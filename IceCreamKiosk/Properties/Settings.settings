@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="IceCreamKiosk.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="KioskLocationLat" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">32.08732</Value>
+    </Setting>
+    <Setting Name="KioskLocationLan" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">34.82809</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
