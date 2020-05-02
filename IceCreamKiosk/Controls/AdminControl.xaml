@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="IceCreamKiosk.Controls.AdminControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IceCreamKiosk.Controls"
+             xmlns:properties="clr-namespace:IceCreamKiosk.Properties"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             DataContext="{Binding Source={StaticResource Locator}, Path=Admin}"
+             d:DesignHeight="700" d:DesignWidth="900">
+    <UserControl.Resources>
+        <DataTemplate x:Key="ImagesButtonTemplate">
+            <Image Source="{Binding Path=Image}" Height="35" />
+        </DataTemplate>       
+    </UserControl.Resources>       
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <materialDesign:ColorZone Mode="PrimaryDark" Grid.Row="0"   CornerRadius="3" materialDesign:ShadowAssist.ShadowDepth="Depth1" Margin="2">
+                <TextBlock VerticalAlignment="Center" Text="Manegmant Dashboard"  Style="{StaticResource MaterialDesignDisplay2TextBlock}" Margin="16 0 0 0"/>
+        </materialDesign:ColorZone>
+        <StackPanel Background="White" Margin="50 10 50 10" Grid.Row="1" Orientation="Horizontal">
+            <TextBlock VerticalAlignment="Center">Kiosk location:</TextBlock>
+            <TextBox materialDesign:HintAssist.Hint="Lat" Margin="5" Width="100"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding Source={x:Static properties:Settings.Default},
+                               Path=KioskLocationLat}" />
+            <TextBox materialDesign:HintAssist.Hint="Lan" Margin="5" Width="100"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     Text="{Binding Source={x:Static properties:Settings.Default},
+                               Path=KioskLocationLan}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Margin="50 2 50 20" Orientation="Vertical">
+                <DataGrid x:Name="ShopsGrid" ItemsSource="{Binding Shops}" IsSynchronizedWithCurrentItem="True"
+                  CanUserSortColumns="True" IsReadOnly="True"  SelectionMode="Single" SelectionUnit="FullRow" 
+                  CanUserAddRows="False"  ColumnWidth="*" AutoGenerateColumns="False"  SelectedItem="{Binding SelectedShop}">
+                    <DataGrid.InputBindings>
+                        <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding Path=EditShopCommand}"
+                            CommandParameter="{Binding ElementName=ShopsGrid, Path=SelectedItem}" />
+                    </DataGrid.InputBindings>
+                    <DataGrid.Columns>
+                    <DataGridTextColumn  Header="Name" Binding="{Binding Name}" TextBlock.TextAlignment="Center"/>
+                    <DataGridTextColumn  Header="Address" Binding="{Binding Address}" TextBlock.TextAlignment="Center"/>
+                    <DataGridTextColumn  Header="Phone" Binding="{Binding PhoneNumber}" TextBlock.TextAlignment="Center"/>
+                    <DataGridTextColumn  Header="Web Site" Binding="{Binding WebSiteLink}" TextBlock.TextAlignment="Center"/>
+                    <DataGridTextColumn  Header="Social" Binding="{Binding SocialMediaLink}" TextBlock.TextAlignment="Center"/>
+                    <DataGridTemplateColumn Header="Photo" CellTemplate="{StaticResource ImagesButtonTemplate}"/>
+                    <DataGridTemplateColumn Width="65" Header="">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource MaterialDesignFlatLightBgButton}" Padding="0"  Width="25" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}},
+                                              Path=DataContext.DeleteShopCommand}" CommandParameter="{Binding}">
+                                    <materialDesign:PackIcon Kind="Delete" />
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <ProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource MaterialDesignCircularProgressBar}"  Value="0" IsIndeterminate="True" Visibility="{Binding Loading, Converter={StaticResource BooleanToVisibilityConverter}}"  
+                         Width="100" Height="100" />
+        <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
+                                 HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                                 Margin="32" Grid.Row="2" Command="{Binding AddShopCommand}">
+            <materialDesign:PackIcon Kind="Plus" Height="18" Width="18" />
+        </Button>
+        <materialDesign:Snackbar Grid.Row="2" IsActive="{Binding HasError}" HorizontalAlignment="Stretch" >
+            <materialDesign:SnackbarMessage  Content="{Binding ErrorMassege}"/>
+        </materialDesign:Snackbar>
+    </Grid>
+</UserControl>

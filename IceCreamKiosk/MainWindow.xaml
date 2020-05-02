@@ -1,0 +1,61 @@
+﻿<Window x:Class="IceCreamKiosk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IceCreamKiosk"
+        xmlns:controls="clr-namespace:IceCreamKiosk.Controls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+        Title="MainWindow" Height="900" Width="1200"        
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="17"
+        DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
+        WindowState="Maximized"
+        WindowStyle="None"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        >
+	<Window.Background>
+		<ImageBrush ImageSource="/background5.jpg" Stretch="UniformToFill" Opacity="0.5"/>
+	</Window.Background>
+
+	<materialDesign:DialogHost x:Name="Host" Identifier="RootDialog" IsOpen="{Binding IsDialogOpen}"
+                               CloseOnClickAway="True" DialogContent="{Binding DialogContent}">
+
+        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <DockPanel x:Name="mainColorZone" >
+                <materialDesign:ColorZone Mode="PrimaryLight" Padding="10" HorizontalAlignment="Stretch" >
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                        <!--<ToggleButton x:Name="MenuToggleButton" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" Click="MenuToggleButton_OnClick"/>-->
+                        <StackPanel Orientation="Horizontal" Margin="0 0 100 0">
+                            <materialDesign:PackIcon Kind="Home" Height="40" Width="auto" />
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="24" FontFamily="Dont melt">ice cream kiosk</TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0 0 290 0">
+                            <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" IsChecked="True" Content="ice cream" FontSize="24" Height="auto" />
+                            <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" IsChecked="False" Content="shops" FontSize="24" Height="auto" />
+                            <!--<RadioButton Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" IsChecked="False" Content="rate" Command="{Binding MoveToRate}" FontSize="24" Height="auto" />-->
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Width="150"  Height="50" Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                            Command="{Binding LoadAdminCommand}">
+                                <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4" FontSize="24">log in</TextBlock>
+                                <materialDesign:PackIcon Kind="AccountCircle" VerticalAlignment="Center" Width="40" Height="40" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </materialDesign:ColorZone>
+            </DockPanel>
+            <!--<DockPanel x:Name="dockPanel" LastChildFill="False">
+                <controls:FindShopControl x:Name="findUC" DockPanel.Dock="Left" Margin="3" />-->
+                <Grid Name="ControlPlaceHolder" DockPanel.Dock="Right"/>
+            <!--</DockPanel>-->
+            
+        </StackPanel>
+    </materialDesign:DialogHost>
+</Window>

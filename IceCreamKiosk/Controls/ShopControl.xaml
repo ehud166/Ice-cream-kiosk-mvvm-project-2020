@@ -1,0 +1,124 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IceCreamKiosk.Controls"
+             xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="IceCreamKiosk.Controls.ShopControl"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="550"
+            d:DesignWidth="870"
+             DataContext="{Binding Source={StaticResource Locator}, Path=Shop}" 
+    >
+    <UserControl.Resources>
+
+    </UserControl.Resources>
+    <StackPanel>
+        <materialDesign:ColorZone Mode="PrimaryDark"  Padding="10" CornerRadius="3" materialDesign:ShadowAssist.ShadowDepth="Depth1" Margin="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center" Text="{Binding ShopButtonText , StringFormat={}{0} Shop}"  Style="{StaticResource MaterialDesignDisplay2TextBlock}" Margin="16 0 0 0"/>
+            </StackPanel>
+        </materialDesign:ColorZone>
+
+        <Grid Width="850" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="3*"  />
+                <ColumnDefinition Width="6*"  />
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Row="0" Grid.Column="0" Margin="25,2,25,2" Text="{Binding Path=Id}" IsEnabled="False" materialDesign:HintAssist.Hint="Id" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Grid.Row="1" Grid.Column="0" Margin="25,2,25,2" Text="{Binding Path=Name}" materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Grid.Row="2" Grid.Column="0" Margin="25,2,25,2" Text="{Binding Address}" materialDesign:HintAssist.Hint="Address" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Grid.Row="3" Grid.Column="0"  Margin="25,2,25,2" Text="{Binding PhoneNumber}" materialDesign:HintAssist.Hint="Phone Number" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Grid.Row="4" Grid.Column="0" Margin="25,2,25,2" Text="{Binding WebSiteLink}" materialDesign:HintAssist.Hint="Web Site Link" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Grid.Row="5" Grid.Column="0" Margin="25,2,25,2" Text="{Binding SocialMediaLink}" materialDesign:HintAssist.Hint="Social Media Link" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <Button Grid.Column="1" Grid.Row="0" Style="{StaticResource MaterialDesignFlatDarkBgButton}" Padding="0" Margin="10,2,35,2" Width="25" Command="{Binding  GetImageFromFile}" CommandParameter="{Binding ImageUri}" HorizontalAlignment="Left">
+                <materialDesign:PackIcon Kind="UploadOutline" />
+            </Button>
+            <TextBox x:Name="imageUri" Grid.Row="0"  Grid.Column="1" Margin="25,2,35,2" Text="{Binding ImageUri}" materialDesign:HintAssist.Hint="Image Uri" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Center"/>
+            <Button Grid.Column="1" Grid.Row="0" Style="{StaticResource MaterialDesignFlatDarkBgButton}" Padding="0" Margin="0 0 10 0" Width="25" Command="{Binding  GetImageFromUri}" CommandParameter="{Binding ImageUri}" HorizontalAlignment="Right">
+                <materialDesign:PackIcon Kind="DownloadOutline" />
+            </Button>
+            <Image  Grid.Row="1" Grid.RowSpan="5"  Grid.Column="1" Height="240" Margin="2" Stretch="UniformToFill">
+                <Image.Source>
+                    <Binding Path="Image" >
+                        <Binding.TargetNullValue>
+                            <ImageSource>pack://application:,,,/Assets/no-image-icon.png</ImageSource>
+                        </Binding.TargetNullValue>
+                    </Binding>
+                </Image.Source>
+            </Image>
+
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0"  Text="Ice Creams:" Margin="15,0,0,0"/>
+            <Button Grid.Column="2" Grid.Row="0" Style="{StaticResource MaterialDesignFlatAccentBgButton}" Padding="0" Margin="0 0 5 0" Width="25" Command="{Binding  AddIceCreamCommand}" HorizontalAlignment="Right">
+                <materialDesign:PackIcon Kind="PlusBox" />
+            </Button>
+            <DataGrid Grid.Row="1"  Grid.RowSpan="5" Grid.Column="2" Margin="5,2,5,2" ItemsSource="{Binding IceCreams}"  
+                      SelectedItem="{Binding SelectedIceCream}" CanUserSortColumns="True"
+                      CanUserAddRows="False"
+           AutoGenerateColumns="False" materialDesign:DataGridAssist.CellPadding="4 2 2 2"
+            materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2" ColumnWidth="*"
+                  Style="{StaticResource MaterialDesignDataGrid}">
+                <DataGrid.Columns>
+                    <materialDesign:MaterialDataGridTextColumn  Binding="{Binding Name}" Header="Name"   />
+                    <materialDesign:MaterialDataGridTextColumn  Binding="{Binding Description}"  Header="Description"  MaxLength="255"  />
+                    <materialDesign:MaterialDataGridComboBoxColumn  Header="Ndb Id" SelectedValueBinding="{Binding NdbId}"
+                            DisplayMemberPath="Name"
+                             SelectedValuePath="NdbId"
+                             ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.NdbIds}" />
+
+                    <materialDesign:MaterialDataGridComboBoxColumn Width="40"  Header="Rate" SelectedValueBinding="{Binding Rate}"
+                             ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.Rates}"  /> 
+                    <DataGridTemplateColumn Width="70" Header="Image"  >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                <Button Style="{StaticResource MaterialDesignFlatDarkBgButton}" Margin="2" Padding="0"  Width="25"
+                                        Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=DataContext.GetIceCreamImageFromFile }" CommandParameter="{Binding}"  >
+                                    <materialDesign:PackIcon Kind="UploadOutline" />
+                                </Button>
+                                <Image Source="{Binding Image, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="35" Width="35"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn Width="35" Header="">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource MaterialDesignFlatLightBgButton}" Padding="0"  Width="25" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}},
+                                              Path=DataContext.DeleteIceCreamCommand}" CommandParameter="{Binding}">
+                                    <materialDesign:PackIcon Kind="Delete" />
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="AddButton" Content="{Binding ShopButtonText}" Grid.Row="7"  Grid.ColumnSpan="3" Width="200"
+                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                     materialDesign:ButtonProgressAssist.Value="-1"
+                     materialDesign:ButtonProgressAssist.IsIndicatorVisible="{Binding Running, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    Command="{Binding ShopCommand}"  Margin="0 12 0 0">
+            </Button>
+            <TextBlock x:Name="ErrorTextBlock" HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="{Binding ErrorMassage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       Visibility="{Binding ErrorMassageVisability, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Foreground="Red" Margin="0,8,0,0"/>
+
+        </Grid>
+    </StackPanel>
+
+</UserControl>

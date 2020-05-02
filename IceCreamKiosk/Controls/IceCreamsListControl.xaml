@@ -1,0 +1,57 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IceCreamKiosk.Controls"
+             xmlns:converters="clr-namespace:IceCreamKiosk.Converters"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="IceCreamKiosk.Controls.IceCreamsListControl"
+             mc:Ignorable="d" 
+             DataContext="{Binding IceCreamsList, Source={StaticResource Locator}}"
+             d:DesignHeight="700" d:DesignWidth="1000">
+    <Grid x:Name="Grid">
+        <Grid.Resources>
+            <converters:DebugDataBindingConverter x:Key="DebugBinding"/>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ListBox x:Name="IceCreamList" Margin="50" 
+                 ItemsSource="{Binding IceCreams}" SelectedItem="{Binding SelectedIceCream}" 
+                 Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Visible" mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True" >
+            <ListBox.Style>
+                <Style TargetType="ListBox" BasedOn="{StaticResource {x:Type ListBox}}">
+                    <Style.Triggers>
+                        <Trigger Property="HasItems" Value="False">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate>
+                                        <TextBlock  TextWrapping="Wrap" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" Style="{StaticResource MaterialDesignDisplay4TextBlock}" 
+                                                    TextAlignment="Center" Foreground="#FFF0FFEC" FontWeight="ExtraBold">
+                                            No Ice Creams Found</TextBlock>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.Style>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel ScrollViewer.VerticalScrollBarVisibility="Visible" Width="{Binding ActualWidth, ElementName=Grid}"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <local:IceCreamControl DataContext="{Binding}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Grid.Row="1" Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="45" Style="{StaticResource MaterialDesignFloatingActionLightButton}">
+            <materialDesign:PackIcon Kind="StepBackward" Height="24" Width="24" />
+        </Button>
+    </Grid>
+</UserControl>

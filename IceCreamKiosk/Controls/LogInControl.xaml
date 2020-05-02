@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="IceCreamKiosk.Controls.LogInControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IceCreamKiosk.Controls"
+             xmlns:vms="clr-namespace:IceCreamKiosk.ViewModel"
+             xmlns:helpers="clr-namespace:IceCreamKiosk.Helpers"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+              DataContext="{Binding Source={StaticResource Locator}, Path=Login}">
+
+    <Grid Width="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Margin="0,30,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}">
+                                Sign In
+        </TextBlock>
+        <Button Grid.Row="0" x:Name="CloseButton"  Width="auto" HorizontalAlignment="Left" 
+                    Style="{StaticResource MaterialDesignFlatButton}" IsCancel="True"
+                    Margin="8 8 8 0" Command="materialDesign:DialogHost.CloseDialogCommand">
+            <materialDesign:PackIcon Kind="WindowClose" />
+        </Button>
+
+        <Grid Grid.Row="1" Margin="0 10 0 30" HorizontalAlignment="Center" VerticalAlignment="Top" Width="250" >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBox  Grid.Row="0" materialDesign:HintAssist.Hint="Name" 
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"  
+                    Margin="0 0 0 0"
+                    Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                />
+            <PasswordBox Grid.Row="1" x:Name="PasswordBox"
+                    materialDesign:HintAssist.Hint="Password"
+                    Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
+            helpers:PasswordBoxHelper.BindPassword="True"
+                helpers:PasswordBoxHelper.BoundPassword="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <!--<CheckBox x:Name="Checkbox" Grid.Row="2" Margin="0 12 0 0"
+                    IsChecked="{Binding RememberMe, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <TextBox Text="Remember Me?" IsEnabled="False" TextDecorations="{x:Null}" />
+                </CheckBox>-->
+            
+            <Button x:Name="LogInButton" Grid.Row="2"  
+                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                     materialDesign:ButtonProgressAssist.Value="-1"
+                     materialDesign:ButtonProgressAssist.IsIndicatorVisible="{Binding Running, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    Command="{Binding LogInCommand}"  Margin="0 12 0 0">
+                Log In
+            </Button>
+            <TextBlock x:Name="ErrorTextBlock" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="{Binding ErrorMassage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       Visibility="{Binding ErrorMassageVisability, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Foreground="Red" Margin="0,8,0,0"/>
+        </Grid>
+    </Grid>
+</UserControl>
