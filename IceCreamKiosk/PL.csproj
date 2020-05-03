@@ -192,11 +192,6 @@
     <Compile Include="Controls\LogInControl.xaml.cs">
       <DependentUpon>LogInControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="ViewModel\AdminViewModel.cs" />
     <Compile Include="ViewModel\FindIceCreamWizardViewModel.cs" />
     <Compile Include="ViewModel\FindIceCreamViewModel.cs" />
@@ -270,6 +265,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
