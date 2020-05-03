@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
-        Title="MainWindow" Height="900" Width="1200"        
+        Title="MainWindow"   Width="auto"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="17"
@@ -25,7 +25,7 @@
 	<materialDesign:DialogHost x:Name="Host" Identifier="RootDialog" IsOpen="{Binding IsDialogOpen}"
                                CloseOnClickAway="True" DialogContent="{Binding DialogContent}">
 
-        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <StackPanel>
             <DockPanel x:Name="mainColorZone" >
                 <materialDesign:ColorZone Mode="PrimaryLight" Padding="10" HorizontalAlignment="Stretch" >
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
@@ -53,7 +53,7 @@
             </DockPanel>
             <!--<DockPanel x:Name="dockPanel" LastChildFill="False">
                 <controls:FindShopControl x:Name="findUC" DockPanel.Dock="Left" Margin="3" />-->
-                <Grid Name="ControlPlaceHolder" DockPanel.Dock="Right"/>
+                <DockPanel Name="ControlPlaceHolder"/>
             <!--</DockPanel>-->
             
         </StackPanel>
