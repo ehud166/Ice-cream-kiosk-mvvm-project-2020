@@ -128,7 +128,7 @@ namespace IceCreamKiosk.ViewModel
                 Address = IceCream.Shop.Address,
                 Name = IceCream.Shop.Name
             });
-            Bitmap myBmp = new Bitmap(Properties.Resources.IceCreamIcon);
+            Bitmap myBmp = new Bitmap(Properties.Resources.waze1);
             QrImage = ImagesBL.GetWazeQrCode(waypoints, myBmp);
             Messenger.Default.Send<IceCreamDetailsViewModel>(this);
         }

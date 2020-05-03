@@ -13,16 +13,14 @@
 	<Grid>
 		<materialDesign:DialogHost BorderBrush="{DynamicResource MaterialDesignDivider}">
 			<materialDesign:DialogHost.DialogContent >
-				<Grid Width="300" Height="150" HorizontalAlignment="Center">
-					<StackPanel Orientation="Horizontal" Margin="15">
+				<Grid  HorizontalAlignment="Center">
+					<StackPanel  Margin="15">
 						<Image Grid.Column="0" Width="150" Height="150" Margin="2" Source="{Binding QrImage}"></Image>
-						<TextBlock Foreground="Gray" Width="200" Margin="15 5" TextWrapping="Wrap">
+						<TextBlock Foreground="Gray" Width="200" Margin="15 5" HorizontalAlignment="Center" TextWrapping="Wrap">
                           scan to your phone
 						</TextBlock>
-					</StackPanel>
-					<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="15">
 						<Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{DynamicResource MaterialDesignFlatButton}" Margin="4" VerticalAlignment="Center">
-							allow
+							accept
 						</Button>
 					</StackPanel>
 				</Grid>

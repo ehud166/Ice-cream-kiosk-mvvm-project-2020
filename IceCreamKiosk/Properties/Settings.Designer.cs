@@ -25,7 +25,7 @@ namespace IceCreamKiosk.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("32.08732")]
+        [global::System.Configuration.DefaultSettingValueAttribute("31.759")]
         public double KioskLocationLat {
             get {
                 return ((double)(this["KioskLocationLat"]));
@@ -37,7 +37,7 @@ namespace IceCreamKiosk.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("34.82809")]
+        [global::System.Configuration.DefaultSettingValueAttribute("35.167")]
         public double KioskLocationLan {
             get {
                 return ((double)(this["KioskLocationLan"]));
