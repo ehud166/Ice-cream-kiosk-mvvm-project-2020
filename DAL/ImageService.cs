@@ -75,6 +75,7 @@ namespace DAL
             ImageConverter converter = new ImageConverter();
             return (byte[])converter.ConvertTo(qrCode.GetGraphic(20, Color.Purple, Color.White, icon, 20), typeof(byte[]));
         }
+       
     }
 
 

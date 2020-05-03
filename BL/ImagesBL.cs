@@ -1,7 +1,9 @@
 ﻿using BE;
+using BingMapsRESTToolkit;
 using DAL;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -38,11 +40,16 @@ namespace BL
             return await GetImageFromUri(downloadUrl + imageName + "?alt=media");
         }
 
-       static public byte[] GetQrCode(string imageName,Bitmap icon)
-        {            
-            return ImageService.GetQrCode(baseUrl + imageName,icon);
+        static public byte[] GetQrCode(string imageName, Bitmap icon)
+        {
+            return ImageService.GetQrCode(baseUrl + imageName, icon);
+        }
+        static public byte[] GetWazeQrCode(List<SimpleWaypoint> waypoints, Bitmap icon)
+        {
+            var url = "https://www.waze.com/he/livemap/directions?to=ll." + waypoints[1].Coordinate.Latitude +"," + waypoints[1].Coordinate.Longitude +"&from=ll." + waypoints[0].Coordinate.Latitude + "," + waypoints[0].Coordinate.Longitude + "&navigate=yes";
+            return ImageService.GetQrCode(url, icon);
         }
 
-        
+
     }
 }

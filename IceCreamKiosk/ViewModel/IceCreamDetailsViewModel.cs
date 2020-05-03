@@ -11,6 +11,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -29,6 +30,7 @@ namespace IceCreamKiosk.ViewModel
 
         MapsBL mapsBL = new MapsBL();
 
+        public RelayCommand wazeQR { get; set; }
         public RelayCommand LoadMap { get; set; }
         public RelayCommand FindWalkRoute { get; set; }
         public RelayCommand FindCarRoute { get; set; }
@@ -37,6 +39,8 @@ namespace IceCreamKiosk.ViewModel
 
         public IceCreamDetailsViewModel():base()
         {
+          
+
             RateCommand = new RelayCommand<IceCream>(
                   x =>
                   {
@@ -124,6 +128,8 @@ namespace IceCreamKiosk.ViewModel
                 Address = IceCream.Shop.Address,
                 Name = IceCream.Shop.Name
             });
+            Bitmap myBmp = new Bitmap(Properties.Resources.IceCreamIcon);
+            QrImage = ImagesBL.GetWazeQrCode(waypoints, myBmp);
             Messenger.Default.Send<IceCreamDetailsViewModel>(this);
         }
         public ObservableCollection<BE.Location> Locations { get; private set; }
@@ -198,6 +204,24 @@ namespace IceCreamKiosk.ViewModel
                 }
                 _iceCream = value;
                 RaisePropertyChanged(() => IceCream);
+            }
+        }
+
+        private byte[] _qrImage = null;
+        public byte[] QrImage
+        {
+            get
+            {
+                return _qrImage;
+            }
+            set
+            {
+                if (_qrImage == value)
+                {
+                    return;
+                }
+                _qrImage = value;
+                RaisePropertyChanged("QrImage");
             }
         }
 
