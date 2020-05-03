@@ -49,7 +49,8 @@ namespace IceCreamKiosk.ViewModel
                     else if (windowState == Navigation.Admin)
                     {
                         (App.Current as App).NavigationCommand.Execute("Find");
-                        AdminButonIcon = "Settings";
+                        AdminButtonIcon = "AccountCircle";
+                        AdminButtonText = "log in";
                         windowState = Navigation.Find;
                     }
                 });
@@ -67,7 +68,8 @@ namespace IceCreamKiosk.ViewModel
             (App.Current as App).NavigationCommand.Execute("Admin");
             HideDialog();
             
-            AdminButonIcon = "KeyboardBackspace";
+            AdminButtonIcon = "Logout";
+            AdminButtonText = "log out";
             windowState = Navigation.Admin;
         }
 
@@ -83,21 +85,38 @@ namespace IceCreamKiosk.ViewModel
             IsDialogOpen = false;
         }
 
-        private string _adminButonIcon = "Settings";
-        public string AdminButonIcon
+        private string _adminButtonIcon = "AccountCircle";
+        public string AdminButtonIcon
         {
             get
             {
-                return _adminButonIcon;
+                return _adminButtonIcon;
             }
             set
             {
-                if (_adminButonIcon == value)
+                if (_adminButtonIcon == value)
                     return;
 
-                _adminButonIcon = value;
+                _adminButtonIcon = value;
 
-                RaisePropertyChanged("AdminButonIcon");
+                RaisePropertyChanged("AdminButtonIcon");
+            }
+        }
+        private string _adminButtonText = "log in";
+        public string AdminButtonText
+        {
+            get
+            {
+                return _adminButtonText;
+            }
+            set
+            {
+                if (_adminButtonText== value)
+                    return;
+
+                _adminButtonText = value;
+
+                RaisePropertyChanged("AdminButtonText");
             }
         }
 

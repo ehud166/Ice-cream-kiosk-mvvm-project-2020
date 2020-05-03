@@ -43,8 +43,8 @@
                             <Button  Width="150"  Height="50" Style="{StaticResource MaterialDesignRaisedAccentButton}"
                             Command="{Binding LoadAdminCommand}">
                                 <StackPanel Orientation="Horizontal">
-                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4" FontSize="24">log in</TextBlock>
-                                <materialDesign:PackIcon Kind="AccountCircle" VerticalAlignment="Center" Width="40" Height="40" />
+									<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4" FontSize="24" Text="{Binding AdminButtonText}"/>
+									<materialDesign:PackIcon Kind="{Binding AdminButtonIcon}" VerticalAlignment="Center" Width="40" Height="40" />
                                 </StackPanel>
                             </Button>
                         </StackPanel>
