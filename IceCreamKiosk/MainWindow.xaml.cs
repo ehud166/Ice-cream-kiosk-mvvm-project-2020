@@ -33,16 +33,6 @@ namespace IceCreamKiosk
 
         public void ShowControl(UserControl uc)
         {
-            //if (windowName == "Find")
-            //{
-            //    //dockPanel.Children.Add(new FindShopControl());
-            //    findUC.Visibility = Visibility.Visible;
-            //}
-            //else
-            //{
-            //    findUC.Visibility = Visibility.Collapsed;
-
-            //}
             ControlPlaceHolder.Children.Clear();
             ControlPlaceHolder.Children.Add(uc);
         }

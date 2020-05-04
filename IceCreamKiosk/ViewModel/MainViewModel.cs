@@ -24,10 +24,14 @@ namespace IceCreamKiosk.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase, LogInViewModel.ILogin,IAdmin
     {
-        public IError Wizard { get; set; }
+        public interface IMain : IError
+        {
+            void MoveToBegining();
+        }
+        public IMain Wizard { get; set; }
 
         public RelayCommand LoadAdminCommand { get; set; }
-
+        public RelayCommand GoToBegining { get; set; }
 
         private Navigation windowState = Navigation.Find;
 
@@ -38,7 +42,15 @@ namespace IceCreamKiosk.ViewModel
         /// </summary>
         public MainViewModel()
         {
-
+            GoToBegining = new RelayCommand(
+              async () => {
+                  if (Wizard != null)
+                  {
+                      await Task.Delay(2000);
+                      Wizard.MoveToBegining();
+                  }
+              }
+              );
             LoadAdminCommand = new RelayCommand(
                 () =>
                 {

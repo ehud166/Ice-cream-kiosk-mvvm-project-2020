@@ -10,9 +10,9 @@
              d:DesignHeight="700" d:DesignWidth="800">
     
     <Grid>
-        <DockPanel x:Name="dockPanel" LastChildFill="False">
+        <DockPanel x:Name="dockPanel" LastChildFill="False" >
             <local:FindShopControl x:Name="findUC" DockPanel.Dock="Left" Margin="3" />
-			<Grid Name="ControlPlaceHolder" DockPanel.Dock="Right" VerticalAlignment="Top" Height="auto" Width="auto" Margin="0 -100 0 0">
+			<Grid Name="ControlPlaceHolder" DockPanel.Dock="Right" VerticalAlignment="Top" HorizontalAlignment="Center" Height="auto" Width="auto">
                 <materialDesign:Transitioner x:Name="TransContainer" SelectedIndex="{Binding SlideIndex}">
                     <!--<local:FindShopControl/>-->
                     <local:IceCreamsListControl/>
