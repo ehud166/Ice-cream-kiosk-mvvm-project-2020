@@ -8,13 +8,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <materialDesign:Card Margin="5" UniformCornerRadius="30" Background="LightBlue" Width="200" > 
-       
+    <materialDesign:Card Margin="5" UniformCornerRadius="30" Background="LightBlue" Width="200" >
+
         <materialDesign:Card.InputBindings>
             <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding DataContext.SelectIceCreamCommand, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
                             CommandParameter="{Binding ElementName=IceCreamList, Path=SelectedItem}" />
         </materialDesign:Card.InputBindings>
-      
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="140" />
@@ -31,8 +31,10 @@
             </Image>
             <StackPanel Grid.Row="1" Margin="8 2 8 5" >
                 <StackPanel Orientation="Horizontal" >
-                    <Label><materialDesign:PackIcon Kind="Store" VerticalAlignment="Bottom" 
-                                             Height="24"  Width="24"/></Label>
+                    <Label>
+                        <materialDesign:PackIcon Kind="Store" VerticalAlignment="Bottom" 
+                                             Height="24"  Width="24"/>
+                    </Label>
                     <Label FontWeight="Bold" FontSize="18" Content="{Binding Shop.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
                 <Separator />
@@ -42,18 +44,24 @@
                     </Label>
                     <Label FontWeight="Bold"  VerticalAlignment="Center" Content="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Label>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" >
+					<Button Style="{StaticResource MaterialDesignOutlinedButton}" ToolTip="MaterialDesignOutlinedButton" BorderBrush="#FF03A9F4" >LEARN MORE
+						<Button.InputBindings>
+							<MouseBinding MouseAction="LeftDoubleClick" Command="{Binding DataContext.SelectIceCreamCommand, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
+                            CommandParameter="{Binding ElementName=IceCreamList, Path=SelectedItem}" />
+						</Button.InputBindings>
+					</Button>
+                    <!--<Label>
                         <materialDesign:PackIcon Kind="EventNoteOutline" VerticalAlignment="Top"
                                             Margin="0 0 0 0" Height="24"  Width="24"/>
                     </Label>
                     <Label  Height="55" Width="150"   VerticalAlignment="Center">
                         <TextBlock TextWrapping="Wrap" Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                </Label>
+                </Label>-->
                 </StackPanel>
                 <DockPanel LastChildFill="False" >
-                    <materialDesign:RatingBar Foreground="Yellow" Value="{Binding Rate}" IsReadOnly="True" x:Name="ReadOnlyRatingBar" />
-                    <TextBlock  DockPanel.Dock="Left" Text="{Binding Rate, StringFormat=N2}" />
+                    <materialDesign:RatingBar DockPanel.Dock="Left" Foreground="Yellow" Value="{Binding Rate}" IsReadOnly="True" x:Name="ReadOnlyRatingBar" />
+                    <TextBlock  DockPanel.Dock="Right" Text="{Binding Rate, StringFormat=N2}" />
                 </DockPanel>
             </StackPanel>
         </Grid>
