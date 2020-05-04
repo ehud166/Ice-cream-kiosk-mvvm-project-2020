@@ -19,7 +19,7 @@ namespace DAL
                 
                 var icecreams = await (from icecream in db.IceCreams.Include(i => i.Nutrients).Include(i => i.Shop).Include(i => i.Reviews)
                                        where shopsInDistance.Contains(icecream.ShopId) &&
-                                             icecream.Description.Contains(description) &&
+                                             (icecream.Description.Contains(description) || icecream.Name.Contains(description)) &&
                                              icecream.Nutrients.Energy >= minNutritions.Energy &&
                                              icecream.Nutrients.Energy <= maxNutritions.Energy &&
 
@@ -51,7 +51,7 @@ namespace DAL
             {
 
                 var icecreams = await (from icecream in db.IceCreams.Include(i => i.Nutrients).Include(i => i.Shop).Include(i => i.Reviews)
-                                       where  icecream.Description.Contains(description) 
+                                       where icecream.Description.Contains(description) || icecream.Name.Contains(description)
                                        select icecream).ToListAsync();
                 return icecreams;
             }

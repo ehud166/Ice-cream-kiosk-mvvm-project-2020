@@ -9,7 +9,7 @@
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="IceCreamKiosk.Controls.IceCreamsListControl"
              mc:Ignorable="d" 
              DataContext="{Binding IceCreamsList, Source={StaticResource Locator}}"
-             d:DesignHeight="700" d:DesignWidth="1000">
+             d:DesignHeight="450" d:DesignWidth="800">
     <Grid x:Name="Grid">
         <Grid.Resources>
             <converters:DebugDataBindingConverter x:Key="DebugBinding"/>

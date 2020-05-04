@@ -7,7 +7,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              DataContext="{Binding Source={StaticResource Locator}, Path=RateIceCreamDialog}"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="1200">
+             d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>

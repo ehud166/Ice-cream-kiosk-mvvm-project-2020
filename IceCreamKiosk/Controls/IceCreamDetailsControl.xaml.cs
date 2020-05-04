@@ -46,9 +46,22 @@ namespace IceCreamKiosk.Controls
 
         private void wazeButton_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://waze.com/ul?ll=" + route.StartLocation.Latitude +","+ route.StartLocation.Longitude +"&navigate=yes");
+            System.Diagnostics.Process.Start("https://www.waze.com/he/livemap/directions?to=ll." + route.EndLocation.Latitude +","+ route.EndLocation.Longitude +"&from=ll." + route.StartLocation.Latitude +"," + route.StartLocation.Longitude + "&navigate=yes");
 
 
+        }
+
+        private void WebSiteLink_Click(object sender, RoutedEventArgs e)
+        {
+            string ct = ((sender as StackPanel).Children[1] as TextBlock).Text;
+            System.Diagnostics.Process.Start(ct);
+        }
+
+        private void socialwebLink_Click(object sender, RoutedEventArgs e)
+        {
+
+            string ct = ((sender as StackPanel).Children[1] as TextBlock).Text;
+            System.Diagnostics.Process.Start(ct);
         }
     }
 }

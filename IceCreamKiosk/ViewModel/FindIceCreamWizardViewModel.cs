@@ -62,6 +62,7 @@ namespace IceCreamKiosk.ViewModel
             SlideIndex = (int)WizardPages.IceCreamDetails;
             IceCreamDetailsView.IceCream = iceCream;
             IceCreamDetailsView.LoadMap.Execute(null);
+
         }
 
         public void MoveToBegining()
