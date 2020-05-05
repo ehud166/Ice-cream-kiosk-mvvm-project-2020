@@ -18,42 +18,67 @@
         WindowStyle="None"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         >
-	<Window.Background>
-		<ImageBrush ImageSource="/background5.jpg" Stretch="UniformToFill" Opacity="0.5"/>
-	</Window.Background>
+    <Window.Background>
+        <ImageBrush ImageSource="sun1.jpg" Stretch="UniformToFill" AlignmentY="Center"  Opacity="1">
+            <ImageBrush.Transform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ImageBrush.Transform>
+            <ImageBrush.RelativeTransform>
+                <TransformGroup>
+                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                    <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ImageBrush.RelativeTransform>
+        </ImageBrush>
+    </Window.Background>
 
-	<materialDesign:DialogHost x:Name="Host" Identifier="RootDialog" IsOpen="{Binding IsDialogOpen}"
+    <materialDesign:DialogHost x:Name="Host" Identifier="RootDialog" IsOpen="{Binding IsDialogOpen}"
                                CloseOnClickAway="True" DialogContent="{Binding DialogContent}">
-		<StackPanel>
-			<materialDesign:ColorZone Mode="PrimaryLight" Padding="10" HorizontalAlignment="Stretch" >
-				<DockPanel LastChildFill="False">
-					<!--<ToggleButton x:Name="MenuToggleButton" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" Click="MenuToggleButton_OnClick"/>-->
-					<Button Height="50" DockPanel.Dock="Left"  Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" Command="{Binding GoToBegining}">
-						<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
-							<materialDesign:PackIcon Kind="Home" Width="45" Height="45" Foreground="Black" VerticalAlignment="Center"/>
-							<TextBlock FontSize="30" VerticalAlignment="Center" FontFamily="Dont melt" Foreground="Black">ice cream kiosk</TextBlock>
-						</StackPanel>
-					</Button>
-					<!--<StackPanel Orientation="Horizontal" Margin="0 0 290 0">
-                            <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" IsChecked="True" Content="ice cream" FontSize="24" Height="auto" />
-                            <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" IsChecked="False" Content="shops" FontSize="24" Height="auto" />
-                            -->
-					<!--<RadioButton Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" IsChecked="False" Content="rate" Command="{Binding MoveToRate}" FontSize="24" Height="auto" />-->
-					<!--
+
+        <StackPanel>
+            <DockPanel x:Name="mainColorZone" >
+                <materialDesign:ColorZone Mode="PrimaryLight" Height="80" Padding="10" HorizontalAlignment="Stretch" >
+                    <materialDesign:ColorZone.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="DimGray" Offset="0"/>
+                            <GradientStop Color="Transparent" Offset="1"/>
+                        </LinearGradientBrush>
+                    </materialDesign:ColorZone.Background>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                        <!--<ToggleButton x:Name="MenuToggleButton" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" Click="MenuToggleButton_OnClick"/>-->
+						<Button Height="50" DockPanel.Dock="Left"  Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" Command="{Binding GoToBegining}">
+							<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
+								<materialDesign:PackIcon Kind="HomeOutline" Height="45" Foreground="Black"  Width="45" VerticalAlignment="Center"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="30" FontFamily="Dont melt" Foreground="Black">ice cream kiosk</TextBlock>
+                            </StackPanel>
+						</Button>
+						<!--<StackPanel Orientation="Horizontal" Margin="0 0 290 0">
+                            <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}" Foreground="White" Margin="8" IsChecked="True" Content="ice creams" FontSize="24" Height="auto" FontStyle="Italic" />
+                            <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" Foreground="White" IsChecked="False" Content="shops" FontSize="24" Height="auto" FontStyle="Italic" />
+                            --><!--<RadioButton Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" IsChecked="False" Content="rate" Command="{Binding MoveToRate}" FontSize="24" Height="auto" />--><!--
                         </StackPanel>-->
-					<Button DockPanel.Dock="Right"  Width="150" materialDesign:ButtonAssist.CornerRadius="10"   Height="40"  Style="{StaticResource MaterialDesignRaisedAccentButton}"
-                        Command="{Binding LoadAdminCommand}">
-						<StackPanel Orientation="Horizontal">
-							<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4" FontSize="24" Text="{Binding AdminButtonText}"/>
-							<materialDesign:PackIcon Kind="{Binding AdminButtonIcon}" VerticalAlignment="Center" Width="40" Height="40" />
-						</StackPanel>
-					</Button>
-				</DockPanel>
-			</materialDesign:ColorZone>
+                            <Button  Width="150"  Height="50" Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                            Command="{Binding LoadAdminCommand}">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4" FontSize="24" Text="{Binding AdminButtonText}"/>
+                                    <materialDesign:PackIcon Kind="{Binding AdminButtonIcon}" VerticalAlignment="Center" Width="40" Height="40" />
+                                </StackPanel>
+                            </Button>
+                    </StackPanel>
+				</materialDesign:ColorZone>
+			</DockPanel>
 			<!--<DockPanel x:Name="dockPanel" LastChildFill="False">
                 <controls:FindShopControl x:Name="findUC" DockPanel.Dock="Left" Margin="3" />-->
-			<DockPanel Name="ControlPlaceHolder"/>
-			<!--</DockPanel>-->
-		</StackPanel>
-	</materialDesign:DialogHost>
+            <DockPanel Name="ControlPlaceHolder"/>
+            <!--</DockPanel>-->
+
+        </StackPanel>
+    </materialDesign:DialogHost>
 </Window>
