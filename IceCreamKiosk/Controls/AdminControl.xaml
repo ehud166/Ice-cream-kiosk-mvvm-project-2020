@@ -28,13 +28,68 @@
                      Text="{Binding Source={x:Static properties:Settings.Default},
                                Path=KioskLocationLan}"/>
         </StackPanel>-->
-        <StackPanel>
-            <DataGrid x:Name="ShopsGrid" materialDesign:DataGridAssist.CellPadding="5 30 0 5"  Margin="15"  Foreground="DarkSlateGray" RowHeight="88" Focusable="False"   RowBackground="Coral"   ItemsSource="{Binding Shops}" IsSynchronizedWithCurrentItem="True"
+        <StackPanel >
+            <DataGrid x:Name="ShopsGrid" materialDesign:DataGridAssist.CellPadding="5 30 0 5"  Margin="15"  Foreground="DarkSlateGray" RowHeight="95" Focusable="False"   RowBackground="Pink" AlternatingRowBackground="#fdd835"   ItemsSource="{Binding Shops}" IsSynchronizedWithCurrentItem="True"
                   CanUserSortColumns="True" IsReadOnly="True" SelectionUnit="FullRow" 
                   CanUserAddRows="False"  ColumnWidth="Auto" AutoGenerateColumns="False"  SelectedItem="{Binding SelectedShop}" Background="Transparent"  HeadersVisibility="None" HorizontalAlignment="Left" SelectionMode="Single" CanUserResizeRows="False" FontWeight="Bold" Opacity="0.85">
+                <DataGrid.CellStyle>
+                    
+                    <Style TargetType="{x:Type DataGridCell}">
+                        <Style.Triggers>
+                            <Trigger Property="DataGridCell.IsSelected" Value="True">
+                                <Setter Property="BorderBrush">
+                                    <Setter.Value>
+                                        <SolidColorBrush Color="Transparent"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Foreground"
+                            Value="{DynamicResource
+                                   {x:Static SystemColors.ControlTextBrushKey}}"/>
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <SolidColorBrush Color="Transparent"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.CellStyle>
+                
                 <DataGrid.RowStyle>
                     <Style TargetType="DataGridRow">
-                        <Setter Property="Margin" Value=" 0 8"/>
+                        <Setter Property="Margin" Value=" 9"/>
+                        <Setter Property="BitmapEffect" >
+                            <Setter.Value>
+                                <DropShadowBitmapEffect ShadowDepth="3"/>
+                            </Setter.Value>
+                          
+                        </Setter>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type DataGridRow}">
+                                    <Border x:Name="DGR_Border" BorderBrush="{TemplateBinding BorderBrush}" 
+                                        BorderThickness="{TemplateBinding BorderThickness}" 
+                                        Background="{TemplateBinding Background}" 
+                                        SnapsToDevicePixels="True"
+                                        CornerRadius="10">
+                                        <SelectiveScrollingGrid>
+                                            <SelectiveScrollingGrid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </SelectiveScrollingGrid.ColumnDefinitions>
+                                            <SelectiveScrollingGrid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </SelectiveScrollingGrid.RowDefinitions>
+                                            <DataGridCellsPresenter Grid.Column="1" ItemsPanel="{TemplateBinding ItemsPanel}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                            <DataGridDetailsPresenter Grid.Column="1" Grid.Row="1" SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen, ConverterParameter={x:Static SelectiveScrollingOrientation.Vertical}, Converter={x:Static DataGrid.RowDetailsScrollingConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Visibility="{TemplateBinding DetailsVisibility}"/>
+                                            <DataGridRowHeader Grid.RowSpan="2" SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical" Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.Row}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                        </SelectiveScrollingGrid>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+
                     </Style>
                 </DataGrid.RowStyle>
                
@@ -43,8 +98,8 @@
                             CommandParameter="{Binding ElementName=ShopsGrid, Path=SelectedItem}" />
                 </DataGrid.InputBindings>
                 <DataGrid.Columns >
-                    <DataGridTextColumn MinWidth="170"   Header="Name" Binding="{Binding Name}"  TextBlock.TextAlignment="Left" TextBlock.FontSize="25" FontFamily="Aharoni" FontWeight="Bold" CanUserResize="False"/>
-                    <DataGridTemplateColumn Header="Photo"  CellTemplate="{StaticResource ImagesButtonTemplate}"/>
+                    <DataGridTextColumn MinWidth="170"   Header="Name" Binding="{Binding Name}"   TextBlock.TextAlignment="Left" TextBlock.FontSize="30"   FontFamily="Aharoni" FontWeight="Bold" CanUserResize="False"/>
+                    <DataGridTemplateColumn Header="Photo"  CellTemplate="{StaticResource ImagesButtonTemplate}" />
                     <DataGridTextColumn MinWidth="180"   Header="Address" Binding="{Binding Address}" TextBlock.TextAlignment="Left" TextBlock.FontSize="20"/>
                     <DataGridTextColumn  Header="Phone" Binding="{Binding PhoneNumber}" TextBlock.TextAlignment="Left" TextBlock.FontSize="20"/>
                     <DataGridTextColumn   Header="Web Site" Binding="{Binding WebSiteLink}" TextBlock.TextAlignment="Center" Visibility="Hidden"/>
@@ -61,14 +116,14 @@
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
-                                 HorizontalAlignment="center" VerticalAlignment="Top" Margin="0,-40,300,0" ToolTip="Add New Shop"
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" Background="#1de9b6"
+                                 HorizontalAlignment="center" VerticalAlignment="Top" Margin="0,-40,400,0" ToolTip="Add New Shop"
                                 Grid.Row="2" Command="{Binding AddShopCommand}" Height="55" Width="55">
-                <materialDesign:PackIcon Kind="Plus" Height="40" Width="40" />
+                <materialDesign:PackIcon Kind="Plus" Height="40" Width="40" BorderBrush="#1de9b6" Background="#1de9b6" />
             </Button>
 
         </StackPanel>
-        <ProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource MaterialDesignCircularProgressBar}"  Value="75" IsIndeterminate="True" Visibility="{Binding Loading, Converter={StaticResource BooleanToVisibilityConverter}}"  
+        <ProgressBar HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignCircularProgressBar}"  Value="75" FontWeight="ExtraBold" IsIndeterminate="True" Visibility="{Binding Loading, Converter={StaticResource BooleanToVisibilityConverter}}"  
                          Width="100" Height="100" />
 
         <materialDesign:Snackbar Grid.Row="2" IsActive="{Binding HasError}" HorizontalAlignment="Stretch" >

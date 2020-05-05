@@ -1,0 +1,45 @@
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\BE.dll.config
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\BE.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\BE.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\BingMapsRESTToolkit.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\BingMapsSDSToolkit.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\EntityFramework.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\Newtonsoft.Json.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\BingMapsRESTToolkit.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\BingMapsRESTToolkit.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\BingMapsSDSToolkit.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\BingMapsSDSToolkit.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\EntityFramework.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\bin\Debug\Newtonsoft.Json.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\obj\Debug\BE.csproj.CopyComplete
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\obj\Debug\BE.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\BE\obj\Debug\BE.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\BE.dll.config
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\BE.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\BE.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\BingMapsRESTToolkit.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\BingMapsSDSToolkit.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\EntityFramework.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\MaterialDesignColors.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\BingMapsRESTToolkit.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\BingMapsRESTToolkit.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\BingMapsSDSToolkit.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\BingMapsSDSToolkit.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\EntityFramework.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\obj\Debug\BE.csprojAssemblyReference.cache
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\obj\Debug\BE.csproj.CopyComplete
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\obj\Debug\BE.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\BE\obj\Debug\BE.pdb

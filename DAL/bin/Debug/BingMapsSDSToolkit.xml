@@ -1,0 +1,3609 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BingMapsSDSToolkit</name>
+    </assembly>
+    <members>
+        <member name="T:BingMapsSDSToolkit.BasicDataSourceInfo">
+            <summary>
+            Basic information about a data source
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.BasicDataSourceInfo.#ctor">
+            <summary>
+            Basic information about a data source
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.BasicDataSourceInfo.#ctor(System.String)">
+            <summary>
+            Basic information about a data source
+            </summary>
+            <param name="queryUrl">A url that is used to query a data source. This is parsed into it's individual components; accessID, name, entityTypeName</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BasicDataSourceInfo.DataSourceName">
+            <summary>
+            Name fo the Data Source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BasicDataSourceInfo.EntityTypeName">
+            <summary>
+            Name of the Entity type of the data source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BasicDataSourceInfo.AccessId">
+            <summary>
+            The access ID for the data source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BasicDataSourceInfo.QueryUrl">
+            <summary>
+            The query URL for accessing the data source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BasicDataSourceInfo.MasterKey">
+            <summary>
+            The master Bing Maps key for editting a data source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BasicDataSourceInfo.QueryKey">
+            <summary>
+            The query Bing Maps key for querying a data source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BasicDataSourceInfo.Description">
+            <summary>
+            A description of the data source data.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.BingDataSources">
+            <summary>
+            A static class that contains data source information for all the built-in Bing data sources in the Bing Spatial Data Services.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BingDataSources.FourthCoffeeSample">
+            <summary>
+            A sample data source of coffee shops.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BingDataSources.NavteqPOIs_NA">
+            <summary>
+            A data source of points of interest for North America. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BingDataSources.NavteqPOIs_EU">
+            <summary>
+            A data source of points of interest for Europe. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BingDataSources.TrafficIncidents">
+            <summary>
+            A data source of real time traffic incidents (accidents, road closures, ...).
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BingDataSources.USCensus2010_States">
+            <summary>
+            A data source that contains a subset of 2010 US Census data broken up by states.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BingDataSources.USCensus2010_Counties">
+            <summary>
+            A data source that contains a subset of 2010 US Census data broken up by counties.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BingDataSources.USCensus2010_111CD">
+            <summary>
+            A data source that contains a subset of 2010 US Census data broken up by 111th Congressional Districts.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.BingDataSources.USCensus2010_ZCTA5">
+            <summary>
+            A data source that contains a subset of 2010 US Census data broken up by Zip Code Tabulation areas (ZCTA5).
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.FileExtensionUtilities">
+            <summary>
+            Useful utilities for working with file extensions.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.FileExtensionUtilities.GetFileExtensions(BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat,System.String@,System.String@)">
+            <summary>
+            Give a data source format, this method provides a default and file extension filter string. 
+            </summary>
+            <param name="format">The data source file format to get the extensions for.</param>
+            <param name="defaultExt">Default file extension.</param>
+            <param name="filters">A file extension filter string</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.FileExtensionUtilities.GetFileExtensions(BingMapsSDSToolkit.GeocodeDataflowAPI.BatchFileFormat,System.String@,System.String@)">
+            <summary>
+            Give a batch geocoding file format, this method provides a default and file extension filter string. 
+            </summary>
+            <param name="format">The batch geocoding file file format to get the extensions for.</param>
+            <param name="defaultExt">Default file extension.</param>
+            <param name="filters">A file extension filter string</param>
+        </member>
+        <member name="T:BingMapsSDSToolkit.InternalSettings">
+            <summary>
+            Internal settings.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.InternalSettings.ClientApi">
+            <summary>
+            API identifier. Used to help trace and debug issues with the toolkit.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.ColumnHeader">
+            <summary>
+            Data source column header information.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.ColumnHeader.#ctor(System.String)">
+            <summary>
+            Data source column header information.
+            </summary>
+            <param name="name">The name of the column.</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.ColumnHeader.#ctor(System.String,System.Type)">
+            <summary>
+            Data source column header information.
+            </summary>
+            <param name="name">The name of the column.</param>
+            <param name="type">The type of data in the column.</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.ColumnHeader.#ctor(System.String,System.Type,System.Boolean)">
+            <summary>
+            Data source column header information.
+            </summary>
+            <param name="name">The name of the column.</param>
+            <param name="type">The type of data in the column.</param>
+            <param name="isPrimaryKey">A boolean indicating if the column is a primary key or not.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.ColumnHeader.Name">
+            <summary>
+            The name of the column.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.ColumnHeader.Type">
+            <summary>
+            The type of data in the column.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.ColumnHeader.IsPrimaryKey">
+            <summary>
+            A boolean indicating if the column is a primary key or not.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.ColumnHeader.GetEdmTypeName">
+            <summary>
+            Gets the Edm type name of the column.
+            </summary>
+            <returns>The Edm type name of the column.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.ColumnHeader.GetXmlTypeName">
+            <summary>
+            Gets the XML type name of the column.
+            </summary>
+            <returns>the XML type name of the column.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.ColumnHeader.ToString">
+            <summary>
+            A string representing a ColumnHeader in the format Name(EdmTypeName) or Name(EdmTypeName,primaryKey) 
+            </summary>
+            <returns>Returns a string in the format Name(EdmTypeName) or  Name(EdmTypeName,primaryKey) </returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.ColumnHeader.IsValidName(System.String)">
+            <summary>
+            Checks the name of the colum to verify it is valid.
+            Column property name can have up to 50 characters.
+            The property name must contain alphanumeric characters and underscores (_) only.
+            The first character of the property name must be a letter or an underscore.
+            The property name cannot start with two underscores (__). Exceptions "__deleteEntity" and "_distance".
+            Property names are case-insensitive.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.DataSourceGeocodeResults">
+            <summary>
+            An object for storing the results of geocoding a data source.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceGeocodeResults.#ctor">
+            <summary>
+            An object for storing the results of geocoding a data source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSourceGeocodeResults.FailedRows">
+            <summary>
+            A list of all the primary keys, of the rows that faile to geocode.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSourceGeocodeResults.Failed">
+            <summary>
+            Number of rows that failed to geocode.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSourceGeocodeResults.Succeeded">
+            <summary>
+            Number of rows that geocoded successfully.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSourceGeocodeResults.Error">
+            <summary>
+            Error during batch geocoding process.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager">
+            <summary>
+            A tool for managing data sources and data flow jobs in the Bing Saptial Data Services.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager._statusUpdateInterval">
+            <summary>
+            Interval used to check the status of the batch job in ms.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.#ctor">
+            <summary>
+            A tool for managing data sources and data flow jobs in the Bing Saptial Data Services.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.#ctor(System.Int32)">
+            <summary>
+            A tool for managing data sources and data flow jobs in the Bing Saptial Data Services.
+            </summary>
+            <param name="statusUpdateInterval">The update interval in ms that should be used when checking the status of a job. Default 15000ms (15 sec.)</param>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.UploadStatusChanged">
+            <summary>
+            An event that provides update messages during the upload process.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.GetJobList(System.String)">
+            <summary>
+            Gets all the recent Bing Spatial Data Services data flow jobs for a Bing Maps account.
+            </summary>
+            <param name="bingMapsKey">A Bing Maps key for the account in which you want to get all jobs for.</param>
+            <exception cref="T:System.Exception">Thrown when a Bing Maps key is not specified.</exception>
+            <returns>A list of all data flow jobs.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.GetAllPublicDataSources(System.String)">
+            <summary>
+            Gets a list of all the data sources in the Bing Spatial Data Services that are marked as public.
+            </summary>
+            <param name="bingMapsKey">A bing maps key to authenicate the service request.</param>
+            <exception cref="T:System.Exception">Thrown when a Bing Maps key is not specified.</exception>
+            <returns>A list of information for all public data sources.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.GetDetails(System.String)">
+            <summary>
+            Gets details for all data sources in a Bing Maps account. Such as the date and time that each data source was last updated, 
+            the data source and entity type names of the data sources, and if they are public or not.
+            </summary>
+            <param name="bingMapsKey">A Bing Maps key from the Bing Maps account you want to get the data source details for.</param>
+            <exception cref="T:System.Exception">Thrown when a Bing Maps key is not specified.</exception>
+            <returns>A list of data source details.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.GetDetails(System.String,System.String,System.String)">
+            <summary>
+            Gets details for a specific data sources in a Bing Maps account. 
+            </summary>
+            <param name="bingMapsKey">A Bing Maps key from the Bing Maps account you want to get the data source details for.</param>
+            <param name="accessId">A unique id used by the Bing Spatial Data Services to identify a data source.</param>
+            <param name="dataSourceName">The name of a data source.</param>             
+            <exception cref="T:System.Exception">Thrown when a Bing Maps key is not specified.</exception>
+            <returns>A list of data source details.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.GetDetails(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Gets details for a specific data sources in a Bing Maps account. 
+            If the access id and data source name is specified details for a specific data sources in a Bing Maps account. 
+            Otherwise details for all data sources in a Bing Maps account are return. 
+            </summary>
+            <param name="bingMapsKey">A Bing Maps key from the Bing Maps account you want to get the data source details for.</param>
+            <param name="accessId">A unique id used by the Bing Spatial Data Services to identify a data source.</param>
+            <param name="dataSourceName">The name of a data source.</param>        
+            <param name="showAllVersions">A boolean value indicating if information for all versions of data sources should be returned.</param>
+            <exception cref="T:System.Exception">Thrown when a Bing Maps key is not specified.</exception>
+            <returns>A list of data source details.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.GetDetails(BingMapsSDSToolkit.BasicDataSourceInfo)">
+            <summary>
+            Gets details for a specific data sources in a Bing Maps account. 
+            Requires Access ID, Data Source Name and Master or Query Key.
+            </summary>
+            <param name="info">Basic data source information.</param>
+            <exception cref="T:System.Exception">Thrown when a Bing Maps key is not specified.</exception>
+            <returns>A list of data source details.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.GetDetails(BingMapsSDSToolkit.BasicDataSourceInfo,System.Boolean)">
+            <summary>
+            Gets details for a specific data sources in a Bing Maps account. 
+            Requires Access ID, Data Source Name and Master or Query Key.
+            </summary>
+            <param name="info">Basic data source information.</param>
+            <param name="showAllVersions">A boolean value indicating if information for all versions of data sources should be returned.</param>
+            <exception cref="T:System.Exception">Thrown when a Bing Maps key is not specified.</exception>
+            <returns>A list of data source details.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.PublishStagedDataSource(BingMapsSDSToolkit.BasicDataSourceInfo)">
+            <summary>
+            Publishes a staged data source to production.
+            Requires Access ID, Data Source Name and Master Key.
+            </summary>
+            <param name="info">Basic data source information.</param>
+            <returns>The final data flow job when the publishing process completes or is aborted.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.PublishStagedDataSource(System.String,System.String,System.String)">
+            <summary>
+            Publishes a staged data source to production.
+            </summary>
+            <param name="accessId">A unique id used by the Bing Spatial Data Services to identify a data source.</param>
+            <param name="dataSourceName">The name of a data source.</param>        
+            <param name="masterKey">A Bing Maps key that has full control of the data source.</param>
+            <returns>The final data flow job when the publishing process completes or is aborted.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.Upload(BingMapsSDSToolkit.DataSourceAPI.DataSource,BingMapsSDSToolkit.DataSourceAPI.LoadOperation)">
+            <summary>
+            Uploads a data source to the Bing Spatial Data Services. Skips rows that have no location information.
+            </summary>
+            <param name="dataSource">The data source that is to be uploaded.</param>
+            <param name="loadOperation">The type of operation to perform when uploading a data source.</param>
+            <returns>The final data flow job when the upload process completes or is aborted.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.Upload(BingMapsSDSToolkit.DataSourceAPI.DataSource,BingMapsSDSToolkit.DataSourceAPI.LoadOperation,System.Boolean)">
+            <summary>
+            Uploads a data source to the Bing Spatial Data Services. Skips rows that have no location information.
+            </summary>
+            <param name="dataSource">The data source that is to be uploaded.</param>
+            <param name="loadOperation">The type of operation to perform when uploading a data source.</param>
+            <param name="setPublic">A boolean value indicating if the data source should be made public or not.</param>
+            <returns>The final data flow job when the upload process completes or is aborted.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.Upload(BingMapsSDSToolkit.DataSourceAPI.DataSource,BingMapsSDSToolkit.DataSourceAPI.LoadOperation,System.Boolean,System.Boolean)">
+            <summary>
+            Uploads a data source to the Bing Spatial Data Services. 
+            </summary>
+            <param name="dataSource">The data source that is to be uploaded.</param>
+            <param name="loadOperation">The type of operation to perform when uploading a data source.</param>
+            <param name="setPublic">A boolean value indicating if the data source should be made public or not.</param>
+            <param name="skipEmptyLocations">A boolean value indicating if rows that don't have locaiton information (latitude, longitude, or Geography column) should be uploaded or not. If all rows do not have location information an error will occur and the upload aborted.</param>
+            <returns>The final data flow job when the upload process completes or is aborted.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.Upload(System.IO.Stream,BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat,BingMapsSDSToolkit.DataSourceAPI.LoadOperation,BingMapsSDSToolkit.BasicDataSourceInfo,System.Boolean)">
+            <summary>
+            Uploads KML and SHP files streams as a data source.
+            </summary>
+            <param name="dataSourceStream">A file stream for a data source that is in KML or SHP file format.</param>
+            <param name="format">Data Source file Format.</param>
+            <param name="loadOperation">The type of operation to perform when uploading a data source.</param>
+            <param name="info">Information about the datasource.</param>
+            <param name="setPublic">A boolean value indicating if the data source should be made public or not.</param>
+            <returns>The final data flow job when the upload process completes or is aborted.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.Download(BingMapsSDSToolkit.BasicDataSourceInfo)">
+            <summary>
+            Downloads a data source.
+            Requires Access ID, Data Source Name and Master Key.
+            </summary>
+            <param name="info">Basic data source information.</param>
+            <exception cref="T:System.Exception">Thrown when invalid data is specified or the download process is aborted.</exception>
+            <returns>The downloaded data source.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.Download(System.String,System.String,System.String)">
+            <summary>
+            Downloads a data source. 
+            </summary>
+            <param name="accessId">A unique id used by the Bing Spatial Data Services to identify a data source.</param>
+            <param name="dataSourceName">The name of a data source.</param>        
+            <param name="masterKey">A Bing Maps key that has full control of the data source.</param>
+            <exception cref="T:System.Exception">Thrown when invalid data is specified or the download process is aborted.</exception>
+            <returns>The downloaded data source.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.SetPublicSetting(BingMapsSDSToolkit.BasicDataSourceInfo,System.Boolean)">
+            <summary>
+            Sets the data source public setting as either public or non-public.
+            Requires Access ID, Data Source Name and Master Key.
+            </summary>
+            <param name="info">Basic data source information.</param>
+            <param name="makePublic">A boolean indicating if the data source should be made public or not.</param>
+            <returns>A data flow job which contains the status of the job setting the public flag of a data source.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.SetPublicSetting(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Sets the data source public setting as either public or non-public.
+            </summary>        
+            <param name="accessId">A unique id used by the Bing Spatial Data Services to identify a data source.</param>
+            <param name="dataSourceName">The name of a data source.</param>        
+            <param name="masterKey">A Bing Maps key that has full control of the data source.</param>
+            <param name="makePublic">A boolean indicating if the data source should be made public or not.</param>
+            <returns>A data flow job which contains the status of the job setting the public flag of a data source.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.RollbackDataSource(System.String,System.String,System.String)">
+            <summary>
+            Rolls back a data source to an earlier version.
+            </summary>
+            <param name="jobId">The job ID from a previous data source upload. To find the job ID for the data source version you want to restore, query for information about a data source using the showAllVersions parameter.</param>
+            <param name="dataSourceName">Name of a data source.</param>
+            <param name="masterKey">A Bing Maps key that has full control of the data source.</param>
+            <returns>A data flow job which contains the status of the rollback job.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.DeleteDataSource(BingMapsSDSToolkit.BasicDataSourceInfo)">
+            <summary>
+            Makes a request to delete a data source.
+            Requires Access ID, Data Source Name and Master Key.
+            </summary>
+            <param name="info">Basic data source information.</param>
+            <exception cref="T:System.Exception">Thrown if invalid parameters are specified or there is an error making the request.</exception>
+            <returns>A boolean value indicating if the request to delete a data source was successfully made or not.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.DeleteDataSource(BingMapsSDSToolkit.BasicDataSourceInfo,System.Boolean)">
+            <summary>
+            Makes a request to delete a data source.
+            Requires Access ID, Data Source Name and Master Key.
+            </summary>
+            <param name="info">Basic data source information.</param>
+            <param name="isStaging">A boolean indicating if the staging data source should be deleted or not.</param>
+            <exception cref="T:System.Exception">Thrown if invalid parameters are specified or there is an error making the request.</exception>
+            <returns>A boolean value indicating if the request to delete a data source was successfully made or not.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.DeleteDataSource(System.String,System.String,System.String)">
+            <summary>
+            Makes a request to delete a data source.
+            </summary>
+            <param name="accessId">A unique id used by the Bing Spatial Data Services to identify a data source.</param>
+            <param name="dataSourceName">The name of a data source.</param>        
+            <param name="masterKey">A Bing Maps key that has full control of the data source.</param>
+            <exception cref="T:System.Exception">Thrown if invalid parameters are specified or there is an error making the request.</exception>
+            <returns>A boolean value indicating if the request to delete a data source was successfully made or not.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSourceManager.DeleteDataSource(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Makes a request to delete a data source.
+            </summary>
+            <param name="accessId">A unique id used by the Bing Spatial Data Services to identify a data source.</param>
+            <param name="dataSourceName">The name of a data source.</param>        
+            <param name="masterKey">A Bing Maps key that has full control of the data source.</param>
+            <param name="isStaging">A boolean indicating if the staging data source should be deleted or not.</param>
+            <exception cref="T:System.Exception">Thrown if invalid parameters are specified or there is an error making the request.</exception>
+            <returns>A boolean value indicating if the request to delete a data source was successfully made or not.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.DataServiceJob">
+            <summary>
+            An object that contains the information of a DataServiceJob.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataServiceJob.Type">
+            <summary>
+            Type name of the data service or flow job.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataServiceJob.Id">
+            <summary>
+            A unique string that identifies the dataflow job. There are no requirements for the string format.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataServiceJob.CompletedDate">
+            <summary>
+            The date and time that the dataflow job is completed. If the Status field is set to Pending, the CompletedDate field is not shown or is empty.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataServiceJob.CreatedDate">
+            <summary>
+            The date and time that the dataflow job was created.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataServiceJob.Description">
+            <summary>
+            A user-defined description of the dataflow job. If a description is not specified when the workflow is created, this field is not included or the value is null.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataServiceJob.Status">
+            <summary>
+            The status of the dataflow job. Possible values are 'Pending', 'Aborted', or 'Completed'.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataServiceJob.Links">
+            <summary>
+            URLs that is defined by its role and name attributes. 
+            “role”:”self”: Use to check the status of your job. This URL is provided in the response when you create a load data source job.
+            “role”:”self” and “name”:“datasource”: Use to query and update a data source. This URL appears in the response to a job status request when the load data source job completes.
+            “role”:”output” and “name”:”failed”: Use to access the error log for the job. This URL appears in the response only when the job status is set to Aborted.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataServiceJob.ErrorMessage">
+            <summary>
+            A string containing an error message if an error occurs while processing the job.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.LoadOperation">
+            <summary>
+            The type of operation to perform when uploading a data source.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.LoadOperation.Complete">
+            <summary>
+            Publishes entity data to a new data source or overwrites an existing data source. 
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.LoadOperation.CompleteStaging">
+            <summary>
+            Performs the same operation as "complete" except that the data source data is staged and not published. 
+            Use the query URLs with the isStaged parameter set to 1 (true) to query the staged data source. 
+            Staged data sources that are not published are deleted after 30 days.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.LoadOperation.Incremental">
+            <summary>
+            Edit, add and delete entities in an existing data source. If you want to delete entities, you must add a 
+            property named __deleteEntity to the schema and set it to 1 or true for each entity that you want to remove.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.LoadOperation.IncrementalStaging">
+            <summary>
+            Performs the same operation as "incremental" except that the data source update is staged and not published. 
+            Use the query URLs with the isStaged parameter set to 1 or true to query the staged data source. 
+            Staged data sources that are not published are deleted after 30 days.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.DataflowJob">
+            <summary>
+            An object that represents a single data flow job.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataflowJob.#ctor">
+            <summary>
+            An object that represents a single data flow job.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataflowJob.#ctor(BingMapsSDSToolkit.DataSourceAPI.DataServiceJob)">
+            <summary>
+            An object that represents a single data flow job.
+            </summary>
+            <param name="job">A data service job to convert into a DataflowJob.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowJob.FailedEntityCount">
+            <summary>
+            The number of entities that did not process successfully because of an error.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowJob.ProcessedEntityCount">
+            <summary>
+            The number of entities that were processed. This number included entities that were processed successfully and those that failed. If the field is set to 0, the number of processed entries is not known.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowJob.TotalEntityCount">
+            <summary>
+            The total number of entities that were uploaded.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.DataSourceDetails">
+            <summary>
+            An object that contains a bunch of information about a data source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSourceDetails.JobId">
+            <summary>
+            The Job Id from when the data source was uploaded.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSourceDetails.Disclaimer">
+            <summary>
+            A disclaimer that indicates if the data source is owned or managed by Microsoft or not.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSourceDetails.Updated">
+            <summary>
+            The date and time the data source was uploaded or last updated.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSourceDetails.IsPublic">
+            <summary>
+            A boolean indicating if the data source is public or not.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSourceDetails.IsStaging">
+            <summary>
+            A boolean indicating if the data source is in the staging environment or not.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSourceDetails.IsActive">
+            <summary>
+            A boolean indicating if the data source is active or not. 
+            Non-active data sources are earlier versions of the data source.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.DataSource">
+            <summary>
+            A data source object used for storing a data set. Can be uploaded, downloaded and converted into various file formats.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.#ctor">
+            <summary>
+            A data source object used for storing a data set. Can be uploaded, downloaded and converted into various file formats.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.#ctor(System.String)">
+            <summary>
+            A data source object used for storing a data set. Can be uploaded, downloaded and converted into various file formats.
+            </summary>
+            <param name="queryUrl">A url that is used to query a data source. This is parsed into it's individual components; accessID, name, entityTypeName</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.#ctor(System.String,System.String)">
+            <summary>
+            A data source object used for storing a data set. Can be uploaded, downloaded and converted into various file formats.
+            </summary>
+            <param name="name">The name of the data source.</param>
+            <param name="entityTypeName">The entity type name of the data source.</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.#ctor(System.String,System.String,System.String)">
+            <summary>
+            A data source object used for storing a data set. Can be uploaded, downloaded and converted into various file formats.
+            </summary>
+            <param name="accessId">The accessId of the data source.</param>
+            <param name="name">The name of the data source.</param>
+            <param name="entityTypeName">The entity type name of the data source.</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.#ctor(BingMapsSDSToolkit.BasicDataSourceInfo)">
+            <summary>
+            A data source object used for storing a data set. Can be uploaded, downloaded and converted into various file formats.
+            </summary>
+            <param name="info">Basic information about the data source.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSource.Info">
+            <summary>
+            Basic information about the data source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSource.ColumnHeaders">
+            <summary>
+            The column header information for the data source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataSource.Rows">
+            <summary>
+            The rows of data in the data source.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.DataSource.GeocodeStatusChanged">
+            <summary>
+            An event that provides update messages during the batch geocode process of the data source.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.ReadAsync(System.IO.Stream,BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat)">
+            <summary>
+            Parses a stream of a Bing Maps data source file and populates the data source.
+            </summary>
+            <param name="stream">The file stream of a Bing Maps data source file.</param>
+            <param name="dataSourceFormat">The data source format.</param>
+            <returns>A boolean value indicating if it was able to parse the file stream.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.WriteAsync(System.IO.Stream,BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat)">
+            <summary>
+            Writes the data source to a stream as a formatted Bing Maps data source.
+            </summary>
+            <param name="outputStream">The output stream to write the data source to.</param>
+            <param name="dataSourceFormat">The data source format.</param>
+            <returns>A boolean value indicating if it was able to write data source successfully.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.WriteAsync(System.IO.Stream,BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat,System.Boolean)">
+            <summary>
+            Writes the data source to a stream as a formatted Bing Maps data source.
+            </summary>
+            <param name="outputStream">The output stream to write the data source to.</param>
+            <param name="dataSourceFormat">The data source format.</param>
+            <param name="skipEmptyLocations">A boolean value indicating if rows that don't have locaiton information (latitude, longitude, or geography column) should be written or not.</param>
+            <returns>A boolean value indicating if it was able to write data source successfully.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.Validate">
+            <summary>
+            Scans a data source to verify that it is valid. If Latitude, Longitude or primary key columns do not exist, they will be added.
+            </summary>
+            <returns>An object containing errors, warnings, and information on if all rows contain location information.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.GetColumnNameIndex(System.String)">
+            <summary>
+            Gets the column header index by column Name. Returns -1 if column does not exist. Search is case sensitive.
+            </summary>
+            <param name="name">Name of column to get index for.</param>
+            <returns>Index of the named column, or -1 if column name not found.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.GetColumnNameIndex(System.String,System.Boolean)">
+            <summary>
+            Gets the column header index by column Name. Returns -1 if column does not exist.
+            </summary>
+            <param name="name">Name of column to get index for.</param>
+            <param name="ignoreCase">A boolean indicating if the search should be case sensitive or not.</param>
+            <returns>Index of the named column, or -1 if column name not found.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.GetColumnTypeIndex(System.Type)">
+            <summary>
+            Gets a list of column header indices by column type. 
+            </summary>
+            <param name="type">The column type to search for.</param>
+            <returns>A list of column indices the have the specified type.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.GetPrimaryKeyColumnIndex">
+            <summary>
+            Gets the index of the primary key column. If no primary key specified it will return -1.
+            </summary>
+            <returns>The index of the primary key column, or -1.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.GetRowByPrimaryKeyValue(System.String)">
+            <summary>
+            Searches through all rows in the data source for a row that has the specified primary key value specified. 
+            If no row found, or no primary key specified in data source, null will be returned.
+            </summary>
+            <param name="keyValue">The primary key value for the row you want to retrieve.</param>
+            <returns>An object array for a row, or null if no primary key specified in data source or row is not found.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.Geocode(System.String)">
+            <summary>
+            Batch geocodes all the data in a data source and updates it accordingly.
+            Only Geocodes rows that do not have Latitude, Longitude, or a Geography value specified.
+            Optimizes batch geocoding by grouping rows with identical addesses together.
+            </summary>    
+            <param name="bingMapsKey">A Bing Maps key to use to geocode data.</param>
+            <returns>The results of the batch geocoding process.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.Geocode(System.String,System.String)">
+            <summary>
+            Batch geocodes all the data in a data source and updates it accordingly.
+            Only Geocodes rows that do not have Latitude, Longitude, or a Geography value specified.
+            Optimizes batch geocoding by grouping rows with identical addesses together.
+            </summary>   
+            <param name="bingMapsKey">A Bing Maps key to use to geocode data.</param>
+            <param name="culture">The culture parameter to use when goeocoding. Default: en-US</param>
+            <returns>The results of the batch geocoding process.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.DataSource.GetFirstColumnNameIndex(System.String[])">
+            <summary>
+            Takes a list of names and finds the index of the first name that appears in the data source. This is not case insensitive.
+            </summary>
+            <param name="names">Array of names to look for.</param>
+            <returns>The index of the column or -1.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat">
+            <summary>
+            The data format of a data source. Note data sources should follow the documented file schema.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat.CSV">
+            <summary>
+            Comma seperated (comma delimited) file format.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat.PIPE">
+            <summary>
+            Pipe (|) delimited file format.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat.TAB">
+            <summary>
+            Tab delimited file format.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat.XML">
+            <summary>
+            XML file that matches the schema required for Bing Spatial Data Services data sources.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat.KML">
+            <summary>
+            A file in KML or KMZ format.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DataSourceAPI.DataSourceFormat.SHP">
+            <summary>
+            A file in the ESRI Shapefile format.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.ValidationResult">
+            <summary>
+            An object used to store the results of validating a data source.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.DataSourceAPI.ValidationResult.#ctor">
+            <summary>
+            An object used to store the results of validating a data source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.ValidationResult.Errors">
+            <summary>
+            A list of error messages. This should be empty for valid data sources.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.ValidationResult.Warnings">
+            <summary>
+            A list of warning messages that may be an issue if uploading a data source. i.e. More than 200,000 rows. Or not Latitue/Longitude values specified.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.ValidationResult.AllRowsHaveLocationInfo">
+            <summary>
+            A boolean value indicating if all rows contain valid location data, either a Latitude/Longitude pair, or a Geography object.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.Link">
+            <summary>
+            A data source job link.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.Link.Role">
+            <summary>
+            The role of the link.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.Link.Name">
+            <summary>
+            The name of the link.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.Link.Url">
+            <summary>
+            The URL of the link.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.DataflowResultSet">
+            <summary>
+            A collection of DataflowJob's
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowResultSet.EstimatedTotal">
+            <summary>
+            An estimate of the total number of resources in the ResourceSet.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowResultSet.Resources">
+            <summary>
+            A collection of one or more DataflowJob resources.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DataSourceAPI.DataflowResponse">
+            <summary>
+            A response object from the Bing Spatial Data Services when making job requests.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowResponse.Copyright">
+            <summary>
+            A copyright notice.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowResponse.BrandLogoUri">
+            <summary>
+            A URL that references a brand image to support contractual branding requirements.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowResponse.StatusCode">
+            <summary>
+            The HTTP Status code for the request.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowResponse.StatusDescription">
+            <summary>
+            A description of the HTTP status code.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowResponse.AuthenticationResultCode">
+            <summary>
+            A status code that offers additional information about authentication success or failure.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowResponse.ErrorDetails">
+            <summary>
+            A collection of error descriptions. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowResponse.TraceId">
+            <summary>
+            A unique identifier for the request.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.DataSourceAPI.DataflowResponse.ResourceSets">
+            <summary>
+            A collection of DataflowResourceSet objects. A DataflowResourceSet is a container of DataflowJob's returned by the request.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocodeManager">
+            <summary>
+            A tool for doing batch geocoding and reverse geocoding using the Bing Spatial Data Services.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocodeManager._statusUpdateInterval">
+            <summary>
+            Interval used to check the status of the batch job in ms.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocodeManager.#ctor">
+            <summary>
+            A tool for doing batch geocoding and reverse geocoding using the Bing Spatial Data Services.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocodeManager.#ctor(System.Int32)">
+            <summary>
+            A tool for doing batch geocoding and reverse geocoding using the Bing Spatial Data Services.
+            </summary>
+            <param name="statusUpdateInterval">The update interval in ms that should be used when checking the status of a job. Default 15000ms (15 sec.)</param>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocodeManager.StatusChanged">
+            <summary>
+            An event that provides update messages during the batch geocode process.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocodeManager.Geocode(BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeFeed,System.String)">
+            <summary>
+            Method to geocode a set of data.
+            </summary>
+            <param name="dataFeed">GeocodeFeed which contains the data to batch geocode/reverse geocode.</param>
+            <param name="bingMapsKey">Bing Maps key to use for accessing service.</param>
+            <returns>The results of the batch geocoding process.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocodeManager.CreateJob(BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeFeed,System.String)">
+            <summary>
+            Creates a geocode dataflow job and uploads spatial data to process.
+            </summary>
+            <param name="dataFeed">The address data to geocode.</param>
+            <param name="bingMapsKey">The Bing Maps Key to use for this job. The same key is used to get job status and download results.</param>
+            <returns>A URL that defines the location of the geocode dataflow job that was created.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocodeManager.CheckStatus(System.String,System.String)">
+            <summary>
+            Checks the status of a dataflow job and defines the URLs to use to download results when the job is completed.
+            </summary>
+            <param name="dataflowJobLocation">The URL to use to check status for a job.</param>
+            <param name="bingMapsKey">The Bing Maps Key for this job. The same key is used to create the job and download results.</param>
+            <returns>
+            A DownloadDetails object that contains the status of the geocode dataflow job (Completed, Pending, Aborted). 
+            When the status is set to Completed, DownloadDetails also contains the links to download the results
+            </returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocodeManager.DownloadResults(BingMapsSDSToolkit.DownloadDetails,System.String)">
+            <summary>
+            Downloads job results to files names Success.txt (successfully geocoded results) and Failed.txt (info about spatial data that was not geocoded successfully).
+            </summary>
+            <param name="statusDetails">Inclues job status and the URLs to use to download all geocoded results.</param>
+            <param name="bingMapsKey">The Bing Maps Key for this job. The same key is used to create the job and get job status. </param>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchFileFormat">
+            <summary>
+            The data format of a batch geocode file.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchFileFormat.CSV">
+            <summary>
+            Comma seperated (comma delimited) file format.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchFileFormat.PIPE">
+            <summary>
+            Pipe (|) delimited file format.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchFileFormat.TAB">
+            <summary>
+            Tab delimited file format.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchFileFormat.XML">
+            <summary>
+            XML file that matches the schema required for batch geocoding files in the Bing Spatial Data Services.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType">
+            <summary>
+            The different entity types a geocode result can have.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Address">
+            <summary>
+            A physical address of a location.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.AdminDivision1">
+            <summary>
+            A first-order, initial political subdivision of a Sovereign, such as a state, a province, a department, a region, or a prefecture.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.AdminDivision2">
+            <summary>
+            A second-order political subdivision of a CountryRegion, a division of an AdminDivision1 or a Dependent.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.AdminDivision3">
+            <summary>
+            A third-order political subdivision of a CountryRegion, a division of an AdminDivision2.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.AdministrativeBuilding">
+            <summary>
+            A building that contains governmental offices or facilities.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.AdministrativeDivision">
+            <summary>
+            An administrative division of a CountryRegion, undifferentiated as to administrative level.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.AgriculturalStructure">
+            <summary>
+            A Structure used for agricultural purposes.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Airport">
+            <summary>
+            A place where aircraft regularly land and take off, with runways, navigational aids, and facilities for handling passengers and/or cargo.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.AirportRunway">
+            <summary>
+            An improved surface suitable for landing airplanes.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.AmusementPark">
+            <summary>
+            A facility that contains rides and other attractions, such as a theme park.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.AncientSite">
+            <summary>
+            A place where archeological remains, old structures, or cultural artifacts are located.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Aquarium">
+            <summary>
+            A place where marine life is displayed to the public.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Archipelago">
+            <summary>
+            A logical grouping of Islands.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Autorail">
+            <summary>
+            A Railway that carries automobiles.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Basin">
+            <summary>
+            A low-lying area mostly or wholly surrounded by higher ground.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Battlefield">
+            <summary>
+            A site of a land battle of historical importance.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Bay">
+            <summary>
+            An area of water partially enclosed by an indentation of shoreline.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Beach">
+            <summary>
+            A Coast with a surface of sand, pebbles, or small rocks.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.BorderPost">
+            <summary>
+            A post or station at an international boundary for regulating the movement of people and goods.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Bridge">
+            <summary>
+            A structure erected across an obstacle, such as a stream or road, that is used by vehicles and pedestrians.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.BusinessCategory">
+            <summary>
+            A category that identifies a kind of business.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.BusinessCenter">
+            <summary>
+            A place where a number of businesses are located.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.BusinessName">
+            <summary>
+            A name that identifies a business.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.BusinessStructure">
+            <summary>
+            A Structure used for commercial purposes.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.BusStation">
+            <summary>
+            A place where buses pick up and discharge passengers.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Camp">
+            <summary>
+            A site occupied by tents, huts, or other shelters for temporary use.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Canal">
+            <summary>
+            An artificially constructed watercourse.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Cave">
+            <summary>
+            An underground passageway or chamber, or a cavity on the side of a cliff.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.CelestialFeature">
+            <summary>
+            A spherical body in space.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Cemetery">
+            <summary>
+            A burial place or a burial ground.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Census1">
+            <summary>
+            One of the set of the most detailed, lowest-level CensusDistricts.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Census2">
+            <summary>
+            One of the set of second-order CensusDistricts composed by aggregating Census1s.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.CensusDistrict">
+            <summary>
+            A district defined by a national census bureau and used for statistical data collection.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Channel">
+            <summary>
+            A body of water between two landmasses.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Church">
+            <summary>
+            A building for public Christian worship.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.CityHall">
+            <summary>
+            A building that contains the administrative offices of a municipal government.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Cliff">
+            <summary>
+            A high, steep-to-perpendicular slope that overlooks a lower area or a water body.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ClimateRegion">
+            <summary>
+            An area of homogenous climactic conditions, as defined by modified Koeppen classes.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Coast">
+            <summary>
+            An area of land adjacent to a WaterFeature.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.CommunityCenter">
+            <summary>
+            A facility for community recreation and meetings.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Continent">
+            <summary>
+            A very large landmass, surrounded by water and larger than an Island, that forms one of the primary divisions of land on a CelestialFeature.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ConventionCenter">
+            <summary>
+            A large meeting hall for conventions and other meetings, and shows.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.CountryRegion">
+            <summary>
+            A primary PoliticalUnit.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Courthouse">
+            <summary>
+            A building in which courts of law are held.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Crater">
+            <summary>
+            A generally circular, saucer-shaped, or bowl-shaped depression caused by volcanic or meteorite explosive action.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.CulturalRegion">
+            <summary>
+            An area of land with strong local identity, but no political status.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Current">
+            <summary>
+            A large area of ocean where surface water flows in a certain constant general direction.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Dam">
+            <summary>
+            A barrier constructed across a stream to impound water.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Delta">
+            <summary>
+            An area where a River divides into many separate water channels as it enters a Sea or a Lake.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Dependent">
+            <summary>
+            A PoliticalUnit that is politically controlled by a Sovereign, but separate geographically, and to some degree politically, such as a territory, a colony, or a dependency.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Desert">
+            <summary>
+            A large area with low rainfall and little or no vegetation.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.DisputedArea">
+            <summary>
+            An area in political dispute that is not considered part of any CountryRegion.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.DrainageBasin">
+            <summary>
+            A land region where all surface water drains into one specific WaterFeature.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Dune">
+            <summary>
+            A wave form, a ridge, or a star-shaped feature composed of sand.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.EarthquakeEpicenter">
+            <summary>
+            A place where the destructive force of a specific earthquake is centered.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Ecoregion">
+            <summary>
+            A region with a homogeneous ecosystem, flora, and/or fauna.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.EducationalStructure">
+            <summary>
+            A place for providing instruction.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ElevationZone">
+            <summary>
+            An area where the surface elevation of all land is within a defined range.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Factory">
+            <summary>
+            A building or set of buildings where goods are manufactured, processed, or fabricated.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.FerryRoute">
+            <summary>
+            A route used by a boat, or by other floating conveyances regularly used to transport people and vehicles across a WaterFeature.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.FerryTerminal">
+            <summary>
+            A structure and associated facilities where a ferry boat docks and takes on passengers, automobiles, and/or cargo.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.FishHatchery">
+            <summary>
+            A place for hatching fish eggs or raising fish.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Forest">
+            <summary>
+            A large area of trees.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.FormerAdministrativeDivision">
+            <summary>
+            An AdministrativeDivision that no longer exists.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.FormerPoliticalUnit">
+            <summary>
+            A PoliticalUnit that no longer exists.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.FormerSovereign">
+            <summary>
+            A Sovereign that no longer exists.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Fort">
+            <summary>
+            A defensive structure or earthwork.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Garden">
+            <summary>
+            An enclosure for displaying selected plant life.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.GeodeticFeature">
+            <summary>
+            An invisible point, line, or area on the surface of a CelestialFeature that is used for geographic reference.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.GeoEntity">
+            <summary>
+            A single thing that has spatial extent and location.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.GeographicPole">
+            <summary>
+            One of the two points of intersection of the surface of a CelestialFeature and its axis of rotation.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Geyser">
+            <summary>
+            A HotSpring that intermittently shoots water into the air.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Glacier">
+            <summary>
+            A mass of ice, usually at high latitudes or high elevations, with sufficient thickness to flow away from the source area.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.GolfCourse">
+            <summary>
+            A recreational field where golf is played.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.GovernmentStructure">
+            <summary>
+            A Structure typically owned and operated by a governmental entity.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Heliport">
+            <summary>
+            A place where helicopters land and take off.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Hemisphere">
+            <summary>
+            A half of the surface of a Celestial Feature, usually specified as northern, southern, eastern, or western.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.HigherEducationFacility">
+            <summary>
+            A place where students receive advanced or specialized education, such as a college or a university.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.HistoricalSite">
+            <summary>
+            A place of historical importance.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Hospital">
+            <summary>
+            A building in which the sick or injured, especially those confined to bed, are medically treated.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.HotSpring">
+            <summary>
+            A place where hot water emerges from the ground.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Ice">
+            <summary>
+            A large area covered with frozen water.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.IndigenousPeoplesReserve">
+            <summary>
+            An area of land set aside for aboriginal, tribal, or native populations.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.IndustrialStructure">
+            <summary>
+            A Structure used for industrial or extractive purposes.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.InformationCenter">
+            <summary>
+            A place where tourists and citizens can obtain information.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.InternationalDateline">
+            <summary>
+            The line running between geographic poles designated as the point where a calendar day begins.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.InternationalOrganization">
+            <summary>
+            An area of land composed of the member PoliticalUnits of an official governmental organization composed of two or more Sovereigns.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Island">
+            <summary>
+            An area of land completely surrounded by water and smaller than a Continent.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Isthmus">
+            <summary>
+            A narrow strip of land connecting two larger landmasses and bordered by water on two sides.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Junction">
+            <summary>
+            A place where two or more roads join.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Lake">
+            <summary>
+            An inland water body, usually fresh water.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.LandArea">
+            <summary>
+            A relatively small area of land exhibiting a common characteristic that distinguishes it from the surrounding land.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Landform">
+            <summary>
+            A natural geographic feature on dry land.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.LandmarkBuilding">
+            <summary>
+            A Structure that is a well-known point of reference.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.LatitudeLine">
+            <summary>
+            An imaginary line of constant latitude that circles a CelestialFeature, in which every point on the line is equidistant from a geographic pole.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Library">
+            <summary>
+            A place where books and other media are stored and loaned out to the public or others.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Lighthouse">
+            <summary>
+            A tall structure with a major navigation light.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.LinguisticRegion">
+            <summary>
+            An area of land where most of the population speaks the same language or speaks languages in the same linguistic family.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.LongitudeLine">
+            <summary>
+            An imaginary line of constant longitude on a CelestialFeature that runs from one geographic pole to the other.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.MagneticPole">
+            <summary>
+            A point on the surface of a CelestialFeature that is the origin for lines of magnetic force.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Marina">
+            <summary>
+            A harbor facility for small boats.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Market">
+            <summary>
+            A place where goods are bought and sold.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.MedicalStructure">
+            <summary>
+            A Structure in which the sick or injured are medically treated.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.MetroStation">
+            <summary>
+            A place where urban rapid transit trains pick up and drop off passengers, often underground or elevated.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.MilitaryBase">
+            <summary>
+            A place used by an armed service for storing arms and supplies, for accommodating and training troops, and as a base from which operations can be initiated.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Mine">
+            <summary>
+            A place where mineral ores are extracted from the ground by excavating surface pits and subterranean passages.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Mission">
+            <summary>
+            A place characterized by dwellings, school, church, hospital, and other facilities operated by a religious group for the purpose of providing charitable services and to propagate religion.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Monument">
+            <summary>
+            A commemorative structure or statue.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Mosque">
+            <summary>
+            A building for public Islamic worship.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Mountain">
+            <summary>
+            An elevated landform that rises, often steeply, above surrounding land on most sides.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.MountainRange">
+            <summary>
+            A group of connected Mountains.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Museum">
+            <summary>
+            A building where objects of permanent interest in one or more of the arts and sciences are preserved and exhibited.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.NauticalStructure">
+            <summary>
+            A Structure used for nautical purposes.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.NavigationalStructure">
+            <summary>
+            A Structure used for navigational purposes.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Neighborhood">
+            <summary>
+            A section of a PopulatedPlace, usually homogenous and/or well-known, but often with indistinct boundaries.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Oasis">
+            <summary>
+            An area in a Desert that contains water and plant life.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ObservationPoint">
+            <summary>
+            A wildlife or scenic observation point.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Ocean">
+            <summary>
+            A vast expanse of salt water, one of the major Seas covering part of the earth.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.OfficeBuilding">
+            <summary>
+            A building that contains offices.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Park">
+            <summary>
+            An area maintained as a place of scenic beauty, or for recreation.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ParkAndRide">
+            <summary>
+            A parking lot reserved for mass transit commuters.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Pass">
+            <summary>
+            A break in a MountainRange used for transportation from one side of the mountain range to the other.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Peninsula">
+            <summary>
+            An elongated area of land projecting into a body of water and surrounded by water on three sides.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Plain">
+            <summary>
+            An extensive area of comparatively level to gently undulating land, lacking surface irregularities.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Planet">
+            <summary>
+            A CelestialFeature that orbits a star.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Plate">
+            <summary>
+            A section of a planetary crust that is in motion relative to other tectonic plates.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Plateau">
+            <summary>
+            An elevated plain with steep slopes on one or more sides.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.PlayingField">
+            <summary>
+            A tract of land used for playing team sports and/or other athletic events.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Pole">
+            <summary>
+            A point on the surface of a CelestialFeature that marks an important geographical or astronomical location.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.PoliceStation">
+            <summary>
+            A building in which police are stationed or posted.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.PoliticalUnit">
+            <summary>
+            An area of land with well-defined borders that is subject to a specific political administration.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.PopulatedPlace">
+            <summary>
+            A concentrated area of human settlement, such as a city, a town, or a village.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Postcode">
+            <summary>
+            A district used by a postal service as an aid in postal distribution and having a unique identifying code.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Postcode1">
+            <summary>
+            One of the set of lowest-level and most detailed set of PostCodes in a Sovereign.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Postcode2">
+            <summary>
+            One of the set of second-order (one level up from the lowest level) Postcodes in a Sovereign, composed by aggregating Postcode1s.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Postcode3">
+            <summary>
+            One of the set of third-order Postcodes in a Sovereign, composed by aggregating Postcode2s.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Postcode4">
+            <summary>
+            One of the set of fourth-order Postcodes in a Sovereign, composed by aggregating Postcode3s.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.PostOffice">
+            <summary>
+            A public building in which mail is received, sorted, and distributed.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.PowerStation">
+            <summary>
+            A facility for generating electric power.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Prison">
+            <summary>
+            A facility for confining persons convicted or accused of crimes.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Promontory">
+            <summary>
+            A small, usually pointed Peninsula that often marks the terminus of a landmass.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.RaceTrack">
+            <summary>
+            A track where races are held.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Railway">
+            <summary>
+            A permanent twin steel-rail track on which trains move.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.RailwayStation">
+            <summary>
+            A place comprised of ticket offices, platforms, and other facilities for loading and unloading train passengers and freight.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.RecreationalStructure">
+            <summary>
+            A Structure used for watching or participating in sports or other athletic activities.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Reef">
+            <summary>
+            A partly submerged feature, usually of coral, that projects upward near the water"s surface and can be a navigational hazard.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Region">
+            <summary>
+            A large area of land where a specific characteristic of the land or its people is relatively homogenous.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ReligiousRegion">
+            <summary>
+            An area of land where the population holds relatively homogenous religious practices.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ReligiousStructure">
+            <summary>
+            A structure where organized, public religious services are held.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ResearchStructure">
+            <summary>
+            A Structure used for scientific purposes.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Reserve">
+            <summary>
+            A tract of public land set aside for restricted use or reserved for future use.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ResidentialStructure">
+            <summary>
+            A house, a hut, an apartment building, or another structure where people reside.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.RestArea">
+            <summary>
+            A designated area, usually along a major highway, where motorists can stop to relax.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.River">
+            <summary>
+            A stream of running water.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Road">
+            <summary>
+            An open way with an improved surface for efficient transportation of vehicles.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.RoadBlock">
+            <summary>
+            A road.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.RoadIntersection">
+            <summary>
+            A junction where two or more roads meet or cross at the same grade.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Ruin">
+            <summary>
+            A destroyed or decayed structure that is no longer functional.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Satellite">
+            <summary>
+            A CelestialFeature that orbits a Planet.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.School">
+            <summary>
+            A place where people, usually children, receive a basic education.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ScientificResearchBase">
+            <summary>
+            A scientific facility used as a base from which research is carried out or monitored.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Sea">
+            <summary>
+            A large area of salt water.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.SeaplaneLandingArea">
+            <summary>
+            A place on a water body where floatplanes land and take off.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ShipWreck">
+            <summary>
+            A site of the remains of a wrecked vessel.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.ShoppingCenter">
+            <summary>
+            A collection of linked retail establishments.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Shrine">
+            <summary>
+            A structure or place that memorializes a person or religious concept.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Site">
+            <summary>
+            A place most notable because of an event that occurred in that location.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.SkiArea">
+            <summary>
+            A place developed for recreational Alpine or Nordic skiing.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Sovereign">
+            <summary>
+            An independent nation-state, the highest level of political authority in that location.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.SpotElevation">
+            <summary>
+            A point on a CelestialFeature"s surface with a known elevation.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Spring">
+            <summary>
+            A place where water emerges from the ground.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Stadium">
+            <summary>
+            A structure with an enclosure for athletic games with tiers of seats for spectators.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.StatisticalDistrict">
+            <summary>
+            An area of land defined as a district to be used for statistical collection or service provision.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Structure">
+            <summary>
+            A building, a facility, or a group of buildings and/or facilities used for a certain common purpose.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.TectonicBoundary">
+            <summary>
+            A line that forms the border between two Plates.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.TectonicFeature">
+            <summary>
+            A Landform related to Plates and their movement.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Temple">
+            <summary>
+            An edifice dedicated to religious worship.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.TimeZone">
+            <summary>
+            A large area within which the same time standard is used.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.TouristStructure">
+            <summary>
+            A Structure typically used by tourists.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Trail">
+            <summary>
+            A path, a track, or a route used by pedestrians, animals, or off-road vehicles.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.TransportationStructure">
+            <summary>
+            A Structure used for transportation purposes.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Tunnel">
+            <summary>
+            A subterranean passageway for transportation.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.UnderwaterFeature">
+            <summary>
+            A feature on the floor of a WaterFeature.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.UrbanRegion">
+            <summary>
+            An area of land with high population density and extensive urban development.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Valley">
+            <summary>
+            A low area surrounded by higher ground on two or more sides.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Volcano">
+            <summary>
+            A Mountain formed by volcanic action and composed of volcanic rock.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Wall">
+            <summary>
+            An upright structure that encloses, divides, or protects an area.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Waterfall">
+            <summary>
+            A vertical or very steep section of a River.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.WaterFeature">
+            <summary>
+            A geographic feature that has water on its surface.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Well">
+            <summary>
+            A cylindrical hole, pit, or tunnel drilled or dug down to a depth from which water, oil, or gas can be pumped or brought to the surface.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Wetland">
+            <summary>
+            An area of high soil moisture, partially or intermittently covered with shallow water.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntityType.Zoo">
+            <summary>
+            A zoological garden or park where wild animals are kept for exhibition.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.Address.AddressLine">
+            <summary>
+            A string specifying the street line of an address. The AddressLine property is the most precise, 
+            official line for an address relative to the postal agency that services the area specified by the 
+            Locality, PostalTown, or PostalCode properties.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.Address.AdminDistrict">
+            <summary>
+            A string specifying the subdivision name within the country or region for an address. 
+            This element is also commonly treated as the first order administrative subdivision; but in some cases, 
+            it is the second, third, or fourth order subdivision within a country, a dependency, or a region.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.Address.CountryRegion">
+            <summary>
+            A string specifying the country or region name of an address.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.Address.AdminDistrict2">
+            <summary>
+            A string specifying the higher level administrative subdivision used in some countries or regions.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.Address.FormattedAddress">
+            <summary>
+            A string that contains a full formatted address.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.Address.Locality">
+            <summary>
+            A string specifying the populated place for the address. This commonly refers to a city, but may refer 
+            to a suburb or a neighborhood in certain countries.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.Address.PostalCode">
+            <summary>
+            A string specifying the post code, postal code, or ZIP Code of an address.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.Address.PostalTown">
+            <summary>
+            A string specifying the post town of an address.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.Address.Landmark">
+            <summary>
+            A string specifying a landmark associated with an address.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.Address.Neighborhood">
+            <summary>
+            A string specifying the neighborhood for an address.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.BaseRequest.ConfidenceFilter">
+            <summary>
+            A string specifying the minimum confidence required for the result. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.BaseRequest.Culture">
+            <summary>
+            A string specifying the culture. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.BaseRequest.IncludeNeighborhood">
+            <summary>
+            A boolean value that specifies whether to return neighborhood information in the address.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.BaseRequest.MaxResults">
+            <summary>
+            An integer from 1 to 20 specifying the maximum number of results to return.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocoderResults">
+            <summary>
+            An object used to store the results of a batch geocoding job.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocoderResults.Succeeded">
+            <summary>
+            All the locations the data that was geocoded successfully.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocoderResults.Failed">
+            <summary>
+            All the locations the data that failed to be geocoded.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.BatchGeocoderResults.Error">
+            <summary>
+            Error message if unable to process batch geocode job.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.CalculationMethodTypes">
+            <summary>
+            The types of calculations methods used for location coodinates.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.CalculationMethodTypes.Interpolation">
+            <summary>
+            The geocode point was matched to a point on a road using interpolation.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.CalculationMethodTypes.InterpolationOffset">
+            <summary>
+            The geocode point was matched to a point on a road using interpolation with an additional offset to shift the point to the side of the street.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.CalculationMethodTypes.ParcelCentroid">
+            <summary>
+            The geocode point was matched to the center of a parcel.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.CalculationMethodTypes.Rooftop">
+            <summary>
+            The geocode point was matched to the rooftop of a building.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.ConfidenceTypes">
+            <summary>
+            The confidence types of a geocode result.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.ConfidenceTypes.Low">
+            <summary>
+            Low confidence. 
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.ConfidenceTypes.Medium">
+            <summary>
+            Medium confidence. 
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.ConfidenceTypes.High">
+            <summary>
+            High confidence. 
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.ConfidenceTypes.IsValid(System.String)">
+            <summary>
+            Checks a string confidence filter to see if it is a valid value.
+            </summary>
+            <param name="confidence">String confidence value.</param>
+            <returns>A boolean indicating if the value is valid or not.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.BoundingBox">
+            <summary>
+            A set of geographical coordinates in degrees that define an area on the Earth that contains the location. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.BoundingBox.SouthLatitude">
+            <summary>
+            The southern most latitude.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.BoundingBox.WestLongitude">
+            <summary>
+            The western most longitude.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.BoundingBox.NorthLatitude">
+            <summary>
+            The northern most latitude.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.BoundingBox.EastLongitude">
+            <summary>
+            The eastern most longitude.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.ConfidenceFilter">
+            <summary>
+            A string specifying the minimum confidence required for the result. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.ConfidenceFilter.MinimumConfidence">
+            <summary>
+            A string specifying the minimum confidence required for the result. 
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.MatchCodeTypes">
+            <summary>
+            Match codes used to indicate the level of match a geocode result has to the original address.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.MatchCodeTypes.Good">
+            <summary>
+            The location has only one match or all returned matches are considered strong matches. 
+            For example, a query for New York returns several Good matches. 
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.MatchCodeTypes.Ambiguous">
+            <summary>
+            The location is one of a set of possible matches. 
+            For example, when you query for the street address 128 Main St., the response may return 
+            two locations for 128 North Main St. and 128 South Main St. because there is not enough 
+            information to determine which option to choose. 
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.MatchCodeTypes.UpHierarchy">
+            <summary>
+            The location represents a move up the geographic hierarchy. This occurs when a match for 
+            the location request was not found, so a less precise result is returned. 
+            For example, if a match for the requested address cannot be found, then a match code of 
+            UpHierarchy with a RoadBlock entity type may be returned.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.MatchCodeTypes.ParseMatchCodes(System.String)">
+            <summary>
+            Takes in a comma seperated string of match codes and parses them into an array of string.
+            </summary>
+            <param name="matchCodes">A string containing comma seperated Match Codes.</param>
+            <returns>An array of MatchCodeTypes</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntity">
+            <summary>
+            An eneity in the the geocode feed to be geocoded or reverse geocoded.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntity.#ctor">
+            <summary>
+            An eneity in the the geocode feed to be geocoded or reverse geocoded.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntity.#ctor(System.String)">
+            <summary>
+            An eneity in the the geocode feed to be geocoded or reverse geocoded.
+            </summary>
+            <param name="query">A query string that contains address information to geocode.Can be used instead of an address.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntity.Id">
+            <summary>
+            A string that contains a unique ID to assign to the entity.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntity.ReverseGeocodeRequest">
+            <summary>
+            The reverse geocode request being made.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntity.GeocodeRequest">
+            <summary>
+            The geocode request being made.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntity.GeocodeResponse">
+            <summary>
+            The results of the geocoding/reverse geocoding process. Do not set this property.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntity.StatusCode">
+            <summary>
+            A string that provides information about the success of the operation.
+            Do not set this property.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntity.FaultReason">
+            <summary>
+            Information about an error that occurred during the geocode dataflow job. 
+            This value is provided only for data that was not processed successfully.
+            Do not set this property.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeEntity.TraceId">
+            <summary>
+            An id used to trace the request through the Bing servers. Do not set this property.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeFeed">
+            <summary>
+            An object that contains the data that is to be geocoded, or has been geocoded.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeFeed.#ctor">
+            <summary>
+            An object that contains the data that is to be geocoded, or has been geocoded.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeFeed.Entities">
+            <summary>
+            A list of all entities in the geocode feed.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeFeed.Version">
+            <summary>
+            The Geocode Dataflow API version to use. This always returns version 2.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeFeed.ReadAsync(System.IO.Stream)">
+            <summary>
+            Deserializes a GeocodeFeed from an XML stream.
+            </summary>
+            <param name="stream">GeocodeFeed XML feed stream.</param>
+            <returns>A GeocodeFeed that has been parsed from a stream.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeFeed.ReadAsync(System.IO.Stream,BingMapsSDSToolkit.GeocodeDataflowAPI.BatchFileFormat)">
+            <summary>
+            Deserializes a GeocodeFeed from a file stream.
+            </summary>
+            <param name="stream">GeocodeFeed a file stream.</param>
+            <param name="fileFormat">The batch file format of the stream.</param>
+            <returns>A GeocodeFeed that has been parsed from a stream.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeFeed.WriteAsync(System.IO.Stream)">
+            <summary>
+            Serializes a GeocodeFeed into an XML stream. 
+            </summary>
+            <param name="outputStream">Stream to output XML to.</param>
+            <returns>An async Task that writes the geocode feed to a stream.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeFeed.GetEntityById(System.String)">
+            <summary>
+            Searches for the first entity that has the specified id value.
+            </summary>
+            <param name="id">Id of entity to retrieve.</param>
+            <returns>An entity with the specified id or null.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeFeed.ContainsAddress(BingMapsSDSToolkit.GeocodeDataflowAPI.Address)">
+            <summary>
+            Checks to see if the geocode request contains and address. If it does, then it returns the string ID, otherwise it returns null.
+            </summary>
+            <param name="address">Address to search for.</param>
+            <returns>The ID of the matching geocode entity, or null.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodePoint">
+            <summary>
+            An object that stores the coordinate information.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodePoint.CalculationMethod">
+            <summary>
+            The method used to calculate the coordinate.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodePoint.Type">
+            <summary>
+            The Entity Type of the location result.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodePoint.UsageTypes">
+            <summary>
+            The recommended usage based on the calculation type.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeRequest">
+            <summary>
+            Request information for geocoding a location.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeRequest.#ctor">
+            <summary>
+            Request information for geocoding a location.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeRequest.#ctor(System.String)">
+            <summary>
+            Request information for geocoding a location.
+            </summary>
+            <param name="query">A query string that contains address information to geocode. Can be used instead of an address.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeRequest.Address">
+            <summary>
+            The address to geocode.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeRequest.IncludeQueryParse">
+            <summary>
+            A boolean value that specifies whether to return parsing information.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeRequest.IncludeQueryParseSpecified">
+            <summary>
+            A boolean indicating if the information on how the query propery was parsed should be returned.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeRequest.Query">
+            <summary>
+            A query string that contains address information to geocode. Can be used instead of an address.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeResponse">
+            <summary>
+            A geocode response object.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeResponse.Address">
+            <summary>
+            The geocoded address result.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeResponse.GeocodePoint">
+            <summary>
+            An array of coordinates for the resulting locaiton.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeResponse.QueryParseValue">
+            <summary>
+            An array of the parsed query properties.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeResponse.BoundingBox">
+            <summary>
+            A bounding box for viewing the location.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeResponse.Point">
+            <summary>
+            A coordinate for the geocoded location.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeResponse.Name">
+            <summary>
+            The name of the geocoded location.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeResponse.EntityType">
+            <summary>
+            The geocode entity type of the geocoded location.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeResponse.Confidence">
+            <summary>
+            The confidence of the geococded results.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.GeocodeResponse.MatchCodes">
+            <summary>
+            A comma seperated string of match codes. Use the MatchCodeTypes.ParseMatchCodes method to parse into an array of strings.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.QueryParseValue">
+            <summary>
+            A parsed query value.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.QueryParseValue.Property">
+            <summary>
+            The property name of the parsed query. See QueryParsePropertyTypes for possible values.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.QueryParseValue.Value">
+            <summary>
+            The value of parsed property.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.ReverseGeocodeRequest">
+            <summary>
+            Request information for reverse geocoding a location cooridinate.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.ReverseGeocodeRequest.Location">
+            <summary>
+            The location coordinate to reverse geocode.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeocodeDataflowAPI.ReverseGeocodeRequest.IncludeEntityTypes">
+            <summary>
+            A list of Geocode Entity Types to return. This parameter only returns a geocoded address if 
+            the entity type for that address is one of the entity types you specified.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeocodeDataflowAPI.QueryParsePropertyTypes">
+            <summary>
+            The different property names of a QueryParse object.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.QueryParsePropertyTypes.AddressLine">
+            <summary>
+            A string specifying the street line of an address. The AddressLine property is the most precise, 
+            official line for an address relative to the postal agency that services the area specified by the 
+            Locality, PostalTown, or PostalCode properties.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.QueryParsePropertyTypes.Locality">
+            <summary>
+            A string specifying the populated place for the address. This commonly refers to a city, but may 
+            refer to a suburb or a neighborhood in certain countries.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.QueryParsePropertyTypes.AdminDistrict">
+            <summary>
+            A string specifying the subdivision name within the country or region for an address. 
+            This element is also commonly treated as the first order administrative subdivision; but in some cases, 
+            it is the second, third, or fourth order subdivision within a country, a dependency, or a region.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.QueryParsePropertyTypes.AdminDistrict2">
+            <summary>
+            A string specifying the higher level administrative subdivision used in some countries or regions.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.QueryParsePropertyTypes.PostalCode">
+            <summary>
+            A string specifying the post code, postal code, or ZIP Code of an address.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.QueryParsePropertyTypes.CountryRegion">
+            <summary>
+            A string specifying the country or region name of an address.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeocodeDataflowAPI.QueryParsePropertyTypes.Landmark">
+            <summary>
+            A string specifying a landmark associated with an address.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.BoundaryEntityType">
+            <summary>
+            The supported boundary entity types. Note that not all all entity types are available in all regions.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeodataAPI.BoundaryEntityType.AdminDivision1">
+            <summary>
+            First administrative level within the country/region level, such as a state or a province.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeodataAPI.BoundaryEntityType.AdminDivision2">
+            <summary>
+            Second administrative level within the country/region level, such as a county.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeodataAPI.BoundaryEntityType.CountryRegion">
+            <summary>
+            Country or region
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeodataAPI.BoundaryEntityType.Neighborhood">
+            <summary>
+            A section of a populated place that is typically well-known, but often with indistinct boundaries. 
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeodataAPI.BoundaryEntityType.PopulatedPlace">
+            <summary>
+            A concentrated area of human settlement, such as a city, town or village.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeodataAPI.BoundaryEntityType.Postcode1">
+            <summary>
+            The smallest post code category, such as a zip code. 
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeodataAPI.BoundaryEntityType.Postcode2">
+            <summary>
+            The next largest post code category after Postcode1 that is created by aggregating Postcode1 areas. 
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeodataAPI.BoundaryEntityType.Postcode3">
+            <summary>
+            The next largest post code category after Postcode2 that is created by aggregating Postcode2 areas.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.GeodataAPI.BoundaryEntityType.Postcode4">
+            <summary>
+            The next largest post code category after Postcode3 that is created by aggregating Postcode3 areas.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.Copyright">
+            <summary>
+            Copyright information.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Copyright.CopyrightUrl">
+            <summary>
+            The copyright URL for the Geodata service. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Copyright.Sources">
+            <summary>
+            A collection of CopyrightSource objects that give information about the sources of the polygon data that is returned. 
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.CopyrightSource">
+            <summary>
+            Copyright source information.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.CopyrightSource.SourceID">
+            <summary>
+            An ID identifying the data provider that supplied the data. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.CopyrightSource.SourceName">
+            <summary>
+            The name of the data provider represented by this Source element.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.CopyrightSource.Copyright">
+            <summary>
+            The copyright string for the source.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.GeodataManager">
+            <summary>
+            A static class for retrieving boundary data from the Geodata API.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeodataAPI.GeodataManager.GetBoundary(BingMapsSDSToolkit.GeodataAPI.GetBoundaryRequest,System.String)">
+            <summary>
+            Gets the boundary for the specified request.
+            </summary>
+            <param name="request">The boundary request information.</param>
+            <param name="bingMapsKey">A bing maps key to authenicate the request.</param>
+            <exception cref="T:System.Exception">Thrown when reuqired information is mssing from request, or an error occurs.</exception>
+            <returns>A list of GetDataResult objects.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.GeodataResponse">
+            <summary>
+            An object that contains the response from the Geodata API.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GeodataResponse.ResultSet">
+            <summary>
+            The result set from the Geodata API.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.GeodataResult">
+            <summary>
+            A Geodata boundary result.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GeodataResult.EntityID">
+            <summary>
+            A unique ID number associated with this entity. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GeodataResult.EntityMetadata">
+            <summary>
+            A collection of metadata information associated with the entity.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GeodataResult.Name">
+            <summary>
+            Information about the name of the boundary location.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GeodataResult.Primitives">
+            <summary>
+            An array of objects that contain the polygon information for the boundary.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GeodataResult.Copyright">
+            <summary>
+            Copyright information for the boundary data.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeodataAPI.GeodataResult.GetPolygons">
+            <summary>
+            Parses all the Primitives into Polygon objects.
+            </summary>
+            <returns>A list of polygons that make up the shape boudary.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeodataAPI.GeodataResult.GetBestMapViewBox(BingMapsSDSToolkit.GeodataLocation@,BingMapsSDSToolkit.GeodataLocation@)">
+            <summary>
+            Parses the BestMapViewBox property into bounding coordinates. 
+            If the BestMapViewBox property is not returned in the Metadata, 
+            the bounding coordinates will be calculated from the boundary coordinates.
+            </summary>
+            <param name="NorthWest">The north west coordinate of the bounding box.</param>
+            <param name="SouthEast">The south east coordinate of the bounding box.</param>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.GeodataResultSet">
+            <summary>
+            A result set from the Geodata API.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GeodataResultSet.Copyright">
+            <summary>
+            A copyright string.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GeodataResultSet.Results">
+            <summary>
+            An array of Geodata boundary results. 
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.GetBoundaryRequest">
+            <summary>
+            An object the contains the request information for retrieving a boundary.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GetBoundaryRequest.Coordinate">
+            <summary>
+            The coordinate to use to find intersecting boundary. If set, this will override the Address property when doing a search.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GetBoundaryRequest.Address">
+            <summary>
+            An address string that is geocoded by the service to get latitude and longitude coordinates.
+            Note: This call will result in two individual usage transactions: RESTLocations (for geocoding) and RESTSpatialDataService:Geodata.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GetBoundaryRequest.LevelOfDetail">
+            <summary>
+            The level of detail for the boundary polygons returned. An integer between 0 and 3, where 0 specifies the coarsest level of boundary detail and 3 specifies the best. Default: 0.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GetBoundaryRequest.EntityType">
+            <summary>
+            The entity type to return. Default: CountryRegion. Note that not all entity types are available for each location.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GetBoundaryRequest.GetAllPolygons">
+            <summary>
+            Specifies whether the response should include all of the boundary polygons for the requested entity or just return a single polygon that represents the main outline of the entity.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GetBoundaryRequest.GetEntityMetadata">
+            <summary>
+            Specifies whether the response should include metadata about the entity, such as AreaSqKm and others.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GetBoundaryRequest.Culture">
+            <summary>
+            Specifies the preferred language to use for any metadata text about the entity or polygons. Defualt: en
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GetBoundaryRequest.UserRegion">
+            <summary>
+            Specifies the user’s home country or region. Default: US
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GetBoundaryRequest.PreferCuratedPolygons">
+            <summary>
+            Prefer curated boundary polygons. Curated polygons have been optimized for display purposes. 
+            These polygons are typically clipped to the land, and can fall somewhere between medium and high fidelity.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.Metadata">
+            <summary>
+            An object that contains metadata about a boundary. Not all fields will always be populated.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Metadata.AreaSqKm">
+            <summary>
+            The approximate total surface area (in square kilometers) covered by all the polygons that comprise this entity.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Metadata.BestMapViewBox">
+            <summary>
+            An area on the Earth that provides the best map view for this entity. This area is defined as a 
+            bounding box which represents an area using a set of latitude and longitude values: South Latitude, 
+            East Longitude, North Latitude, East Longitude. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Metadata.OfficialCulture">
+            <summary>
+            The culture associated with this entity.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Metadata.RegionalCulture">
+            <summary>
+            The regional culture associated with this entity.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Metadata.PopulationClass">
+            <summary>
+            The approximate population within this entity. 
+            </summary>
+            <example>PopClass20000to99999</example>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.Name">
+            <summary>
+            An object that contains information about the boundary, such as the name and culture.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Name.EntityName">
+            <summary>
+            The name of boundary. 
+            </summary>
+            <example>United States</example>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Name.Culture">
+            <summary>
+            The culture of the region.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Name.SourceID">
+            <summary>
+            An ID identifying the data provider that supplied the data. 
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.GeodataPolygon">
+            <summary>
+            An object storing the parsed bundary infromation as sets for rings for a polygon.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeodataAPI.GeodataPolygon.#ctor">
+            <summary>
+            An object storing the parsed bundary infromation as sets for rings for a polygon.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GeodataPolygon.ExteriorRing">
+            <summary>
+            A list of coordinates that make up the exterior ring of a polygon.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.GeodataPolygon.InnerRings">
+            <summary>
+            A list of list of coordinates that make up all the inner rings of a polygon.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.PointCompression">
+            <summary>
+            This compression algorithm encodes/decodes a collections of locations into a string. 
+            This algorithm is used for generating a compressed collection of locations for use 
+            with the Bing Maps REST Elevation Service. This algorithm is also used for decoding 
+            the compressed coordinates returned by the Geodata API.
+            
+            These algorithms come from the following documentation:
+            http://msdn.microsoft.com/en-us/library/jj158958.aspx
+            http://msdn.microsoft.com/en-us/library/dn306801.aspx
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeodataAPI.PointCompression.Encode(System.Collections.Generic.List{BingMapsSDSToolkit.GeodataLocation})">
+            <summary>
+            Compresses a list of coordinates into a string.
+            
+            Based on: http://msdn.microsoft.com/en-us/library/jj158958.aspx
+            </summary>
+            <param name="points">Collection of coordinates to compress.</param>
+            <returns>A compressed string representing a collection coordinates.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeodataAPI.PointCompression.TryDecode(System.String,System.Collections.Generic.List{BingMapsSDSToolkit.GeodataLocation}@)">
+            <summary>
+            Decodes a collection of coordinates from a compressed string.
+            
+            Based on: http://msdn.microsoft.com/en-us/library/dn306801.aspx
+            </summary>
+            <param name="value">Compressed string to decode.</param>
+            <param name="parsedValue">Collection of decoded coordinates.</param>
+            <returns>A boolean indicating if the algorithm was able to decode the compressed coordinates or not.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataAPI.Primitive">
+            <summary>
+            An object that stores the information for a single polygon in the boundary.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Primitive.PrimitiveID">
+            <summary>
+            A unique ID associated with this polygon primitive. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Primitive.Shape">
+            <summary>
+            A comma-delimited sequence starting with the version number of the polygon set followed by a list of compressed polygon “rings” (closed paths represented by sequences of latitude and-longitude points) ordered as follows: 
+            [version],[compressed polygon ring 1],[compressed polygon ring 2],...,[compressed polygon ring n]
+            See the Decompression Algorithm below for code to use to retrieve the polygon points from the compressed strings.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Primitive.NumPoints">
+            <summary>
+            The number of vertex points used to define the polygon.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataAPI.Primitive.SourceID">
+            <summary>
+            An ID identifying the data provider that supplied the data. This ID number will reference one of the sources listed in the CopyrightSources collection attached to the parent entity .
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeodataAPI.Primitive.GetPolygon">
+            <summary>
+            Parses the encoded Shape into a Polygon that consists of a list of coordinates that make up the 
+            exterior ring of the polygon and list of inner rings. 
+            </summary>
+            <returns>A list of polygon which contains parsed coordinate values from the Shape property.</returns>
+        </member>
+        <member name="F:BingMapsSDSToolkit.Internal.DelimitedFileReader.EOS">
+            <summary>
+            End of Stream.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.Internal.DelimitedFileReader.EOL">
+            <summary>
+            End of line.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Internal.DelimitedFileReader.Dispose">
+            <summary>
+            Disposes the DelimitedFileReader.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Internal.DelimitedFileReader.GetNextRow">
+            <summary>
+            Reads the next row of the delimited file.
+            </summary>
+            <returns>An array of strings for each cell of the row</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Internal.DelimitedFileReader.GetNextCell">
+            <summary>Gets the next cell value from the delimited file.</summary>
+            <returns>Returns the value of a cell in the delimited file.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Internal.DelimitedFileReader.GetChar(System.Boolean)">
+            <summary>Gets the character for the current position in the stream unless told to get the next character.</summary>
+            <param name="getNextChar">Specifies if the next character in the stream should be returned.</param>
+            <returns>A character from the stream.</returns>
+        </member>
+        <member name="F:BingMapsSDSToolkit.Internal.DelimitedFileWriter._numColumns">
+            <summary>
+            Number of columns that the delimited file has.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Internal.DelimitedFileWriter.#ctor(System.IO.Stream,System.Int32,System.Char)">
+            <summary>
+            Generates a delimited file from lists of data. 
+            </summary>
+            <param name="numColumns">The number of columns in the file</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Internal.DelimitedFileWriter.#ctor(System.IO.Stream,System.Collections.Generic.IList{System.String},System.Char)">
+            <summary>
+            Generates a delimited file from lists of data. 
+            </summary>
+            <param name="header">The delimited header file. This must contain a value for all columns.</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Internal.DelimitedFileWriter.WriteRow(System.Collections.Generic.IList{System.String},System.Boolean)">
+            <summary>
+            Writes a list of string as a row in the delimited StringWriter
+            </summary>
+            <param name="row">A list of string to add to the StringWriter</param>
+            <param name="protectDelimiter">Wraps items with quotes if item contains the delimiter. Often true, usually false for headers.</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Internal.DelimitedFileWriter.WriteRow(System.Collections.Generic.IList{System.Object},System.Boolean)">
+            <summary>
+            Writes a list of objects as a row in the delimited StringWriter.
+            </summary>
+            <param name="row">A list of objects to add to the StringWriter.</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Internal.DelimitedFileWriter.WriteItem(System.Object,System.Boolean)">
+            <summary>
+            Writes an object to the StringWriter.
+            </summary>
+            <param name="item">An object to add to the StringWriter.</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Internal.ServiceHelper.GetStringAsync(System.Uri)">
+            <summary>
+            Downloads data as a string from a URL.
+            </summary>
+            <param name="url">URL that points to data to download.</param>
+            <returns>A string with the data.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Internal.ServiceHelper.GetStreamAsync(System.Uri)">
+            <summary>
+            Downloads data as a stream from a URL.
+            </summary>
+            <param name="url">URL that points to data to download.</param>
+            <returns>A stream with the data.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.SpatialTools">
+            <summary>
+            A set of useful spatial calculation tools.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.SpatialTools.EarthRadius">
+            <summary>
+            The approximate spherical radius of the Earth
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.SpatialTools.EarthRadius.KM">
+            <summary>
+            Earth Radius in Kilometers
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.SpatialTools.EarthRadius.Meters">
+            <summary>
+            Earth Radius in Meters
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.SpatialTools.EarthRadius.Miles">
+            <summary>
+            Earth Radius in Miles
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.SpatialTools.EarthRadius.Feet">
+            <summary>
+            Earth Radius in Feet
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.SpatialTools.GetEarthRadius(BingMapsSDSToolkit.DistanceUnitType)">
+            <summary>
+            Retrieves the radius of the earth in a specific distance unit for WGS84. Defaults unit is in Meters.
+            </summary>
+            <param name="units">Unit of distance measurement</param>
+            <returns>A double that represents the radius of the earth in a specific distance unit. Defaults unit is in KM's.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.SpatialTools.ConvertDistance(System.Double,BingMapsSDSToolkit.DistanceUnitType,BingMapsSDSToolkit.DistanceUnitType)">
+            <summary>
+            Converts distances from one unit to another.
+            </summary>
+            <param name="distance">The distance to convert</param>
+            <param name="fromUnits">The units of the distance.</param>
+            <param name="toUnits">The units to convert to.</param>
+            <returns>Distance converted to the specified units.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.SpatialTools.ToRadians(System.Double)">
+            <summary>
+            Converts an angle that is in degrees to radians. Angle * (PI / 180)
+            </summary>
+            <param name="angle">An angle in degrees</param>
+            <returns>An angle in radians</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.SpatialTools.ToDegrees(System.Double)">
+            <summary>
+            Converts an angle that is in radians to degress. Angle * (180 / PI)
+            </summary>
+            <param name="angle">An angle in radians</param>
+            <returns>An angle in degrees</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.SpatialTools.HaversineDistance(BingMapsSDSToolkit.GeodataLocation,BingMapsSDSToolkit.GeodataLocation,BingMapsSDSToolkit.DistanceUnitType)">
+            <summary>
+            Calculate the distance between two coordinates on the surface of a sphere (Earth).
+            </summary>
+            <param name="origin">First coordinate to calculate distance between.</param>
+            <param name="destination">Second coordinate to calculate distance between.</param>
+            <param name="units">Unit of distance measurement.</param>
+            <returns>The shortest distance in the specifed units.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.SpatialTools.HaversineDistance(System.Double,System.Double,System.Double,System.Double,BingMapsSDSToolkit.DistanceUnitType)">
+            <summary>
+            Calculate the distance between two coordinates on the surface of a sphere (Earth).
+            </summary>
+            <param name="origLat">Origin Latitude.</param>
+            <param name="origLon">Origin Longitude.</param>
+            <param name="destLat">Destination Latitude.</param>
+            <param name="destLon">Destination Longitude.</param>
+            <param name="units">Unit of distance measurement.</param>
+            <returns>The shortest distance in the specifed units.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DownloadDetails">
+            <summary>
+            A summary of status information returned in the response when you check job status. 
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.Geography">
+            <summary>
+            An object used to represent a geography column type.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.Geography.WellKnownText">
+            <summary>
+            The well known text that describes the geography object.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.Geography.NumPoints">
+            <summary>
+            Calculates the number of coordinate pairs in the geography.
+            </summary>
+            <returns>The number of cooridnate pairs in the geography.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.GeodataLocation">
+            <summary>
+            An object that stores the coordinate information.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeodataLocation.#ctor">
+            <summary>
+            A location coordinate.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.GeodataLocation.#ctor(System.Double,System.Double)">
+            <summary>
+            A location coordinate.
+            </summary>
+            <param name="latitude">Latitude coordinate vlaue.</param>
+            <param name="longitude">Longitude coordinate value.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataLocation.Latitude">
+            <summary>
+            Latitude coordinate.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.GeodataLocation.Longitude">
+            <summary>
+            Longitude coordinate.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.DistanceUnitType">
+            <summary>
+            Units of measurements for distances.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DistanceUnitType.Kilometers">
+            <summary>
+            Distances in Kilometers.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DistanceUnitType.Meters">
+            <summary>
+            Distances in Meters.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DistanceUnitType.Miles">
+            <summary>
+            Distances in Miles
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DistanceUnitType.Feet">
+            <summary>
+            Distances in Feet
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.DistanceUnitType.Yards">
+            <summary>
+            Distances in Yards
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.AvoidType">
+            <summary>
+            Specifies the road types to minimize or avoid when the route is created for the driving travel mode.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.AvoidType.Highways">
+            <summary>
+            Avoids the use of highways in the route. 
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.AvoidType.Tolls">
+            <summary>
+            Avoids the use of toll roads in the route.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.AvoidType.MinimizeHighways">
+            <summary>
+            Minimizes (tries to avoid) the use of highways in the route.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.AvoidType.MinimizeTolls">
+            <summary>
+            Minimizes (tries to avoid) the use of toll roads in the route.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.FindInBoundingBoxRequest">
+            <summary>
+            A search request that looks for locations that are inside a bounding box.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindInBoundingBoxRequest.#ctor">
+            <summary>
+            A search request that looks for locations that are inside a bounding box.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindInBoundingBoxRequest.#ctor(BingMapsSDSToolkit.BasicDataSourceInfo)">
+            <summary>
+            A search request that looks for locations that are inside a bounding box.
+            </summary>
+            <param name="info">Basic information about the data source.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindInBoundingBoxRequest.North">
+            <summary>
+            The northern most latitude of the bounding box. Value between -90 and 90.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindInBoundingBoxRequest.South">
+            <summary>
+            The southern most latitude of the bounding box. Value between -90 and 90.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindInBoundingBoxRequest.East">
+            <summary>
+            The eastern most longitude of the bounding box. Value between -180 and 180.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindInBoundingBoxRequest.West">
+            <summary>
+            The western most longitude of the bounding box. Value between -180 and 180.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindInBoundingBoxRequest.GetRequestUrl">
+            <summary>
+            Retrieves the reuqest URL for the query.
+            </summary>
+            <returns>A string URL for the query.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.FindNearByRequest">
+            <summary>
+            A radial search request for finding results that are near a location.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindNearByRequest.#ctor">
+            <summary>
+            A radial search request for finding results that are near a location.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindNearByRequest.#ctor(BingMapsSDSToolkit.BasicDataSourceInfo)">
+            <summary>
+            A radial search request for finding results that are near a location.
+            </summary>
+            <param name="info">Basic information about the data source.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearByRequest.Center">
+            <summary>
+            A centeral coordinate to perform the nearby search. Overrides the Address value if both are specified.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearByRequest.Address">
+            <summary>
+            A string address to perform a nearby search around. 
+            If the Center properties is specified it will override this value when doing the search.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearByRequest.Distance">
+            <summary>
+            The radial search distance.
+            You must specify the distance in between 0.16 and 1000 kilometers. 
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindNearByRequest.GetRequestUrl">
+            <summary>
+            Retrieves the reuqest URL for the query.
+            </summary>
+            <returns>A string URL for the query.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest">
+            <summary>
+            A search query that looks for locations that are within 1 mile or 1.6 kilometers of a route.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.#ctor">
+            <summary>
+            A search query that looks for locations that are within 1 mile or 1.6 kilometers of a route.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.#ctor(BingMapsSDSToolkit.BasicDataSourceInfo)">
+            <summary>
+            A search query that looks for locations that are within 1 mile or 1.6 kilometers of a route.
+            </summary>
+            <param name="info">Basic information about the data source.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.StartLocation">
+            <summary>
+            A coordinate to use as the starting location of the route. Overrides the StartAddress value if both are specified.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.StartAddress">
+            <summary>
+            A string address to use as the starting location of the route.
+            If the StartLocation properties is specified it will override this value when doing the search.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.EndLocation">
+            <summary>
+            A coordinate to use as the end location of the route. Overrides the EndAddress value if both are specified.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.EndAddress">
+            <summary>
+            A string address to use as the end location of the route.
+            If the EndLocation properties is specified it will override this value when doing the search.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.Avoid">
+            <summary>
+            Specifies the road types to minimize or avoid when the route is created for the driving travel mode. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.DistanceBeforeFirstTurn">
+            <summary>
+            Specifies the distance before the first turn is allowed in the route. This option only applies to the driving travel mode.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.Heading">
+            <summary>
+            Specifies the initial heading for the route. An integer value between 0 and 359 that represents degrees from north 
+            where north is 0 degrees and the heading is specified clockwise from north. For example, setting the heading of 270 
+            degrees creates a route that initially heads west.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.Optimize">
+            <summary>
+            Specifies what parameters to use to optimize the route on the map. Default: Time.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.TravelMode">
+            <summary>
+            The mode of travel for the route. Default: Driving. 
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindNearRouteRequest.GetRequestUrl">
+            <summary>
+            Retrieves the reuqest URL for the query.
+            </summary>
+            <returns>A string URL for the query.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.IntersectionSearchRequest">
+            <summary>
+            A search query which looks to see if and locations intersect the specified Geography.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.IntersectionSearchRequest.#ctor">
+            <summary>
+            A search query which looks to see if and locations intersect the specified Geography.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.IntersectionSearchRequest.#ctor(BingMapsSDSToolkit.BasicDataSourceInfo)">
+            <summary>
+            A search query which looks to see if and locations intersect the specified Geography.
+            </summary>
+            <param name="info">Basic information about the data source.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.IntersectionSearchRequest.Geography">
+            <summary>
+            The Geography to do an intersection test against.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.IntersectionSearchRequest.GetRequestUrl">
+            <summary>
+            Retrieves the reuqest URL for the query.
+            </summary>
+            <returns>A string URL for the query.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.IFilter">
+            <summary>
+            A filter interface.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.LogicalOperator">
+            <summary>
+            The logical operators that can be used by a filter expression.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.LogicalOperator.Eq">
+            <summary>
+             Equal
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.LogicalOperator.Ne">
+            <summary>
+             Not equal
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.LogicalOperator.Gt">
+            <summary>
+             Greater than
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.LogicalOperator.Ge">
+            <summary>
+             Greater than or equal
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.LogicalOperator.Lt">
+            <summary>
+             Less than
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.LogicalOperator.Le">
+            <summary>
+             Less than or equal
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.LogicalOperator.StartsWith">
+            <summary>
+            Finds all property values that start with a specified string value.
+            Not supported with And or Or comparison operators.
+            Is not supported for NavteqNA and NavteqEU data sources.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.LogicalOperator.EndsWith">
+            <summary>
+            Finds all property values that end with a specified string value.
+            Not supported with And or Or comparison operators.
+            Is not supported for NavteqNA and NavteqEU data sources.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.LogicalOperator.IsIn">
+            <summary>
+            Finds all properties who's value is within a list of values.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.FilterGroup">
+            <summary>
+            A group of filter objects and the compare operator to use against them.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FilterGroup.#ctor">
+            <summary>
+            A group of filter objects and the compare operator to use against them.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FilterGroup.#ctor(BingMapsSDSToolkit.QueryAPI.IFilter[],BingMapsSDSToolkit.QueryAPI.CompareOperator)">
+            <summary>
+            A group of filter objects and the compare operator to use against them.
+            </summary>
+            <param name="filters">The filters to combine into a group.</param>
+            <param name="compareOperator">The operator to use to combine the filters.</param>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FilterGroup.#ctor(BingMapsSDSToolkit.QueryAPI.IFilter[],BingMapsSDSToolkit.QueryAPI.CompareOperator,System.Boolean)">
+            <summary>
+            A group of filter objects and the compare operator to use against them.
+            </summary>
+            <param name="filters">The filters to combine into a group.</param>
+            <param name="compareOperator">The operator to use to combine the filters.</param>
+            <param name="not">A boolean indicating if this filter should not make or not. </param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FilterGroup.Filters">
+            <summary>
+            An array of filters expressions.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FilterGroup.CompareOperator">
+            <summary>
+            The comparison operator to use with the filters.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FilterGroup.Not">
+            <summary>
+            A boolean indicating if this filter should not make or not. 
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FilterGroup.ToString">
+            <summary>
+            Converts the filter group to string.
+            </summary>
+            <returns>A stirng representation of the filter group.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.FilterExpression">
+            <summary>
+            An object that defines a filter expression.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FilterExpression.#ctor">
+            <summary>
+            An object that defines a filter expression.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FilterExpression.#ctor(System.String,BingMapsSDSToolkit.QueryAPI.LogicalOperator,System.Object)">
+            <summary>
+            An object that defines a filter expression.
+            </summary>
+            <param name="propertyName">he name of the property to filter against.</param>
+            <param name="logicalOperator">The logical operator to use when comparing filtering against the filter value.</param>
+            <param name="value">The value to compare against.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FilterExpression.PropertyName">
+            <summary>
+            The name of the property to filter against.
+            Note: You cannot filter on the latitude and longitude entity properties.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FilterExpression.Operator">
+            <summary>
+            The logical operator to use when comparing filtering against the filter value.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FilterExpression.Value">
+            <summary>
+            The value to compare against.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FilterExpression.ToString">
+            <summary>
+            Converts the filter expression to string.
+            </summary>
+            <returns>A stirng representation of the filter expression.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.CompareOperator">
+            <summary>
+            Compare Operators that can be used with filters.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.CompareOperator.And">
+            <summary>
+             Logical and
+             Note: Not supported when combined with StartsWith or EndsWith wildcard searches.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.CompareOperator.Or">
+            <summary>
+             Logical or
+             Note: Not supported when combined with StartsWith or EndsWith wildcard searches.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest">
+            <summary>
+            A query that searches by property. This is also the basis to all other queries.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.#ctor">
+            <summary>
+            A query that searches by property.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.#ctor(BingMapsSDSToolkit.BasicDataSourceInfo)">
+            <summary>
+            A query that searches by property.
+            </summary>
+            <param name="info">Basic information about the data source.</param>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.IsStaging">
+            <summary>
+            A boolean value indicating if the staging version of the data source should be accessed or not.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.DistanceUnits">
+            <summary>
+            The distance units to use with the query.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.Top">
+            <summary>
+            An integer value between 1 and 250 that represents the maximium results that can be returned. Default 25. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.Skip">
+            <summary>
+            Specifies the number of results to skip. This lets you page through the results.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.Select">
+            <summary>
+            A string that contains a comma delimited list of data source properties to return.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.Orderby">
+            <summary>
+            A comma delimited list of data source properties to use to sort the results. (up to 3 properties can be specified).
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.InlineCount">
+            <summary>
+            A boolean that specifies whether or not to return a count of the results in the response. Default: false.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.Filter">
+            <summary>
+            A filter that specifies conditional expressions for a list of properties and values. 
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.GetRequestUrl">
+            <summary>
+            Gets a URL to query the Bing Spatial Data Services.
+            </summary>
+            <returns>A URL to query the Bing Spatial Data Services.</returns>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest.GetBaseRequestUrl">
+            <summary>
+            Generates the base reuqest URL that includes everything but the spatial filter.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.QueryManager">
+            <summary>
+            A static class for processing queries.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.QueryManager.ProcessQuery(BingMapsSDSToolkit.QueryAPI.FindByPropertyRequest)">
+            <summary>
+            Processes a query request. 
+            </summary>
+            <param name="request">A request class that derives from the BaseQueryRequest class.</param>
+            <returns>A query response.</returns>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.RouteOptimizationType">
+            <summary>
+            Specifies what parameters to use to optimize the route on the map.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.RouteOptimizationType.Distance">
+            <summary>
+            Optimizes route for shortest distance.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.RouteOptimizationType.Time">
+            <summary>
+            Optimizes route for shortst travel time.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.RouteOptimizationType.TimeWithTraffic">
+            <summary>
+            Optimizes route for shortst travel time with respect to current traffic conditions.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.TravelModeType">
+            <summary>
+            The mode of travel for the route.
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.TravelModeType.Driving">
+            <summary>
+            Driving mode
+            </summary>
+        </member>
+        <member name="F:BingMapsSDSToolkit.QueryAPI.TravelModeType.Walking">
+            <summary>
+            Walking Mode
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.QueryResponse">
+            <summary>
+            An object that represents the response from a query.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.QueryResponse.#ctor">
+            <summary>
+            An objet that represents the response from a query.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.QueryResponse.Results">
+            <summary>
+            An array of query results.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.QueryResponse.ErrorMessage">
+            <summary>
+            A string containing an error message if an error occurs while processing the query.
+            </summary>
+        </member>
+        <member name="T:BingMapsSDSToolkit.QueryAPI.QueryResult">
+            <summary>
+            An object that represents a single entity result in the query.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.QueryResult.#ctor">
+            <summary>
+            An object the represents a single entity result in the query.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.QueryResult.EntityUrl">
+            <summary>
+            A url that points to this entity in the data source.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.QueryResult.Distance">
+            <summary>
+            The distance the result is from the search query. The distance value will be in the specified distance units or will default to KM.
+            This value is only set if the request is of type FindNearby, FindInBoundingBox, or FindNearRoute. 
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.QueryResult.IntersectedGeography">
+            <summary>
+            The intersected section of the Geography
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.QueryResult.Location">
+            <summary>
+            The location coordinate of the result.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.QueryResult.HasGeography">
+            <summary>
+            Indicates if the result has a property of type Geography or not.
+            </summary>
+        </member>
+        <member name="P:BingMapsSDSToolkit.QueryAPI.QueryResult.Properties">
+            <summary>
+            A dictionary of additional properties this entity has.
+            </summary>
+        </member>
+        <member name="M:BingMapsSDSToolkit.QueryAPI.QueryResult.GetGeography">
+            <summary>
+            Gets first property of type geography for the result.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,218 @@
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.dll.config
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\libSkiaSharp.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\libSkiaSharp.dylib
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\x86\libSkiaSharp.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\x64\libSkiaSharp.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\IceCreamKiosk.exe.config
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\IceCreamKiosk.exe
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\IceCreamKiosk.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BE.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsRESTToolkit.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsSDSToolkit.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BL.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BruTile.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\CommonServiceLocator.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\ConcurrentCollections.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\ControlzEx.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\EntityFramework.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\HelixToolkit.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\HelixToolkit.Wpf.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\MahApps.Metro.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\Mapsui.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\Mapsui.Geometries.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\Mapsui.Rendering.Skia.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\Mapsui.Rendering.Xaml.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\Mapsui.UI.Wpf.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignColors.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\Newtonsoft.Json.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.Svg.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.Views.Desktop.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.Views.WPF.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\XamlAnimatedGif.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\DAL.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\QRCoder.dll
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BE.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BE.dll.config
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BL.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BL.dll.config
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsRESTToolkit.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsRESTToolkit.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsSDSToolkit.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsSDSToolkit.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\ConcurrentCollections.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\ControlzEx.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\EntityFramework.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\HelixToolkit.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\HelixToolkit.Wpf.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\MahApps.Metro.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\MahApps.Metro.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignColors.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\Newtonsoft.Json.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.xml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\DAL.pdb
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\bin\Debug\DAL.dll.config
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\PL.csprojAssemblyReference.cache
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\AdminControl.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\FindIceCreamWizardControl.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\FindIceCreamControl.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamControl.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamDetailsControl.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamsListControl.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\LogInControl.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreamControl.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreamDialog.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreameDoneControl.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\ShopControl.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\MainWindow.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\App.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk_MarkupCompile.cache
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk_MarkupCompile.lref
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\App.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\AdminControl.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\FindIceCreamWizardControl.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\FindIceCreamControl.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamControl.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamDetailsControl.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamsListControl.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\LogInControl.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreamControl.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreamDialog.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreameDoneControl.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\ShopControl.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\MainWindow.baml
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk.g.resources
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk.Properties.Resources.resources
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\PL.csproj.GenerateResource.cache
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\PL.csproj.CoreCompileInputs.cache
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\PL.csproj.CopyComplete
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk.exe
+C:\Users\yishai\Downloads\Telegram Desktop\IceCreamKiosk\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.dll.config
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\libSkiaSharp.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\libSkiaSharp.dylib
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\x86\libSkiaSharp.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\x64\libSkiaSharp.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\IceCreamKiosk.exe.config
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\IceCreamKiosk.exe
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\IceCreamKiosk.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BE.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsRESTToolkit.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsSDSToolkit.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BL.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BruTile.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\CommonServiceLocator.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\ConcurrentCollections.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\ControlzEx.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\EntityFramework.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\HelixToolkit.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\HelixToolkit.Wpf.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\MahApps.Metro.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\Mapsui.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\Mapsui.Geometries.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\Mapsui.Rendering.Skia.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\Mapsui.Rendering.Xaml.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\Mapsui.UI.Wpf.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignColors.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.Svg.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.Views.Desktop.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.Views.WPF.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\XamlAnimatedGif.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\DAL.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\QRCoder.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BE.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BE.dll.config
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BL.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BL.dll.config
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsRESTToolkit.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsRESTToolkit.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsSDSToolkit.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\BingMapsSDSToolkit.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\ConcurrentCollections.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\ControlzEx.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\EntityFramework.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\HelixToolkit.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\HelixToolkit.Wpf.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\MahApps.Metro.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\MahApps.Metro.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\SkiaSharp.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\DAL.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\DAL.dll.config
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\PL.csprojAssemblyReference.cache
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\AdminControl.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\FindIceCreamWizardControl.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\FindIceCreamControl.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamControl.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamDetailsControl.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamsListControl.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\LogInControl.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreamControl.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreamDialog.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreameDoneControl.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\ShopControl.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\MainWindow.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\App.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk_MarkupCompile.cache
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk_MarkupCompile.lref
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\App.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\AdminControl.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\FindIceCreamWizardControl.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\FindIceCreamControl.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamControl.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamDetailsControl.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\IceCreamsListControl.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\LogInControl.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreamControl.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreamDialog.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\RateIceCreameDoneControl.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\Controls\ShopControl.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\MainWindow.baml
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk.g.resources
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk.Properties.Resources.resources
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\PL.csproj.GenerateResource.cache
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\PL.csproj.CoreCompileInputs.cache
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\PL.csproj.CopyComplete
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk.exe
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\obj\Debug\IceCreamKiosk.pdb
