@@ -338,6 +338,12 @@
   <ItemGroup>
     <None Include="bin\Debug\assets\waze.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\assets\sun1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sun1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("no-image-icon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sun1.jpg")]
 
 
