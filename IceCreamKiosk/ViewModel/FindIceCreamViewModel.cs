@@ -266,5 +266,18 @@ namespace IceCreamKiosk.ViewModel
                 RaisePropertyChanged("Loading");
             }
         }
+        public void ResetBindings()
+        {
+            MinFiber = 0;
+            MaxFiber = 400;
+            MaxProtein = 100;
+            MaxSugars = 56;
+            MaxTotalFat = 70;
+            MaxCarbohydrate = 100;
+            MaxEnergy = 500;
+            ShopDistance = 15;
+            IceCreamDescription = "";
+            FindCommand.Execute(null);
+        }
     }
 }

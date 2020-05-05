@@ -29,10 +29,14 @@
 								<Setter Property="Template">
 									<Setter.Value>
 										<ControlTemplate>
+											<StackPanel VerticalAlignment="Center">
 											<TextBlock  TextWrapping="Wrap" HorizontalAlignment="Center" 
                        VerticalAlignment="Center" Style="{StaticResource MaterialDesignDisplay4TextBlock}" 
-                                                        TextAlignment="Center" Foreground="#FFF0FFEC" FontWeight="ExtraBold">
-                                                No Ice Creams Found</TextBlock>
+                                                        TextAlignment="Center" Foreground="Black" FontWeight="ExtraBold">
+                                                loading</TextBlock>
+												<ProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource MaterialDesignCircularProgressBar}"  Value="0" IsIndeterminate="True"  
+                         Width="100" Height="100" />
+											</StackPanel>
 										</ControlTemplate>
 									</Setter.Value>
 								</Setter>
@@ -52,8 +56,8 @@
 				</ListBox.ItemTemplate>
 			</ListBox>
 		</ScrollViewer>
-		<Button Grid.Column="0" Margin="0 40" Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Style="{StaticResource MaterialDesignFloatingActionLightButton}">
+		<!--<Button Grid.Column="0" Margin="0 40" Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Style="{StaticResource MaterialDesignFloatingActionLightButton}">
             <materialDesign:PackIcon Kind="StepBackward" Height="24" Width="24" />
-        </Button>
+        </Button>-->
     </Grid>
 </UserControl>

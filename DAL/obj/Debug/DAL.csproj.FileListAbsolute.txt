@@ -33,6 +33,7 @@ C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\BingMapsRESTToolkit.dll
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\BingMapsSDSToolkit.dll
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\EntityFramework.dll
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\MaterialDesignColors.dll
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\QRCoder.dll
@@ -45,6 +46,7 @@ C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\BingMapsSDSToolkit.pdb
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\BingMapsSDSToolkit.xml
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\EntityFramework.xml
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\MaterialDesignColors.pdb
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
@@ -52,5 +54,3 @@ C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\obj\Debug\DAL.dll
 C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\obj\Debug\DAL.pdb
-C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\MaterialDesignColors.dll
-C:\Users\ehud1\Desktop\IceCreamKiosk\DAL\bin\Debug\MaterialDesignColors.pdb
