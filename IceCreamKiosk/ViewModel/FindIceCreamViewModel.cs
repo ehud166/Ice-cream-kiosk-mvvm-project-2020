@@ -19,6 +19,7 @@ namespace IceCreamKiosk.ViewModel
         }
 
         public IFindIceCream Wizard { get; set; }
+
         private IceCreamBL iceCreamBL = new IceCreamBL();
         public RelayCommand MoveToRate { get; set; }
         public RelayCommand FindCommand { get; set; }
@@ -55,7 +56,7 @@ namespace IceCreamKiosk.ViewModel
                          Loading = false;
                      }
                  });
-
+            FindCommand.Execute(null);
         }
 
         private string _iceCreamDescription = "";

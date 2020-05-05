@@ -28,7 +28,7 @@
                      Text="{Binding Source={x:Static properties:Settings.Default},
                                Path=KioskLocationLan}"/>
         </StackPanel>-->
-        <StackPanel >
+        <StackPanel>
             <DataGrid x:Name="ShopsGrid" materialDesign:DataGridAssist.CellPadding="5 30 0 5"  Margin="15"  Foreground="DarkSlateGray" RowHeight="88" Focusable="False"   RowBackground="Coral"   ItemsSource="{Binding Shops}" IsSynchronizedWithCurrentItem="True"
                   CanUserSortColumns="True" IsReadOnly="True" SelectionUnit="FullRow" 
                   CanUserAddRows="False"  ColumnWidth="Auto" AutoGenerateColumns="False"  SelectedItem="{Binding SelectedShop}" Background="Transparent"  HeadersVisibility="None" HorizontalAlignment="Left" SelectionMode="Single" CanUserResizeRows="False" FontWeight="Bold" Opacity="0.85">
