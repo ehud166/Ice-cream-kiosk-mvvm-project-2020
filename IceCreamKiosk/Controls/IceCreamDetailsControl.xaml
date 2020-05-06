@@ -309,11 +309,11 @@
                     HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="45" Style="{StaticResource MaterialDesignFloatingActionLightButton}">
 				<materialDesign:PackIcon Kind="StepBackward" Height="24" Width="24" />
 			</Button>
-			<Button Grid.Row="1" FontSize="45" Width="76" Height="76" Command="{x:Static materialDesign:Transitioner.MoveFirstCommand}"
+			<!--<Button Grid.Row="1" FontSize="45" Width="76" Height="76" Command="{x:Static materialDesign:Transitioner.MoveFirstCommand}"
                 HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="38 45 45 120"
                 Style="{StaticResource MaterialDesignFloatingActionAccentButton}">
 				<materialDesign:PackIcon Kind="Home" Height="36" Width="36" />
-			</Button>
+			</Button>-->
 		</Grid>
 		</materialDesign:DialogHost>
 	</Grid>

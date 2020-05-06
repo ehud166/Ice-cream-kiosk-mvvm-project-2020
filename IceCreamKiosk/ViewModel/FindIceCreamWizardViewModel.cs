@@ -28,6 +28,7 @@ namespace IceCreamKiosk.ViewModel
         public RelayCommand<object> MoveToSlide { get; set; }
         public IceCreamsListViewModel IceCreamsListView { get; set; }
         public IceCreamDetailsViewModel IceCreamDetailsView { get; set; }
+        public FindIceCreamViewModel FindIceCreamViewModel { get; set; }
 
         public RateIceCreamDialogViewModel RateIceCreamDialogView { get; set; }
         public RateIceCreamViewModel RateIceCreamView { get; set; }
@@ -69,6 +70,7 @@ namespace IceCreamKiosk.ViewModel
         public void MoveToBegining()
         {
             SlideIndex = (int)WizardPages.FoundIceCreams;
+            FindIceCreamViewModel.ResetBindings();
         }
 
         public void GoToFinishRating()

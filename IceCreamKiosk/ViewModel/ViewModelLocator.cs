@@ -58,8 +58,10 @@ namespace IceCreamKiosk.ViewModel
             IceCreamsList.MoveToIceCream += FindIceCreamWizard.MoveToIceCream;
             RateIceCreamDialog.Wizard = FindIceCreamWizard;
             RateIceCreamDone.Wizard = FindIceCreamWizard;
+            FindIceCream.Wizard = FindIceCreamWizard;
             //FindIceCreamWizard.RateIceCreamView = RateIceCream;
             FindIceCreamWizard.RateIceCreamDialogView = RateIceCreamDialog;
+            FindIceCreamWizard.FindIceCreamViewModel = FindIceCream;
             FindIceCreamWizard.RateIceCreamDoneView = RateIceCreamDone;
             IceCreamDetails.Wizard = FindIceCreamWizard;
             Main.Wizard = FindIceCreamWizard;
@@ -107,7 +109,6 @@ namespace IceCreamKiosk.ViewModel
             get
             {
                 var findIceCream = ServiceLocator.Current.GetInstance<FindIceCreamViewModel>();
-                findIceCream.Wizard = FindIceCreamWizard;
                 return findIceCream;
             }
         }
@@ -119,6 +120,7 @@ namespace IceCreamKiosk.ViewModel
                 FindIceCreamWizardViewModel findIceCreamWizardViewModel = ServiceLocator.Current.GetInstance<FindIceCreamWizardViewModel>();
                 findIceCreamWizardViewModel.IceCreamsListView = IceCreamsList;
                 findIceCreamWizardViewModel.RateIceCreamDialogView = RateIceCreamDialog;
+                findIceCreamWizardViewModel.FindIceCreamViewModel = FindIceCream;
                 findIceCreamWizardViewModel.IceCreamDetailsView = IceCreamDetails;
                 return findIceCreamWizardViewModel;
             }
