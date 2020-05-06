@@ -60,7 +60,7 @@
                 </Label>-->
                 </StackPanel>
                 <DockPanel LastChildFill="False" >
-                    <materialDesign:RatingBar DockPanel.Dock="Left" Foreground="Yellow" Value="{Binding Rate}" IsReadOnly="True" x:Name="ReadOnlyRatingBar" />
+					<materialDesign:RatingBar DockPanel.Dock="Left" Foreground="#fdd835" Value="{Binding Rate}" IsReadOnly="True" x:Name="ReadOnlyRatingBar" />
                     <TextBlock  DockPanel.Dock="Right" Text="{Binding Rate, StringFormat=N2}" />
                 </DockPanel>
             </StackPanel>

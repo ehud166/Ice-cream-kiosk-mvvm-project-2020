@@ -12,13 +12,14 @@ using System.Threading.Tasks;
 using static IceCreamKiosk.ViewModel.FindIceCreamViewModel;
 using static IceCreamKiosk.ViewModel.IceCreamDetailsViewModel;
 using static IceCreamKiosk.ViewModel.IceCreamsListViewModel;
+using static IceCreamKiosk.ViewModel.MainViewModel;
 using static IceCreamKiosk.ViewModel.RateIceCreamDialogViewModel;
 using static IceCreamKiosk.ViewModel.RateIceCreamDoneViewModel;
 using static IceCreamKiosk.ViewModel.RateIceCreamViewModel;
 
 namespace IceCreamKiosk.ViewModel
 {
-    public class FindIceCreamWizardViewModel : ViewModelBase, IFindIceCream, IIceCreamDetails, /*IRateIceCream,*/ IRateDialogIceCream, IRateIceCreamDone
+    public class FindIceCreamWizardViewModel : ViewModelBase, IFindIceCream, IIceCreamDetails, /*IRateIceCream,*/ IRateDialogIceCream, IRateIceCreamDone, IMain
     {
         public enum WizardPages
         {
@@ -27,6 +28,7 @@ namespace IceCreamKiosk.ViewModel
         public RelayCommand<object> MoveToSlide { get; set; }
         public IceCreamsListViewModel IceCreamsListView { get; set; }
         public IceCreamDetailsViewModel IceCreamDetailsView { get; set; }
+        public FindIceCreamViewModel FindIceCreamViewModel { get; set; }
 
         public RateIceCreamDialogViewModel RateIceCreamDialogView { get; set; }
         public RateIceCreamViewModel RateIceCreamView { get; set; }
@@ -68,6 +70,7 @@ namespace IceCreamKiosk.ViewModel
         public void MoveToBegining()
         {
             SlideIndex = (int)WizardPages.FoundIceCreams;
+            FindIceCreamViewModel.ResetBindings();
         }
 
         public void GoToFinishRating()
