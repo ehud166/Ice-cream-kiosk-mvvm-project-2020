@@ -338,6 +338,36 @@
   <ItemGroup>
     <None Include="bin\Debug\assets\waze.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="color.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="blue1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="orange1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BlackWhite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="yellow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="light1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="light2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="orange4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="2tone1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sun1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
