@@ -62,6 +62,7 @@ namespace IceCreamKiosk.ViewModel
             FindIceCreamWizard.RateIceCreamDialogView = RateIceCreamDialog;
             FindIceCreamWizard.RateIceCreamDoneView = RateIceCreamDone;
             IceCreamDetails.Wizard = FindIceCreamWizard;
+            Main.Wizard = FindIceCreamWizard;
         }
 
         public MainViewModel Main

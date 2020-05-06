@@ -12,13 +12,14 @@ using System.Threading.Tasks;
 using static IceCreamKiosk.ViewModel.FindIceCreamViewModel;
 using static IceCreamKiosk.ViewModel.IceCreamDetailsViewModel;
 using static IceCreamKiosk.ViewModel.IceCreamsListViewModel;
+using static IceCreamKiosk.ViewModel.MainViewModel;
 using static IceCreamKiosk.ViewModel.RateIceCreamDialogViewModel;
 using static IceCreamKiosk.ViewModel.RateIceCreamDoneViewModel;
 using static IceCreamKiosk.ViewModel.RateIceCreamViewModel;
 
 namespace IceCreamKiosk.ViewModel
 {
-    public class FindIceCreamWizardViewModel : ViewModelBase, IFindIceCream, IIceCreamDetails, /*IRateIceCream,*/ IRateDialogIceCream, IRateIceCreamDone
+    public class FindIceCreamWizardViewModel : ViewModelBase, IFindIceCream, IIceCreamDetails, /*IRateIceCream,*/ IRateDialogIceCream, IRateIceCreamDone, IMain
     {
         public enum WizardPages
         {
