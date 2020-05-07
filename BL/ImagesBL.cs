@@ -20,9 +20,9 @@ namespace BL
 
         private INutritionService nutritionService = new UsdaNutritionService();
         private ImageService imageService = new ImageService();
-        public async Task <Nutritions> GetIceCreamNutritionAsync(int productId)
+        public Nutritions GetIceCreamNutrition(string productName)
         {
-            return await nutritionService.GetNutritionInformationAsync(productId);
+            return nutritionService.GetNutritionInformation(productName);
         }
 
         public async Task<bool> IsImageContainsIceCream(string imageName)

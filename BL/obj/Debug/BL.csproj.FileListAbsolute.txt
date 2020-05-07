@@ -89,3 +89,6 @@ C:\Users\yishai\Source\Repos\Ice-cream-kiosk-mvvm-project-2020-6-5\BL\obj\Debug\
 C:\Users\yishai\Source\Repos\Ice-cream-kiosk-mvvm-project-2020-6-5\BL\obj\Debug\BL.csproj.CopyComplete
 C:\Users\yishai\Source\Repos\Ice-cream-kiosk-mvvm-project-2020-6-5\BL\obj\Debug\BL.dll
 C:\Users\yishai\Source\Repos\Ice-cream-kiosk-mvvm-project-2020-6-5\BL\obj\Debug\BL.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\BL\bin\Debug\RestSharp.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\BL\bin\Debug\RestSharp.Serializers.Newtonsoft.Json.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\BL\bin\Debug\RestSharp.xml

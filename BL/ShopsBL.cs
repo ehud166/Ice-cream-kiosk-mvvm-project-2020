@@ -14,10 +14,10 @@ namespace BL
         public async Task AddShop(Shop shop)
         {
             ShopService shopService = new ShopService();
-            foreach(IceCream iceCream in shop.IceCreams)
+            foreach (IceCream iceCream in shop.IceCreams)
             {
-                iceCream.Nutrients =  await nutritionService.GetNutritionInformationAsync(iceCream.NdbId);
-                
+                iceCream.Nutrients = nutritionService.GetNutritionInformation(iceCream.Name);
+
             }
             await shopService.AddShop(shop);
         }
@@ -27,7 +27,7 @@ namespace BL
             ShopService shopService = new ShopService();
             foreach (IceCream iceCream in shop.IceCreams)
             {
-                iceCream.Nutrients = await nutritionService.GetNutritionInformationAsync(iceCream.NdbId);
+                iceCream.Nutrients = nutritionService.GetNutritionInformation(iceCream.Name);
             }
             await shopService.UpdateShop(shop);
         }
@@ -35,7 +35,7 @@ namespace BL
         public async Task DeleteShop(Shop shop)
         {
             ShopService shopService = new ShopService();
-             await shopService.DeleteShop(shop);
+            await shopService.DeleteShop(shop);
         }
 
         public async Task<List<Shop>> GetShops()
@@ -71,5 +71,7 @@ namespace BL
             distance = radius * c;
             return distance;
         }
-    }
+
+
+    }       
 }
