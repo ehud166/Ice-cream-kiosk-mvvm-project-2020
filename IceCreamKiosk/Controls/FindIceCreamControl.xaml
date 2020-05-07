@@ -8,8 +8,9 @@
              xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
              DataContext="{Binding Source={StaticResource Locator}, Path=FindIceCream}"
              mc:Ignorable="d" 
-       d:DesignHeight="600" d:DesignWidth="330">
+             d:DesignWidth="330">
     <StackPanel >
+        
         <!--<materialDesign:ColorZone Mode="PrimaryDark" Grid.Row="0"   CornerRadius="3" materialDesign:ShadowAssist.ShadowDepth="Depth1" Margin="2">
             <StackPanel >
                 <TextBlock VerticalAlignment="Center" Text="Find Ice Cream"  Style="{StaticResource MaterialDesignDisplay2TextBlock}" Margin="16 0 0 0"/>
@@ -18,17 +19,17 @@
 
             </StackPanel>               
         </materialDesign:ColorZone>-->
-        <materialDesign:Card Margin="5"  Background="{DynamicResource PrimaryHueLightBrush}"  VerticalAlignment="Center" HorizontalAlignment="Center"
+        <materialDesign:Card Margin="10 0"  Background="{DynamicResource PrimaryHueLightBrush}" Opacity="0.9"  VerticalAlignment="Center" HorizontalAlignment="Center"
             Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" Padding="10"  >
-            <StackPanel VerticalAlignment="Center" Margin="10" Height="auto" Width="auto">
-                <StackPanel Orientation="Horizontal" Margin="5" >
-                    <TextBox Text="{Binding IceCreamDescription}" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" HorizontalAlignment="Stretch"   BorderThickness="10"
+            <StackPanel VerticalAlignment="Center" Margin="0" Height="auto" Width="auto">
+                <StackPanel Orientation="Horizontal"  Margin="3" >
+                    <TextBox Text="{Binding IceCreamDescription}" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" HorizontalAlignment="Stretch"  
             AcceptsReturn="True"  TextWrapping="Wrap" MinWidth="200" MaxWidth="250" FontSize="16"  materialDesign:HintAssist.Hint="Ice Cream Name/Description"/>
                     <Button Command="{ Binding FindCommand}"
-                         Padding="5"
+                         Padding="3"
                            HorizontalAlignment="Stretch"
                             Height="auto"
-                         Margin="5 0" Style="{StaticResource MaterialDesignRaisedButton}" >
+                         Margin="5 0" Style="{StaticResource MaterialDesignRaisedButton}" Width="85" >
                         search
                     </Button>
                 </StackPanel>
@@ -42,12 +43,12 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <Expander Width="300"   Background="{DynamicResource PrimaryHueLightBrush}" Grid.Row="2"  Style="{StaticResource MaterialDesignExpander}"
+                    <Expander Width="300"   Background="{DynamicResource PrimaryHueLightBrush}" Grid.Row="2" Padding="0"  Style="{StaticResource MaterialDesignExpander}"
                         Header="Filter by Nutrition">
-                        <StackPanel Orientation="Vertical" Height="450">
+                        <StackPanel Orientation="Vertical">
 
-                            <StackPanel Orientation="vertical">
-                                <Slider x:Name="EnergySlider" Orientation="Horizontal"   TickFrequency="10" IsSnapToTickEnabled="True"   Minimum="0"  Maximum="600"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxEnergy}"/>
+                            <StackPanel Orientation="vertical" Height="71" >
+                                <Slider x:Name="EnergySlider" Orientation="Horizontal"   TickFrequency="10"   IsSnapToTickEnabled="True"   Minimum="0"  Maximum="600"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxEnergy}"  Height="51"/>
                                 <DockPanel LastChildFill="False" >
                                     <TextBlock  HorizontalAlignment="Left"  Text="Max Enargy(Kcal)"/>
                                     <TextBlock DockPanel.Dock="Right"   Text="{Binding Path=Value, ElementName=EnergySlider}" />
@@ -55,48 +56,48 @@
                                 </DockPanel>
                             </StackPanel>
 
-                            <StackPanel >
-                                <Slider x:Name="CarboSlider" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True"   Minimum="0"  Maximum="550"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxCarbohydrate}" />
+                            <StackPanel  Height="71">
+                                <Slider x:Name="CarboSlider" Height="51" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True"   Minimum="0"  Maximum="550"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxCarbohydrate}" />
                                 <DockPanel LastChildFill="False">
                                     <TextBlock DockPanel.Dock="Left" Text="Max Carbohydrate (g)"/>
                                     <TextBlock DockPanel.Dock="Right" Text="{Binding Path=Value, ElementName=CarboSlider}"/>
                                 </DockPanel>
                             </StackPanel>
 
-                            <StackPanel >
-                                <Slider x:Name="FatSlider" Cursor="Wait"  Orientation="Horizontal" TickFrequency="5" IsSnapToTickEnabled="True" Minimum="0"  Maximum="100"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxTotalFat}"/>
+                            <StackPanel Height="71" >
+                                <Slider x:Name="FatSlider" Height="51" Cursor="Wait"  Orientation="Horizontal" TickFrequency="5" IsSnapToTickEnabled="True" Minimum="0"  Maximum="100"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxTotalFat}"/>
                                 <DockPanel LastChildFill="False">
                                     <TextBlock DockPanel.Dock="Left" Text="Max Total Fat (g)"/>
                                     <TextBlock DockPanel.Dock="Right" Text="{Binding Path=Value, ElementName=FatSlider}"/>
                                 </DockPanel>
                             </StackPanel>
 
-                            <StackPanel>
-                                <Slider x:Name="CholesSlider" Orientation="Horizontal" TickFrequency="5" IsSnapToTickEnabled="True" Minimum="0"  Maximum="100"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxCholesterol}"/>
+                            <StackPanel Height="71">
+                                <Slider x:Name="CholesSlider" Height="51" Orientation="Horizontal" TickFrequency="5" IsSnapToTickEnabled="True" Minimum="0"  Maximum="100"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxCholesterol}"/>
                                 <DockPanel LastChildFill="False">
                                     <TextBlock DockPanel.Dock="Left" Text="Max Cholesterol (mg)"/>
                                     <TextBlock DockPanel.Dock="Right" Text="{Binding Path=Value, ElementName=CholesSlider}"/>
                                 </DockPanel>
                             </StackPanel>
 
-                            <StackPanel>
-                                <Slider x:Name="SugarSlider" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True" Minimum="0"  Maximum="550"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxSugars}" />
+                            <StackPanel Height="71">
+                                <Slider x:Name="SugarSlider" Height="51" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True" Minimum="0"  Maximum="550"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxSugars}" />
                                 <DockPanel LastChildFill="False">
                                     <TextBlock DockPanel.Dock="Left" Text="Max Sugars (g)"/>
                                     <TextBlock DockPanel.Dock="Right" Text="{Binding Path=Value, ElementName=SugarSlider}"/>
                                 </DockPanel>
                             </StackPanel>
 
-                            <StackPanel>
-                                <Slider x:Name="ProteinSlider" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True" Minimum="0"  Maximum="500"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxProtein}" />
+                            <StackPanel Height="71">
+                                <Slider x:Name="ProteinSlider" Height="51" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True" Minimum="0"  Maximum="500"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxProtein}" />
                                 <DockPanel LastChildFill="False">
                                     <TextBlock DockPanel.Dock="Left" Text="Max Protein (g)"/>
                                     <TextBlock DockPanel.Dock="Right" Text="{Binding Path=Value, ElementName=ProteinSlider}"/>
                                 </DockPanel>
                             </StackPanel>
 
-                            <StackPanel>
-                                <Slider x:Name="FiberSlider" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True" Minimum="0"  Maximum="100"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxFiber}" />
+                            <StackPanel Height="71">
+                                <Slider x:Name="FiberSlider" Height="51" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True" Minimum="0"  Maximum="100"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxFiber}" />
                                 <DockPanel LastChildFill="False">
                                     <TextBlock DockPanel.Dock="Left" Text="Max Fiber (g)"/>
                                     <TextBlock DockPanel.Dock="Right" Text="{Binding Path=Value, ElementName=FiberSlider}"/>

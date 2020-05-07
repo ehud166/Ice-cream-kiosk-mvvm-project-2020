@@ -7,40 +7,35 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              DataContext="{Binding Source={StaticResource Locator}, Path=RateIceCreamDialog}"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <materialDesign:Card Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid >
+        <Grid.Background>
+            <SolidColorBrush Color="Transparent"/>
+
+        </Grid.Background>
+
+
+        <materialDesign:Card Width="450"
             Background="{DynamicResource PrimaryHueLightBrush}" 
-            Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" Padding="70 20 70 20" >
-                <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition  Height="125"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
+            Foreground="{DynamicResource PrimaryHueLightForegroundBrush}"  >
+                
+                <StackPanel >
 
-                    </Grid.RowDefinitions>
-
-                    <materialDesign:RatingBar VerticalAlignment="Center" RenderTransformOrigin="0.5 0.5"  
-                                          HorizontalAlignment="Center" Grid.Row="0" 
+                <TextBlock Text="plese rate this ice cream" HorizontalAlignment="Center" FontSize="30"></TextBlock>
+                    <materialDesign:RatingBar Foreground="#fdd835" VerticalAlignment="Center"  
+                                          HorizontalAlignment="Center" 
                                           Value="{Binding RateValue , UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
-                                          x:Name="BasicRatingBar"  >
+                                          x:Name="BasicRatingBar" Margin="-160,10,0,0"  >
                         <materialDesign:RatingBar.RenderTransform>
                             <TransformGroup>
-                                <ScaleTransform ScaleX="3.5" ScaleY="3.5"/>
+                                <ScaleTransform ScaleX="2.5" ScaleY="2.5"/>
                             </TransformGroup>
                         </materialDesign:RatingBar.RenderTransform>
 
                     </materialDesign:RatingBar>
-                    <TextBox Grid.Row="1" Text="{Binding RateReview, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"  
-                     VerticalAlignment="Top" AcceptsReturn="True" Height="100" Margin="10" TextWrapping="Wrap" MaxWidth="450"  materialDesign:HintAssist.Hint="Review"/>
-                    <TextBlock Grid.Row="2" MaxWidth="400" FontSize="18" TextWrapping="Wrap" Text="Scan this QR code with your smartphone, and click the button to sync after you uplaoded the image on the link." HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                    <TextBox MinLines="2" materialDesign:HintAssist.Hint="write your review about this ice cream" Text="{Binding RateReview, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"  
+                     VerticalAlignment="Top" AcceptsReturn="True" Height="100" Margin="50" TextWrapping="Wrap" MaxWidth="450"  />
+                    <TextBlock Grid.Row="2" MaxWidth="400" FontSize="18" TextWrapping="Wrap" Text="You can scan this QR code with your smartphone, and click the button to sync after you uplaoded the image on the link." HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
                     <Grid Width="450" Grid.Row="3">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -49,12 +44,12 @@
                             </Grid.ColumnDefinitions>
                             <Image Grid.Column="0" Width="150" Height="150" Margin="2" Source="{Binding QrImage}"></Image>
                             <Button Grid.Column="1" Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
-      Margin="8 0 0 0"  Command="{Binding DownloadCommand}" materialDesign:ButtonProgressAssist.IsIndicatorVisible="{Binding IsDownloading}"
+      Margin="0 -20 0 0"  Command="{Binding DownloadCommand}" materialDesign:ButtonProgressAssist.IsIndicatorVisible="{Binding IsDownloading}"
       materialDesign:ButtonProgressAssist.Value="{Binding DownloadProgress}">
                                 <!-- simple example of toggling/animating pack icon with a data trigger-->
                                 <materialDesign:PackIcon  Height="24"   Width="24">
                                     <materialDesign:PackIcon.Style>
-                                        <Style  TargetType="materialDesign:PackIcon"  BasedOn="{StaticResource {x:Type materialDesign:PackIcon}}">
+                                        <Style  TargetType="materialDesign:PackIcon" >
                                             <Setter Property="Kind"  Value="CloudSync" />
                                             <Style.Triggers>
                                                 <DataTrigger  Binding="{Binding IsDownloadComplete}"  Value="True">
@@ -78,10 +73,9 @@
                     <Button Grid.Row="4" FontSize="24" Height="45" Width="110" Command="{Binding RateCommand}" Margin="15 15 15 15" Style="{StaticResource MaterialDesignRaisedButton}" >
                         Rate
                     </Button>
-                </Grid>
+                </StackPanel>
             </materialDesign:Card>
-        </Grid>
-        <Button Grid.Row="0" Command="{Binding GoBackCommand}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="45" Style="{StaticResource MaterialDesignFloatingActionLightButton}">
+        <Button Grid.Row="0" Command="{Binding GoBackCommand}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-100 0 0 0" Style="{StaticResource MaterialDesignFloatingActionLightButton}">
             <materialDesign:PackIcon Kind="StepBackward" Height="24" Width="24" />
         </Button>
         <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Fill="Gray" Opacity="0.4" Visibility="{Binding Loading, Converter={StaticResource BooleanToVisibilityConverter}}"/>

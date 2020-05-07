@@ -63,13 +63,18 @@
                             <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" Foreground="White" IsChecked="False" Content="shops" FontSize="24" Height="auto" FontStyle="Italic" />
                             --><!--<RadioButton Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" IsChecked="False" Content="rate" Command="{Binding MoveToRate}" FontSize="24" Height="auto" />--><!--
                     </StackPanel>-->
-					<Button DockPanel.Dock="Right" Width="150"  Height="50" Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    <Button DockPanel.Dock="Right" Width="150" Foreground="Black" BorderBrush="Black"  BorderThickness="4"  Height="50" Background="Transparent" materialDesign:ButtonAssist.CornerRadius="25" Style="{StaticResource MaterialDesignRaisedDarkButton}"
                         Command="{Binding LoadAdminCommand}">
 						<StackPanel Orientation="Horizontal">
 							<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4" FontSize="24" Text="{Binding AdminButtonText}"/>
 							<materialDesign:PackIcon Kind="{Binding AdminButtonIcon}" VerticalAlignment="Center" Width="40" Height="40" />
 						</StackPanel>
-					</Button>  
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="25"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>  
 				</DockPanel>
 			</materialDesign:ColorZone>
 			<!--<DockPanel x:Name="dockPanel" LastChildFill="False">
