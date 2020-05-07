@@ -29,9 +29,10 @@
                                Path=KioskLocationLan}"/>
         </StackPanel>-->
         <StackPanel >
-            <DataGrid x:Name="ShopsGrid" materialDesign:DataGridAssist.CellPadding="5 30 0 5"  Margin="15"  Foreground="DarkSlateGray" RowHeight="95" Focusable="False"   RowBackground="Pink" AlternatingRowBackground="#fdd835"   ItemsSource="{Binding Shops}" IsSynchronizedWithCurrentItem="True"
+            <DataGrid x:Name="ShopsGrid"  materialDesign:DataGridAssist.CellPadding="5"  Margin="15"  Foreground="DarkSlateGray" RowHeight="95" Focusable="False"   RowBackground="Pink" AlternatingRowBackground="#fdd835"   ItemsSource="{Binding Shops}" IsSynchronizedWithCurrentItem="True"
                   CanUserSortColumns="True" IsReadOnly="True" SelectionUnit="FullRow" 
-                  CanUserAddRows="False"  ColumnWidth="Auto" AutoGenerateColumns="False"  SelectedItem="{Binding SelectedShop}" Background="Transparent"  HeadersVisibility="None" HorizontalAlignment="Left" SelectionMode="Single" CanUserResizeRows="False" FontWeight="Bold" Opacity="0.85">
+                  CanUserAddRows="False"  ColumnWidth="Auto" AutoGenerateColumns="False"  SelectedItem="{Binding SelectedShop}" Background="Transparent"  HeadersVisibility="None" HorizontalAlignment="Center" SelectionMode="Single" CanUserResizeRows="False" FontWeight="Bold" Opacity="0.85">
+                
                 <DataGrid.CellStyle>
                     
                     <Style TargetType="{x:Type DataGridCell}">
@@ -42,6 +43,8 @@
                                         <SolidColorBrush Color="Transparent"/>
                                     </Setter.Value>
                                 </Setter>
+                               
+
                                 <Setter Property="Foreground"
                             Value="{DynamicResource
                                    {x:Static SystemColors.ControlTextBrushKey}}"/>
@@ -98,10 +101,32 @@
                             CommandParameter="{Binding ElementName=ShopsGrid, Path=SelectedItem}" />
                 </DataGrid.InputBindings>
                 <DataGrid.Columns >
-                    <DataGridTextColumn MinWidth="170"   Header="Name" Binding="{Binding Name}"   TextBlock.TextAlignment="Left" TextBlock.FontSize="30"   FontFamily="Aharoni" FontWeight="Bold" CanUserResize="False"/>
+
+                    <DataGridTextColumn MinWidth="170"   Header="Name" Binding="{Binding Name}"   TextBlock.TextAlignment="Justify"  TextBlock.FontSize="30"   FontFamily="Aharoni" FontWeight="Bold" CanUserResize="False">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Margin" Value="5" />
+                                <Setter Property="Padding" Value="10 25 0 0" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
                     <DataGridTemplateColumn Header="Photo"  CellTemplate="{StaticResource ImagesButtonTemplate}" />
-                    <DataGridTextColumn MinWidth="180"   Header="Address" Binding="{Binding Address}" TextBlock.TextAlignment="Left" TextBlock.FontSize="20"/>
-                    <DataGridTextColumn  Header="Phone" Binding="{Binding PhoneNumber}" TextBlock.TextAlignment="Left" TextBlock.FontSize="20"/>
+                    <DataGridTextColumn MinWidth="180"   Header="Address" Binding="{Binding Address}" TextBlock.TextAlignment="Left" TextBlock.FontSize="20">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Margin" Value="5" />
+                                <Setter Property="Padding" Value="10 25 0 0" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn  Header="Phone" Binding="{Binding PhoneNumber}" TextBlock.TextAlignment="Left" TextBlock.FontSize="20">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Margin" Value="5" />
+                                <Setter Property="Padding" Value="10 25 10 0" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
                     <DataGridTextColumn   Header="Web Site" Binding="{Binding WebSiteLink}" TextBlock.TextAlignment="Center" Visibility="Hidden"/>
                     <DataGridTextColumn  Header="Social" Binding="{Binding SocialMediaLink}" TextBlock.TextAlignment="Center" Visibility="Hidden"/>
                     <DataGridTemplateColumn Width="50" Header="">
@@ -116,10 +141,10 @@
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" Background="#1de9b6"
-                                 HorizontalAlignment="center" VerticalAlignment="Top" Margin="0,-40,400,0" ToolTip="Add New Shop"
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" Background="#1de9b6" BorderBrush="#1de9b6"
+                                 HorizontalAlignment="center" VerticalAlignment="Top" Margin="0,-40,0,0" ToolTip="Add New Shop"
                                 Grid.Row="2" Command="{Binding AddShopCommand}" Height="55" Width="55">
-                <materialDesign:PackIcon Kind="Plus" Height="40" Width="40" BorderBrush="#1de9b6" Background="#1de9b6" />
+                <materialDesign:PackIcon Kind="Plus" Height="40" Width="40"  />
             </Button>
 
         </StackPanel>

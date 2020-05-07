@@ -21,13 +21,14 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
     </UserControl.Resources>
        
  
     <StackPanel Background="Transparent" Opacity="0.9">
         
         
-        <TextBlock Text="Shop Details" Margin="5" Height="40" Background="Gray" Foreground="White" FontStretch="ExtraExpanded" TextWrapping="Wrap" FontWeight="Bold" FontSize="24" ></TextBlock>
+        <TextBlock Text="Shop Details" Padding="5 0 0 0" Margin="5" Height="40" Background="Gray" Foreground="White" FontStretch="ExtraExpanded" TextWrapping="Wrap" FontWeight="Bold" FontSize="24" ></TextBlock>
 
 
         <Grid Margin="20 5" Background="LightGray" >
@@ -119,7 +120,7 @@
 
 
         <StackPanel   HorizontalAlignment="Right" Background="Transparent" >
-            <TextBlock Text="Shop Ice Creams" Margin="0 0 5 0 " Height="40" Background="Gray" Foreground="White" FontStretch="ExtraExpanded" TextWrapping="Wrap" FontWeight="Bold" FontSize="24" ></TextBlock>
+            <TextBlock Text="Shop Ice Creams" Padding="20 0 0 0" Margin="5 0 5 0 " Height="40" Background="Gray" Foreground="White" FontStretch="ExtraExpanded" TextWrapping="Wrap" FontWeight="Bold" FontSize="24" ></TextBlock>
             <DataGrid Background="Transparent"    Margin="10 0 15 0"  ItemsSource="{Binding IceCreams}"  
                       SelectedItem="{Binding SelectedIceCream}" CanUserSortColumns="True"
                       CanUserAddRows="False"
@@ -158,12 +159,27 @@
                     </Style>
                 </DataGrid.RowStyle>
                 <DataGrid.Columns>
-                    <materialDesign:MaterialDataGridTextColumn  Binding="{Binding Name}" Header="Name" Width="100"   />
-                    <materialDesign:MaterialDataGridTextColumn  Binding="{Binding Description}"  Header="Description"  Width="350"  />
-                    <materialDesign:MaterialDataGridComboBoxColumn Width="100" Header="Ndb Id" SelectedValueBinding="{Binding NdbId}"
+                    <DataGridTextColumn  Binding="{Binding Name}" Header="Name" Width="100">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Margin" Value="5" />
+                                <Setter Property="Padding" Value="5 10 0 0" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn  Binding="{Binding Description}"  Header="Description"  Width="350">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Margin" Value="5" />
+                                <Setter Property="Padding" Value="5 10 0 0" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <materialDesign:MaterialDataGridComboBoxColumn  Width="100"  Header="Ndb Id" SelectedValueBinding="{Binding NdbId}"
                             DisplayMemberPath="Name"
                              SelectedValuePath="NdbId"
-                             ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.NdbIds}" />
+                             ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.NdbIds}"/>
+
 
                     <materialDesign:MaterialDataGridComboBoxColumn Visibility="Hidden" Width="0" Header="Rate" SelectedValueBinding="{Binding Rate}"
                              ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.Rates}"  />
