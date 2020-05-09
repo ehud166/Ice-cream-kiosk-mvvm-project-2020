@@ -9,6 +9,6 @@ namespace DAL
 {
     public interface INutritionService
     {
-        Task <Nutritions> GetNutritionInformationAsync(int productID);
+        Nutritions GetNutritionInformation(string productName);
     }
 }

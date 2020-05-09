@@ -176,10 +176,10 @@
                             </Style>
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
-                    <materialDesign:MaterialDataGridComboBoxColumn  Width="100"  Header="Ndb Id" SelectedValueBinding="{Binding NdbId}"
+                    <!--<materialDesign:MaterialDataGridComboBoxColumn  Width="100"  Header="Ndb Id" SelectedValueBinding="{Binding NdbId}"
                             DisplayMemberPath="Name"
                              SelectedValuePath="NdbId"
-                             ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.NdbIds}"/>
+                             ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.NdbIds}"/>-->
 
 
                     <materialDesign:MaterialDataGridComboBoxColumn Visibility="Hidden" Width="0" Header="Rate" SelectedValueBinding="{Binding Rate}"

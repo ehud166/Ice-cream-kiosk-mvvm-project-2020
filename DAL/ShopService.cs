@@ -103,15 +103,17 @@ namespace DAL
             }
         }
 
-        public async Task<List<int>> GetShopsIdInDistance(double distance)
+        public async Task<List<int>> GetShopsIdInDistance(double distance=15)
         {
             //implement with location service
             using (var db = new DBContext())
             {
                 var shops = await (from shop in db.Shops.Include(s => s.IceCreams)
+                                   //where GetDistanceBetweenPoints(shop.x,shop.y,kiosk.x, kiosk.y)/1000<=distance
                                    select shop.Id).ToListAsync();
                 return shops;
             }
         }
+        
     }
 }

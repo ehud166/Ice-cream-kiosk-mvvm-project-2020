@@ -325,3 +325,5 @@ C:\Users\yishai\Source\Repos\Ice-cream-kiosk-mvvm-project-2020-6-5\IceCreamKiosk
 C:\Users\yishai\Source\Repos\Ice-cream-kiosk-mvvm-project-2020-6-5\IceCreamKiosk\obj\Debug\PL.csproj.CopyComplete
 C:\Users\yishai\Source\Repos\Ice-cream-kiosk-mvvm-project-2020-6-5\IceCreamKiosk\obj\Debug\IceCreamKiosk.exe
 C:\Users\yishai\Source\Repos\Ice-cream-kiosk-mvvm-project-2020-6-5\IceCreamKiosk\obj\Debug\IceCreamKiosk.pdb
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\RestSharp.dll
+C:\Users\ehud1\Desktop\IceCreamKiosk\IceCreamKiosk\bin\Debug\RestSharp.xml
