@@ -35,7 +35,6 @@
                 </Grid.ColumnDefinitions>
                 <materialDesign:TransitioningContent Margin=" 0 0 30 0"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:1.2}">
 
-                    <materialDesign:Card  MaxWidth="520" Grid.Column="0" >
                         <StackPanel>
                             <GroupBox Header="Ice cream details" Grid.Column="1" Height="300" Width="420" Style="{DynamicResource MaterialDesignCardGroupBox}">
                                 <GroupBox.HeaderTemplate>
@@ -72,8 +71,9 @@
                                     </StackPanel>
                                 </Grid>
                             </GroupBox>
-
-                            <Expander x:Name="NutriExpender" HorizontalAlignment="Stretch" IsExpanded="False"  >
+                            
+                                <Expander x:Name="NutriExpender" HorizontalAlignment="Stretch"  IsExpanded="False"  >
+                                
                                 <Expander.Style>
                                     <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource MaterialDesignExpander}">
                                         <Style.Triggers>
@@ -89,52 +89,56 @@
                                         <materialDesign:PackIcon   DockPanel.Dock="Left" Kind="TagTextOutline" Height="32"  Width="32"  VerticalAlignment="Center" />
                                     </DockPanel>
                                 </Expander.Header>
-                                <StackPanel Width="300">
-                                    <DockPanel Margin="0 10" LastChildFill="False">
-                                        <TextBlock DockPanel.Dock="Left"  Text="Energy"/>
-                                        <TextBlock  DockPanel.Dock="Right"  Text="kcal"/>
-                                        <TextBlock DockPanel.Dock="Right" Margin="5 0" Text="{Binding IceCream.Nutrients.Energy}"/>
-                                    </DockPanel>
+                                <ScrollViewer MaxHeight="120">
 
-                                    <DockPanel Margin="0 10" LastChildFill="False">
-                                        <TextBlock DockPanel.Dock="Left"  Text="Carbohydrate"/>
-                                        <TextBlock DockPanel.Dock="Right"   Text="g"/>
-                                        <TextBlock Margin="5 0" DockPanel.Dock="Right"   Text="{Binding IceCream.Nutrients.Carbohydrate}"/>
-                                    </DockPanel>
+                                    <StackPanel Width="300">
+                                        <DockPanel Margin="0 10" LastChildFill="False">
+                                            <TextBlock DockPanel.Dock="Left"  Text="Energy"/>
+                                            <TextBlock  DockPanel.Dock="Right"  Text="kcal"/>
+                                            <TextBlock DockPanel.Dock="Right" Margin="5 0" Text="{Binding IceCream.Nutrients.Energy}"/>
+                                        </DockPanel>
 
-                                    <DockPanel Margin="0 10" LastChildFill="False">
-                                        <TextBlock DockPanel.Dock="Left" Text="TotalFat"/>
-                                        <TextBlock DockPanel.Dock="Right" Text="g"/>
-                                        <TextBlock DockPanel.Dock="Right" Margin="5 0" Text="{Binding IceCream.Nutrients.TotalFat}"/>
-                                    </DockPanel>
+                                        <DockPanel Margin="0 10" LastChildFill="False">
+                                            <TextBlock DockPanel.Dock="Left"  Text="Carbohydrate"/>
+                                            <TextBlock DockPanel.Dock="Right"   Text="g"/>
+                                            <TextBlock Margin="5 0" DockPanel.Dock="Right"   Text="{Binding IceCream.Nutrients.Carbohydrate}"/>
+                                        </DockPanel>
 
-                                    <DockPanel Margin="0 10" LastChildFill="False">
-                                        <TextBlock DockPanel.Dock="Left" Text="Cholesterol"/>
-                                        <TextBlock DockPanel.Dock="Right" Text="mg"/>
-                                        <TextBlock DockPanel.Dock="Right" Margin="5 0" Text="{Binding IceCream.Nutrients.Cholesterol}"/>
-                                    </DockPanel>
+                                        <DockPanel Margin="0 10" LastChildFill="False">
+                                            <TextBlock DockPanel.Dock="Left" Text="TotalFat"/>
+                                            <TextBlock DockPanel.Dock="Right" Text="g"/>
+                                            <TextBlock DockPanel.Dock="Right" Margin="5 0" Text="{Binding IceCream.Nutrients.TotalFat}"/>
+                                        </DockPanel>
 
-                                    <DockPanel Margin="0 10" LastChildFill="False">
-                                        <TextBlock  DockPanel.Dock="Left" Text="Sugars"/>
-                                        <TextBlock  DockPanel.Dock="Right"  Text="g"/>
-                                        <TextBlock  DockPanel.Dock="Right" Margin="5 0"  Text="{Binding IceCream.Nutrients.Sugars}"/>
-                                    </DockPanel>
+                                        <DockPanel Margin="0 10" LastChildFill="False">
+                                            <TextBlock DockPanel.Dock="Left" Text="Cholesterol"/>
+                                            <TextBlock DockPanel.Dock="Right" Text="mg"/>
+                                            <TextBlock DockPanel.Dock="Right" Margin="5 0" Text="{Binding IceCream.Nutrients.Cholesterol}"/>
+                                        </DockPanel>
 
-                                    <DockPanel Margin="0 10" LastChildFill="False">
-                                        <TextBlock DockPanel.Dock="Left" Text="Protein"/>
-                                        <TextBlock   DockPanel.Dock="Right"  Text="g"/>
-                                        <TextBlock  DockPanel.Dock="Right" Margin="5 0" Text="{Binding IceCream.Nutrients.Protein}"/>
-                                    </DockPanel>
+                                        <DockPanel Margin="0 10" LastChildFill="False">
+                                            <TextBlock  DockPanel.Dock="Left" Text="Sugars"/>
+                                            <TextBlock  DockPanel.Dock="Right"  Text="g"/>
+                                            <TextBlock  DockPanel.Dock="Right" Margin="5 0"  Text="{Binding IceCream.Nutrients.Sugars}"/>
+                                        </DockPanel>
 
-                                    <DockPanel Margin="0 10" LastChildFill="False">
-                                        <TextBlock  DockPanel.Dock="Left" Text="Fiber"/>
-                                        <TextBlock  DockPanel.Dock="Right"  Text="g"/>
-                                        <TextBlock  DockPanel.Dock="Right" Margin="5 0" Text="{Binding IceCream.Nutrients.Fiber}"/>
-                                    </DockPanel>
+                                        <DockPanel Margin="0 10" LastChildFill="False">
+                                            <TextBlock DockPanel.Dock="Left" Text="Protein"/>
+                                            <TextBlock   DockPanel.Dock="Right"  Text="g"/>
+                                            <TextBlock  DockPanel.Dock="Right" Margin="5 0" Text="{Binding IceCream.Nutrients.Protein}"/>
+                                        </DockPanel>
 
-                                </StackPanel>
-                            </Expander>
-                            <Expander x:Name="ReviewExpender" IsExpanded="False" HorizontalAlignment="Stretch" >
+                                        <DockPanel Margin="0 10" LastChildFill="False">
+                                            <TextBlock  DockPanel.Dock="Left" Text="Fiber"/>
+                                            <TextBlock  DockPanel.Dock="Right"  Text="g"/>
+                                            <TextBlock  DockPanel.Dock="Right" Margin="5 0" Text="{Binding IceCream.Nutrients.Fiber}"/>
+                                        </DockPanel>
+
+                                    </StackPanel>
+                           </ScrollViewer>
+                                 </Expander>
+                            
+                                <Expander x:Name="ReviewExpender" IsExpanded="False" HorizontalAlignment="Stretch" >
                                 <Expander.Style>
                                     <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource MaterialDesignExpander}">
                                         <Style.Triggers>
@@ -151,28 +155,30 @@
                                         <TextBlock DockPanel.Dock="Left" Text="{Binding IceCream.Rate, StringFormat=N2}" Margin="10 0 0 0" VerticalAlignment="Center" />
                                     </DockPanel>
                                 </Expander.Header>
-                                <StackPanel >
-                                    <ListBox  MaxHeight="300" ItemsSource="{Binding IceCream.Reviews}" >
+                                <ScrollViewer MaxHeight="150">
+
+                                    <ListBox Focusable="False" ItemsSource="{Binding IceCream.Reviews}" >
+                                        
                                         <ListBox.ItemTemplate>
                                             <DataTemplate>
-                                                <materialDesign:Card Margin="5" Padding="4"
+                                                <materialDesign:Card  Height="90" Margin="5" Padding="4"
                                                          
-                                                         materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="#FFC3FFC3">
+                                                         materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="#FFC3FFC3" >
 
                                                     <StackPanel Orientation="Horizontal">
                                                         <materialDesign:RatingBar Foreground="#fdd835"  Value="{Binding Rate}" IsReadOnly="True" x:Name="ReadOnlyRatingBar" />
 
-                                                        <TextBlock TextWrapping="Wrap" Margin="20 10"  Text="{Binding Message, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center"/>
+                                                        <TextBlock  TextWrapping="Wrap"  Margin="20 10"  Text="{Binding Message, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center"/>
                                                         <Image Margin="2" Grid.Column="2"  Source="{Binding Image}" Height="45" Width="45"/>
                                                     </StackPanel>
                                                 </materialDesign:Card>
                                             </DataTemplate>
                                         </ListBox.ItemTemplate>
                                     </ListBox>
-                                </StackPanel>
+                          </ScrollViewer>
                             </Expander>
+
                         </StackPanel>
-                    </materialDesign:Card>
 
                 </materialDesign:TransitioningContent>
 
