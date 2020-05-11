@@ -77,7 +77,7 @@ namespace IceCreamKiosk.ViewModel
         {
             SlideIndex = (int)WizardPages.RateIceCreamFinished;
             RateIceCreamDialogView.Reset();
-            RateIceCreamView.Reset();
+            //RateIceCreamView.Reset();
             RateIceCreamDoneView.GoToBegining.Execute(null);
         }
 

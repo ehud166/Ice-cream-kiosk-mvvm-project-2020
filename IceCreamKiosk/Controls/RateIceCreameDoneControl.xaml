@@ -9,13 +9,10 @@
              xmlns:mi="http://schemas.microsoft.com/expression/2010/interactions"
              mc:Ignorable="d" 
                DataContext="{Binding RateIceCreamDone, Source={StaticResource Locator}}"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450">
    
     <Grid>
-       
-        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" 
-                   VerticalAlignment="Center" Style="{StaticResource MaterialDesignDisplay4TextBlock}" TextAlignment="Center" Foreground="#FFF0FFEC" FontWeight="ExtraBold">
-            Thank you for your feedback!   
-        </TextBlock>
+        <Image Source="thanks.jpg"> </Image>
+      
     </Grid>
 </UserControl>

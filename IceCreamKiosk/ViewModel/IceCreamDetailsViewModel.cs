@@ -34,6 +34,8 @@ namespace IceCreamKiosk.ViewModel
         public RelayCommand LoadMap { get; set; }
         public RelayCommand FindWalkRoute { get; set; }
         public RelayCommand FindCarRoute { get; set; }
+        public RelayCommand LeftButtonClick { get; set; }
+        public RelayCommand RightButtonClick { get; set; }
         public RelayCommand<IceCream> RateCommand{ get; set; }
         public IIceCreamDetails Wizard { get; set; }
 
@@ -49,6 +51,18 @@ namespace IceCreamKiosk.ViewModel
 
          
             Locations = new ObservableCollection<BE.Location>();
+
+            RightButtonClick = new RelayCommand(
+               async () =>
+               {
+                  await rightButtonClick();
+               });
+
+            LeftButtonClick = new RelayCommand(
+                           async () =>
+                           {
+                               await leftButtonClick();
+                           });
 
             FindWalkRoute = new RelayCommand(
                 async () =>
@@ -93,7 +107,36 @@ namespace IceCreamKiosk.ViewModel
                 });
 
         }
+        public async Task rightButtonClick()
+        {
+            try
+            {
+                var temp = IceCream.Reviews[0];
+                IceCream.Reviews.RemoveAt(0);
+                IceCream.Reviews.Add(temp);
 
+                await Task.Delay(1);
+            }
+            catch (Exception e)
+            {
+                Wizard.FireError(e.Message);
+            }
+        }
+        public async Task leftButtonClick()
+        {
+            try
+            {
+                var temp = IceCream.Reviews[IceCream.Reviews.Count-1];
+                IceCream.Reviews.RemoveAt(IceCream.Reviews.Count - 1);
+                IceCream.Reviews.Insert(0,temp);
+
+                await Task.Delay(1);
+            }
+            catch (Exception e)
+            {
+                Wizard.FireError(e.Message);
+            }
+        }
         private async Task loadMap(TravelModeType travelModeType)
         {
             var waypoints = new List<SimpleWaypoint>

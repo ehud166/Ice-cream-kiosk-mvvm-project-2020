@@ -148,7 +148,7 @@ namespace IceCreamKiosk.ViewModel
         //public RateIceCreamViewModel RateIceCream
         //{
         //    get
-        //    {
+        //    {  
         //        var rateIceCream = ServiceLocator.Current.GetInstance<RateIceCreamViewModel>();
         //        rateIceCream.Wizard = FindIceCreamWizard;
         //        return rateIceCream;

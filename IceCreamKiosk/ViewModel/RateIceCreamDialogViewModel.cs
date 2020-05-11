@@ -102,8 +102,10 @@ namespace IceCreamKiosk.ViewModel
 
                   Image = await bl.GetImageFromStore(imageName);
 
-                  if (Image != null)
+                  if (Image != null) { 
                       DownloadProgress = 100;
+                      DialogHost.OpenDialogCommand.Execute(null, null);
+                      }
                   else
                       throw new Exception("Error: Can't download the image");
                   IsDownloadComplete = true;

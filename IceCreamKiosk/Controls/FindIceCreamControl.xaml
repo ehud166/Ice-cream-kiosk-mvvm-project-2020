@@ -44,7 +44,7 @@
                     </Grid.RowDefinitions>
 
                     <Expander Width="300"   Background="{DynamicResource PrimaryHueLightBrush}" Grid.Row="2" Padding="0"  Style="{StaticResource MaterialDesignExpander}"
-                        Header="Filter by Nutrition">
+                        Header="Advanced search">
                         <StackPanel Orientation="Vertical">
 
                             <StackPanel Orientation="vertical" Height="71" >
@@ -52,7 +52,6 @@
                                 <DockPanel LastChildFill="False" >
                                     <TextBlock  HorizontalAlignment="Left"  Text="Max Enargy(Kcal)"/>
                                     <TextBlock DockPanel.Dock="Right"   Text="{Binding Path=Value, ElementName=EnergySlider}" />
-
                                 </DockPanel>
                             </StackPanel>
 
@@ -73,6 +72,14 @@
                             </StackPanel>
 
                             <StackPanel Height="71">
+                                <Slider x:Name="SugarSlider" Height="51" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True" Minimum="0"  Maximum="550"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxSugars}" />
+                                <DockPanel LastChildFill="False">
+                                    <TextBlock DockPanel.Dock="Left" Text="Max Sugars (g)"/>
+                                    <TextBlock DockPanel.Dock="Right" Text="{Binding Path=Value, ElementName=SugarSlider}"/>
+                                </DockPanel>
+                            </StackPanel>
+
+                            <StackPanel Height="71">
                                 <Slider x:Name="CholesSlider" Height="51" Orientation="Horizontal" TickFrequency="5" IsSnapToTickEnabled="True" Minimum="0"  Maximum="100"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxCholesterol}"/>
                                 <DockPanel LastChildFill="False">
                                     <TextBlock DockPanel.Dock="Left" Text="Max Cholesterol (mg)"/>
@@ -80,11 +87,13 @@
                                 </DockPanel>
                             </StackPanel>
 
+                          
+                            
                             <StackPanel Height="71">
-                                <Slider x:Name="SugarSlider" Height="51" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True" Minimum="0"  Maximum="550"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxSugars}" />
+                                <Slider x:Name="FiberSlider" Height="51" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True" Minimum="0"  Maximum="100"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxFiber}" />
                                 <DockPanel LastChildFill="False">
-                                    <TextBlock DockPanel.Dock="Left" Text="Max Sugars (g)"/>
-                                    <TextBlock DockPanel.Dock="Right" Text="{Binding Path=Value, ElementName=SugarSlider}"/>
+                                    <TextBlock DockPanel.Dock="Left" Text="Max Fiber (g)"/>
+                                    <TextBlock DockPanel.Dock="Right" Text="{Binding Path=Value, ElementName=FiberSlider}"/>
                                 </DockPanel>
                             </StackPanel>
 
@@ -96,13 +105,6 @@
                                 </DockPanel>
                             </StackPanel>
 
-                            <StackPanel Height="71">
-                                <Slider x:Name="FiberSlider" Height="51" Orientation="Horizontal" TickFrequency="10" IsSnapToTickEnabled="True" Minimum="0"  Maximum="100"  Style="{StaticResource MaterialDesignDiscreteSlider}" Value="{Binding MaxFiber}" />
-                                <DockPanel LastChildFill="False">
-                                    <TextBlock DockPanel.Dock="Left" Text="Max Fiber (g)"/>
-                                    <TextBlock DockPanel.Dock="Right" Text="{Binding Path=Value, ElementName=FiberSlider}"/>
-                                </DockPanel>
-                            </StackPanel>
 
                         </StackPanel>
                     </Expander>

@@ -10,11 +10,14 @@
              DataContext="{Binding Source={StaticResource Locator}, Path=Admin}"
              d:DesignHeight="700" d:DesignWidth="900">
     <UserControl.Resources>
+        
         <DataTemplate x:Key="ImagesButtonTemplate">
             <Image Source="{Binding Path=Image}" Height="75" Width="auto" />
         </DataTemplate>
     </UserControl.Resources>
-    <Grid Background="Transparent">
+    <materialDesign:TransitioningContent Margin=" 0"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromTop, Duration=0:0:1.2}">
+
+        <Grid Background="Transparent">
 
 
 
@@ -155,4 +158,5 @@
             <materialDesign:SnackbarMessage  Content="{Binding ErrorMassege}"/>
         </materialDesign:Snackbar>
     </Grid>
+    </materialDesign:TransitioningContent>
 </UserControl>
