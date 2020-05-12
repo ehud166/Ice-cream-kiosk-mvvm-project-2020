@@ -19,7 +19,7 @@
 
             </StackPanel>               
         </materialDesign:ColorZone>-->
-        <materialDesign:Card Margin="10 0"  Background="{DynamicResource PrimaryHueLightBrush}" Opacity="0.9"  VerticalAlignment="Center" HorizontalAlignment="Center"
+        <materialDesign:Card HorizontalAlignment="Left"  Margin="10 0"  Background="{DynamicResource PrimaryHueLightBrush}" Opacity="0.9"  VerticalAlignment="Center" 
             Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" Padding="10"  >
             <StackPanel VerticalAlignment="Center" Margin="0" Height="auto" Width="auto">
                 <StackPanel Orientation="Horizontal"  Margin="3" >
