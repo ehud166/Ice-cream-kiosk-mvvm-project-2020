@@ -9,12 +9,12 @@ The project simulates an **information kiosk** that is placed in a public place 
 In addition, the manager is given access to manage stores and their products.
 After buying the ice cream, the customer will be able to give an opinion on the store and ice cream he bought.
 In addition, the manager is given access to manage stores and their products.
-## architecture
+## Architecture
 
   - **MVVM model**
   - **layers model**
   - **Design pattern**
- ## features
+ ## Features
  - transitioning effect
  - QR code
  - Waze link
