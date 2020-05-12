@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/avisoftware/ray-tracing.svg?branch=master)](https://travis-ci.org/avisoftware/ray-tracing)
 [![codecov](https://codecov.io/gh/avisoftware/ray-tracing/branch/master/graph/badge.svg)](https://codecov.io/gh/avisoftware/ray-tracing)
 # Ice cream kiosk -  mvvm project 2020
-This project was done by **Ehud Gershony** & **Yishai Badichi** (@badishay), undergraduate students in software engineering as part of the "Windows Systems Engineering" course at the Lev Academic Center.
+This project was done by **Ehud Gershony** & **Yishai Badichi** (@badishay), undergraduate students in software engineering as part of the "Windows Systems Engineering" course at the Lev Academic Center.</br>
 **Moderator:** Mr. Yossi Zaguri.
 ## Description
 The project simulates an **information kiosk** that is placed in a public place and customers can get information about ice cream stores in the area and ice creams sold in the store, subscribe to the store on the website and social networks and reach them by the **map service** and navigation **WAZE**
