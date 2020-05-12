@@ -28,22 +28,35 @@ we create html page that hosted by firebase and this is the way that user can up
 
 <img width="500" alt="htmlSite" src="https://user-images.githubusercontent.com/45228315/81687372-ac334080-9461-11ea-8246-59f6da1fb138.png">
 
-## Examples
+# Examples
 
-### Information Kiosk
+## Information Kiosk
+
 <img width="500" alt="htmlSite" src="https://user-images.githubusercontent.com/45228315/81694350-e7397200-9469-11ea-8439-f5355ed22521.jpg">
-#### Filters
+
+### Filters
+
 <img width="500" alt="htmlSite" src="https://user-images.githubusercontent.com/45228315/81694346-e7397200-9469-11ea-84c6-425256a081c9.jpg">
-#### Detailes on random Ice cream
+
+### Detailes on random Ice cream
+
 <img width="500" alt="htmlSite" src="https://user-images.githubusercontent.com/45228315/81694338-e4d71800-9469-11ea-864b-899102cdbe6d.jpg">
-#### Rate it
+
+### Rate it
+
 <img width="500" alt="htmlSite" src="https://user-images.githubusercontent.com/45228315/81694358-e86a9f00-9469-11ea-8a6a-50bed43fb1c2.jpg">
-#### Thanks for feedback
+
+### Thanks for feedback
+
 <img width="500" alt="htmlSite" src=https://user-images.githubusercontent.com/45228315/81694359-e9033580-9469-11ea-8b85-195dd346b0aa.jpg">
-### Admin system
-#### Log in
+
+## Admin system
+### Log in
+
 <img width="500" alt="htmlSite" src="https://user-images.githubusercontent.com/45228315/81694374-ebfe2600-9469-11ea-9dcd-7f764aba3d73.jpg">
+
 ### Shops
-<img width="500" alt="htmlSite" src="(https://user-images.githubusercontent.com/45228315/81694362-e99bcc00-9469-11ea-96ce-b26429e7fdba.jpg">
+
+<img width="500" alt="htmlSite" src="https://user-images.githubusercontent.com/45228315/81694362-e99bcc00-9469-11ea-96ce-b26429e7fdba.jpg">
 ### Shop detailes
 <img width="500" alt="htmlSite" src="https://user-images.githubusercontent.com/45228315/81694366-ea346280-9469-11ea-920d-9840f3f18ef6.jpg">
