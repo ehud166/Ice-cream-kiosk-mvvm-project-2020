@@ -47,7 +47,6 @@ namespace IceCreamKiosk.ViewModel
                             updateShopVm.ResetBindings();
                             //show the dialog
                             Main.ShowDialog(view);
-                            //var result = await DialogHost.Show(view, "RootDialog");
                         }
                         catch (Exception e)
                         {
@@ -70,7 +69,6 @@ namespace IceCreamKiosk.ViewModel
                            view.DataContext = updateShopVm;
                            //show the dialog
                            Main.ShowDialog(view);
-                           //var result = await DialogHost.Show(view, "RootDialog");
                        }
                        catch (Exception e)
                        {

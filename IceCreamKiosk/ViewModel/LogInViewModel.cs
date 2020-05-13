@@ -83,7 +83,6 @@ namespace IceCreamKiosk.ViewModel
             {
                 e.Cancel = true;
             }
-            //throw new System.Exception("bla");
         }
 
         private void reset()

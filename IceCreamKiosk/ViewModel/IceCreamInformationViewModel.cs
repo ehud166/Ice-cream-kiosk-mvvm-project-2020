@@ -26,7 +26,6 @@ namespace IceCreamKiosk.ViewModel
         public interface IIceCreamDetails: IError
         {
             void MoveToRate(IceCream iceCream);
-            //void MoveToBegining();
         }
 
         MapsBL mapsBL = new MapsBL();

@@ -252,7 +252,6 @@ namespace IceCreamKiosk.ViewModel
             };
         }
 
-        /// UpdateShop details ///       
         private int _id = 0;
         public int Id
         {

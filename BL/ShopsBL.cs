@@ -57,7 +57,7 @@ namespace BL
 
             //Calculate radius of earth
             // For this you can assume any of the two points.
-            double radiusE = 6378135; // Equatorial radius, in metres
+            double radiusE = 6378135; // Equatorial radius, in meters
             double radiusP = 6356750; // Polar Radius
 
             //Numerator part of function
@@ -67,7 +67,7 @@ namespace BL
                             + Math.Pow(radiusP * Math.Sin(lat1 / 180 * Math.PI), 2);
             double radius = Math.Sqrt(nr / dr);
 
-            //Calaculate distance in metres.
+            //Calculate distance in meters.
             distance = radius * c;
             return distance;
         }

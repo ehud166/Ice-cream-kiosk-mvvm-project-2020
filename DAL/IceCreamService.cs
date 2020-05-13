@@ -65,7 +65,6 @@ namespace DAL
                 shops.Add(review);
                 await db.SaveChangesAsync();
 
-                //var iceCreamDB = await db.IceCreams.Include(i => i.Reviews).FirstOrDefaultAsync(i => i.Id == review.IceCreamId);
                 var iceCream = await db.IceCreams.FirstOrDefaultAsync(i => i.Id == review.IceCreamId);
                 var oldScore = iceCream.Rate;
                 double newScore = (oldScore + review.Rate) / 2.0 ;

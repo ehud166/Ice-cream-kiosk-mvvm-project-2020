@@ -18,11 +18,11 @@ using static IceCreamKiosk.ViewModel.ThanksForRateViewModel;
 
 namespace IceCreamKiosk.ViewModel
 {
-    public class IceCreamWizardViewModel : ViewModelBase, IFindIceCream, IIceCreamDetails, /*IRateIceCream,*/ IRateDialogIceCream, IRateIceCreamDone, IMain
+    public class IceCreamWizardViewModel : ViewModelBase, IFindIceCream, IIceCreamDetails, IRateDialogIceCream, IRateIceCreamDone, IMain
     {
         public enum WizardPages
         {
-            FoundIceCreams, IceCreamDetails, /*RateIceCreamControl,*/ RateIceCreamDialog, RateIceCreamFinished
+            FoundIceCreams, IceCreamDetails, RateIceCreamDialog, RateIceCreamFinished
         }
         public RelayCommand<object> MoveToSlide { get; set; }
         public IceCreamsListViewModel IceCreamsListView { get; set; }

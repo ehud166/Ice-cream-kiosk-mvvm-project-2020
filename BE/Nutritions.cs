@@ -10,13 +10,13 @@ namespace BE
 {
     public class Nutritions
     {
-        public double Energy { get; set; } //kcal
-        public double Carbohydrate { get; set; } //g
-        public double TotalFat { get; set; }//Total lipid (fat) g
-        public double Cholesterol { get; set; }//mg
-        public double Sugars { get; set; }//g
-        public double Protein { get; set; }//g
-        public double Fiber { get; set; }//g
+        public double Energy { get; set; }
+        public double Carbohydrate { get; set; }
+        public double TotalFat { get; set; }
+        public double Cholesterol { get; set; }
+        public double Sugars { get; set; }
+        public double Protein { get; set; }
+        public double Fiber { get; set; }
 
         [Key]
         [ForeignKey("IceCream")]
