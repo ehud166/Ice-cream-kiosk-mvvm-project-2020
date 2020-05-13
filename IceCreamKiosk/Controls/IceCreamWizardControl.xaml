@@ -14,10 +14,8 @@
             <local:FindBarControl x:Name="FindUc" DockPanel.Dock="Left" Margin="3" />
 			<Grid Name="ControlPlaceHolder" DockPanel.Dock="Right" VerticalAlignment="Top" HorizontalAlignment="Center" Height="auto">
                 <materialDesign:Transitioner x:Name="TransContainer" SelectedIndex="{Binding SlideIndex}">
-                    <!--<local:FindShopControl/>-->
                     <local:IceCreamsListControl Margin=" 100 0 0 0"/>
                     <local:IceCreamInformationControl/>
-                    <!--  <local:RateIceCreamControl/>-->
                     <local:RateIceCreamControl/>
                     <local:ThanksForRateControl/>
                 </materialDesign:Transitioner>

@@ -67,7 +67,6 @@
                         <Button Grid.Column="1" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" 
       Margin=" 0"  Command="{Binding DownloadCommand}" materialDesign:ButtonProgressAssist.IsIndicatorVisible="{Binding IsDownloading}"
       materialDesign:ButtonProgressAssist.Value="{Binding DownloadProgress}">
-                            <!-- simple example of toggling/animating pack icon with a data trigger-->
                             <materialDesign:PackIcon  Height="24"   Width="24">
                                 <materialDesign:PackIcon.Style>
                                     <Style  TargetType="materialDesign:PackIcon" >

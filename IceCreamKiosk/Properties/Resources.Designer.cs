@@ -61,16 +61,6 @@ namespace IceCreamKiosk.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap background {
-            get {
-                object obj = ResourceManager.GetObject("background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to YbsFH9mAIM6MZhfgszTf~4ab73pxxBx0Gruk7H8CB_g~Aov8AwhhOTx-wOtrfPtfCuRA_0ewDbEGMkpoEXVRBAa41GeCFQJg0EHs0gPDKI8c.
         /// </summary>
         public static string BingMapsKey {

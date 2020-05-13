@@ -307,18 +307,6 @@
     <None Include="Resources\Background.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\background1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\text3715.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="background5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Controls\waze.png" />
   </ItemGroup>
   <ItemGroup>

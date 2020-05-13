@@ -56,8 +56,5 @@
 				</ListBox.ItemTemplate>
 			</ListBox>
 		</ScrollViewer>
-		<!--<Button Grid.Column="0" Margin="0 40" Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Style="{StaticResource MaterialDesignFloatingActionLightButton}">
-            <materialDesign:PackIcon Kind="StepBackward" Height="24" Width="24" />
-        </Button>-->
     </Grid>
 </UserControl>

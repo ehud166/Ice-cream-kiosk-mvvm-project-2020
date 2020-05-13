@@ -155,7 +155,6 @@
                                         <TextBlock DockPanel.Dock="Left" Text="{Binding IceCream.Rate, StringFormat=N2}" Margin="10 0 0 0" VerticalAlignment="Center" />
                                     </DockPanel>
                                 </Expander.Header>
-                            <!--<ScrollViewer MaxHeight="200"   >-->
                             <DockPanel LastChildFill="False" MaxHeight="180">
                                 <Button Style="{StaticResource MaterialDesignIconForegroundButton}" ToolTip="MaterialDesignIconForegroundButton">
                                     <Button.InputBindings>
@@ -215,7 +214,6 @@
                                     <materialDesign:PackIcon Kind="ChevronRight" />
                                 </Button>
                             </DockPanel>
-                            <!--</ScrollViewer>-->
                             </Expander>
 
                         </StackPanel>
@@ -345,15 +343,11 @@
                         </GroupBox>
                     </materialDesign:Card>
                 </materialDesign:TransitioningContent>
-                <Button Grid.Row="1" Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}" 
+                <Button Grid.Column="0" Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}" 
                     HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-200 0 0 0" Style="{StaticResource MaterialDesignFloatingActionLightButton}">
                     <materialDesign:PackIcon Kind="StepBackward" Height="24" Width="24" />
                 </Button>
-                <!--<Button Grid.Row="1" FontSize="45" Width="76" Height="76" Command="{x:Static materialDesign:Transitioner.MoveFirstCommand}"
-                HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="38 45 45 120"
-                Style="{StaticResource MaterialDesignFloatingActionAccentButton}">
-				<materialDesign:PackIcon Kind="Home" Height="36" Width="36" />
-			</Button>-->
+              
             </Grid>
         </materialDesign:DialogHost>
     </Grid>

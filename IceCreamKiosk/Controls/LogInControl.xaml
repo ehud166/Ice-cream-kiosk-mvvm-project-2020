@@ -43,11 +43,6 @@
                     Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
             helpers:PasswordBoxHelper.BindPassword="True"
                 helpers:PasswordBoxHelper.BoundPassword="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <!--<CheckBox x:Name="Checkbox" Grid.Row="2" Margin="0 12 0 0"
-                    IsChecked="{Binding RememberMe, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-                    <TextBox Text="Remember Me?" IsEnabled="False" TextDecorations="{x:Null}" />
-                </CheckBox>-->
-            
             <Button x:Name="LogInButton" Grid.Row="2"  
                     Style="{StaticResource MaterialDesignRaisedLightButton}"
                      materialDesign:ButtonProgressAssist.Value="-1"

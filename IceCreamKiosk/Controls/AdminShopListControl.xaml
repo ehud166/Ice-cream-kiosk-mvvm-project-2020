@@ -16,26 +16,11 @@
         </DataTemplate>
     </UserControl.Resources>
     <materialDesign:TransitioningContent Margin=" 0"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromTop, Duration=0:0:1.2}">
-
         <Grid Background="Transparent">
-
-
-
-        <!--  <StackPanel Background="White" Margin="50 10 50 10" Grid.Row="1" Orientation="Horizontal">
-            <TextBlock VerticalAlignment="Center">Kiosk location:</TextBlock>
-            <TextBox materialDesign:HintAssist.Hint="Lat" Margin="5" Width="100"
-                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding Source={x:Static properties:Settings.Default},
-                               Path=KioskLocationLat}" />
-            <TextBox materialDesign:HintAssist.Hint="Lan" Margin="5" Width="100"
-                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                     Text="{Binding Source={x:Static properties:Settings.Default},
-                               Path=KioskLocationLan}"/>
-        </StackPanel>-->
         <StackPanel >
             <DataGrid x:Name="ShopsGrid"  materialDesign:DataGridAssist.CellPadding="5"  Margin="15"  Foreground="DarkSlateGray" RowHeight="95" Focusable="False"   RowBackground="Pink" AlternatingRowBackground="#fdd835"   ItemsSource="{Binding Shops}" IsSynchronizedWithCurrentItem="True"
                   CanUserSortColumns="True" IsReadOnly="True" SelectionUnit="FullRow" 
                   CanUserAddRows="False"  ColumnWidth="Auto" AutoGenerateColumns="False"  SelectedItem="{Binding SelectedShop}" Background="Transparent"  HeadersVisibility="None" HorizontalAlignment="Center" SelectionMode="Single" CanUserResizeRows="False" FontWeight="Bold" Opacity="0.85">
-                
                 <DataGrid.CellStyle>
                     
                     <Style TargetType="{x:Type DataGridCell}">
@@ -154,8 +139,8 @@
         <ProgressBar HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignCircularProgressBar}"  Value="75" FontWeight="ExtraBold" IsIndeterminate="True" Visibility="{Binding Loading, Converter={StaticResource BooleanToVisibilityConverter}}"  
                          Width="100" Height="100" />
 
-        <materialDesign:Snackbar Grid.Row="2" IsActive="{Binding HasError}" HorizontalAlignment="Stretch" >
-            <materialDesign:SnackbarMessage  Content="{Binding ErrorMassege}"/>
+        <materialDesign:Snackbar IsActive="{Binding HasError}" HorizontalAlignment="Stretch" >
+				<materialDesign:SnackbarMessage  Content="{Binding ErrorMassage}"/>
         </materialDesign:Snackbar>
     </Grid>
     </materialDesign:TransitioningContent>
