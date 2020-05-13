@@ -14,6 +14,12 @@ In addition, the manager is given access to manage stores and their products.
   - **MVVM model**
   - **layers model**
   - **Design pattern**
+  - **SOLID**
+  - **OOP**
+  - **SOC**
+  - **UI/UX design**
+  - **IoC**
+  - **Global trigger style**
  ## Features
  - transitioning effect
  - QR code
