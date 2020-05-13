@@ -90,4 +90,3 @@ C:\Users\ehud1\Source\Repos\ehud166\Ice-cream-kiosk-mvvm-project-2020-12-5\BE\ob
 C:\Users\ehud1\Source\Repos\ehud166\Ice-cream-kiosk-mvvm-project-2020-12-5\BE\obj\Debug\BE.csproj.CopyComplete
 C:\Users\ehud1\Source\Repos\ehud166\Ice-cream-kiosk-mvvm-project-2020-12-5\BE\obj\Debug\BE.dll
 C:\Users\ehud1\Source\Repos\ehud166\Ice-cream-kiosk-mvvm-project-2020-12-5\BE\obj\Debug\BE.pdb
-C:\Users\ehud1\Source\Repos\ehud166\Ice-cream-kiosk-mvvm-project-2020-12-5\BE\obj\Debug\BE.csprojAssemblyReference.cache
