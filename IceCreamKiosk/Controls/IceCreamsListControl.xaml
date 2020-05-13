@@ -51,7 +51,7 @@
 				</ListBox.ItemsPanel>
 				<ListBox.ItemTemplate>
 					<DataTemplate>
-						<local:IceCreamControl DataContext="{Binding}"/>
+						<local:IceCreamCardControl DataContext="{Binding}"/>
 					</DataTemplate>
 				</ListBox.ItemTemplate>
 			</ListBox>

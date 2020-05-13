@@ -13,7 +13,7 @@ namespace IceCreamKiosk.commands
     {
         public enum Navigation
         {
-           Admin, Find
+           AdminShopList, Find
         }
 
         public NavigationCommand()
@@ -55,11 +55,11 @@ namespace IceCreamKiosk.commands
 
             switch (navigation)
             {
-                case Navigation.Admin:
-                    res = new AdminControl();
+                case Navigation.AdminShopList:
+                    res = new AdminShopListControl();
                     break;
                 case Navigation.Find:
-                    res = new FindIceCreamWizardControl();
+                    res = new IceCreamWizardControl();
                     break;
             }
 

@@ -9,11 +9,11 @@
         mc:Ignorable="d"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
-        Title="MainWindow"   Width="auto"
+        Title="MainWindowWindow"   Width="auto"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="17"
-        DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
+        DataContext="{Binding Source={StaticResource Locator}, Path=MainWindow}"
         WindowState="Maximized"
         WindowStyle="None"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
@@ -50,7 +50,7 @@
 						<GradientStop Color="Transparent" Offset="1"/>
 					</LinearGradientBrush>
 				</materialDesign:ColorZone.Background>
-				<DockPanel x:Name="mainColorZone" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" LastChildFill="False" >
+				<DockPanel x:Name="MainColorZone" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" LastChildFill="False" >
                         <!--<ToggleButton x:Name="MenuToggleButton" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" Click="MenuToggleButton_OnClick"/>-->
 					<Button Height="50" DockPanel.Dock="Left"  Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" Command="{Binding GoToBegining}">
 						<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >

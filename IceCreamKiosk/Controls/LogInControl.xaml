@@ -18,7 +18,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Margin="0,30,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}">
-                                Sign In
+                                log In
         </TextBlock>
         <Button Grid.Row="0" x:Name="CloseButton"  Width="auto" HorizontalAlignment="Left" 
                     Style="{StaticResource MaterialDesignFlatButton}" IsCancel="True"

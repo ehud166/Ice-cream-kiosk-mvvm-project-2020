@@ -156,20 +156,20 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="commands\NavigationCommand.cs" />
-    <Compile Include="Controls\AdminControl.xaml.cs">
-      <DependentUpon>AdminControl.xaml</DependentUpon>
+    <Compile Include="Controls\AdminShopListControl.xaml.cs">
+      <DependentUpon>AdminShopListControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FindIceCreamWizardControl.xaml.cs">
-      <DependentUpon>FindIceCreamWizardControl.xaml</DependentUpon>
+    <Compile Include="Controls\IceCreamWizardControl.xaml.cs">
+      <DependentUpon>IceCreamWizardControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FindIceCreamControl.xaml.cs">
-      <DependentUpon>FindIceCreamControl.xaml</DependentUpon>
+    <Compile Include="Controls\FindBarControl.xaml.cs">
+      <DependentUpon>FindBarControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\IceCreamControl.xaml.cs">
-      <DependentUpon>IceCreamControl.xaml</DependentUpon>
+    <Compile Include="Controls\IceCreamCardControl.xaml.cs">
+      <DependentUpon>IceCreamCardControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\IceCreamDetailsControl.xaml.cs">
-      <DependentUpon>IceCreamDetailsControl.xaml</DependentUpon>
+    <Compile Include="Controls\IceCreamInformationControl.xaml.cs">
+      <DependentUpon>IceCreamInformationControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\IceCreamsListControl.xaml.cs">
       <DependentUpon>IceCreamsListControl.xaml</DependentUpon>
@@ -177,14 +177,11 @@
     <Compile Include="Controls\RateIceCreamControl.xaml.cs">
       <DependentUpon>RateIceCreamControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\RateIceCreamDialog.xaml.cs">
-      <DependentUpon>RateIceCreamDialog.xaml</DependentUpon>
+    <Compile Include="Controls\ThanksForRateControl.xaml.cs">
+      <DependentUpon>ThanksForRateControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\RateIceCreameDoneControl.xaml.cs">
-      <DependentUpon>RateIceCreameDoneControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\ShopControl.xaml.cs">
-      <DependentUpon>ShopControl.xaml</DependentUpon>
+    <Compile Include="Controls\UpdateShopControl.xaml.cs">
+      <DependentUpon>UpdateShopControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\DebugDataBindingConverter.cs" />
     <Compile Include="Converters\SocailMediaUrlToIconConverter.cs" />
@@ -192,36 +189,35 @@
     <Compile Include="Controls\LogInControl.xaml.cs">
       <DependentUpon>LogInControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\AdminViewModel.cs" />
-    <Compile Include="ViewModel\FindIceCreamWizardViewModel.cs" />
-    <Compile Include="ViewModel\FindIceCreamViewModel.cs" />
-    <Compile Include="ViewModel\IceCreamDetailsViewModel.cs" />
+    <Compile Include="ViewModel\AdminShopListViewModel.cs" />
+    <Compile Include="ViewModel\IceCreamWizardViewModel.cs" />
+    <Compile Include="ViewModel\FindBarViewModel.cs" />
+    <Compile Include="ViewModel\IceCreamInformationViewModel.cs" />
     <Compile Include="ViewModel\IceCreamsListViewModel.cs" />
-    <Compile Include="ViewModel\IError.cs" />
+    <Compile Include="Helpers\IError.cs" />
     <Compile Include="ViewModel\LogInViewModel.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\RateIceCreamDialogViewModel.cs" />
-    <Compile Include="ViewModel\RateIceCreamDoneViewModel.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\RateIceCreamViewModel.cs" />
-    <Compile Include="ViewModel\ShopViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Page Include="Controls\AdminControl.xaml">
+    <Compile Include="ViewModel\ThanksForRateViewModel.cs" />
+    <Compile Include="ViewModel\UpdateShopViewModel.cs" />
+    <Compile Include="ViewModel\LocatorViewModel.cs" />
+    <Page Include="Controls\AdminShopListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\FindIceCreamWizardControl.xaml">
+    <Page Include="Controls\IceCreamWizardControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\FindIceCreamControl.xaml">
+    <Page Include="Controls\FindBarControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\IceCreamControl.xaml">
+    <Page Include="Controls\IceCreamCardControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\IceCreamDetailsControl.xaml">
+    <Page Include="Controls\IceCreamInformationControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -237,15 +233,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\RateIceCreamDialog.xaml">
+    <Page Include="Controls\ThanksForRateControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\RateIceCreameDoneControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\ShopControl.xaml">
+    <Page Include="Controls\UpdateShopControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

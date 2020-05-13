@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\yishai\source\repos\Ice-cream-kiosk-mvvm-project-2020-6-5\IceCreamKiosk\obj\Debug\
+C:\Users\ehud1\Source\Repos\ehud166\Ice-cream-kiosk-mvvm-project-2020-12-5\IceCreamKiosk\obj\Debug\
 IceCreamKiosk
 none
 false
 DEBUG;TRACE
-C:\Users\yishai\source\repos\Ice-cream-kiosk-mvvm-project-2020-6-5\IceCreamKiosk\App.xaml
-12-21931669
+C:\Users\ehud1\Source\Repos\ehud166\Ice-cream-kiosk-mvvm-project-2020-12-5\IceCreamKiosk\App.xaml
+11-1759730128
 
-3384092020
-1022114538675
-Controls\AdminControl.xaml;Controls\FindIceCreamWizardControl.xaml;Controls\FindIceCreamControl.xaml;Controls\IceCreamControl.xaml;Controls\IceCreamDetailsControl.xaml;Controls\IceCreamsListControl.xaml;Controls\LogInControl.xaml;Controls\RateIceCreamControl.xaml;Controls\RateIceCreamDialog.xaml;Controls\RateIceCreameDoneControl.xaml;Controls\ShopControl.xaml;MainWindow.xaml;
+31688877384
+102-1256963967
+Controls\AdminShopListControl.xaml;Controls\IceCreamWizardControl.xaml;Controls\FindBarControl.xaml;Controls\IceCreamCardControl.xaml;Controls\IceCreamInformationControl.xaml;Controls\IceCreamsListControl.xaml;Controls\LogInControl.xaml;Controls\RateIceCreamControl.xaml;Controls\ThanksForRateControl.xaml;Controls\UpdateShopControl.xaml;MainWindow.xaml;
 
-False
+True
 

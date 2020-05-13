@@ -1,7 +1,7 @@
 ﻿/*
   In App.xaml:
   <Application.Resources>
-      <vm:ViewModelLocator xmlns:vm="clr-namespace:IceCreamKiosk"
+      <vm:LocatorViewModel xmlns:vm="clr-namespace:IceCreamKiosk"
                            x:Key="Locator" />
   </Application.Resources>
   
