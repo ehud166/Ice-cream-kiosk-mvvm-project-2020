@@ -5,7 +5,7 @@
 This project was done by **Ehud Gershony** & **Yishai Badichi** (@badishay), undergraduate students in software engineering as part of the "Windows Systems Engineering" course at the Lev Academic Center.</br>
 **Moderator:** Mr. Yossi Zaguri.
 ## Description
-The project simulates an **information kiosk** that is placed in a public place and customers can get information about ice cream stores in the area and ice creams sold in the store, subscribe to the store on the website and social networks and reach them by the **map service** and navigation **WAZE**
+The project simulates an **information kiosk** that is placed in a public place and customers can get information about ice cream stores in the area and ice creams sold in the store, subscribe to the store on the website and social networks and reach them by the **map service** and navigation **Waze**
 In addition, the manager is given access to manage stores and their products.
 After buying the ice cream, the customer will be able to give an opinion on the store and ice cream he bought.
 In addition, the manager is given access to manage stores and their products.
@@ -30,6 +30,7 @@ In addition, the manager is given access to manage stores and their products.
  - Feedback system
  - Firebase hosting
  - DB system
+ - snack bar for errors insteed of exception
 
 
 
