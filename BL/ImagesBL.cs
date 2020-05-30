@@ -15,8 +15,8 @@ namespace BL
 {
     public class ImagesBL
     {
-        private const string baseUrl = "https://icecream-88e4b.web.app/?imageName=";
-        private const string downloadUrl = "https://firebasestorage.googleapis.com/v0/b/icecream-88e4b.appspot.com/o/images%2F";
+        private const string baseUrl = "https://ice-cream-kiosk-2020-gerbad.firebaseapp.com/?imageName=";
+        private const string downloadUrl = "https://firebasestorage.googleapis.com/v0/b/ice-cream-kiosk-2020-gerbad.appspot.com/o/images%2F";
 
         private INutritionService nutritionService = new UsdaNutritionService();
         private ImageService imageService = new ImageService();
